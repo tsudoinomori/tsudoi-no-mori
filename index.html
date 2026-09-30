@@ -98,6 +98,15 @@
       <span class="eyebrow"><span class="dot"></span>お知らせ</span>
       <h2>つどいの森からのお知らせ</h2>
     </div>
+    <button class="poster-banner" id="posterOpen" aria-haspopup="dialog">
+      <img src="img/event/kanshasai2026_thumb.jpg" alt="つどいの森感謝祭 令和8年10月18日(日) 10:00〜15:00 小雨決行のポスター" width="520" height="735">
+      <span class="pb-body">
+        <span class="pb-meta">10月18日(日) 10:00〜15:00・小雨決行</span>
+        <h3>つどいの森感謝祭を開催します</h3>
+        <p>体験コーナー、青空木工体験、クラフト体験、特設屋台コーナー、フリーマーケット、芝生広場のデイキャンプサイト開放。秋の味覚「津志田芋の芋の子汁」も販売します。</p>
+        <span class="pb-cta">ポスターと詳細を見る →</span>
+      </span>
+    </button>
     <div class="news-list">
       <div class="news-item">
         <time>2026.09</time>
@@ -211,7 +220,75 @@
   </div>
 </section>
 
+<section class="tight">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span class="dot"></span>サイト更新情報</span>
+      <h2>このサイトの更新履歴</h2>
+    </div>
+    <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
+    <div class="update-list">
+      <div class="update-item"><time>2026.9.30</time><span>つどいの森感謝祭掲示</span></div>
+      <div class="update-item"><time>2026.9.29</time><span>リニューアルサイト試験運用</span></div>
+    </div>
+    <details class="update-archive">
+      <summary>過去の更新情報</summary>
+      <p class="empty">現在、過去の更新情報はありません。</p>
+    </details>
+  </div>
+</section>
+
 </main>
+
+<div class="poster-modal" id="posterModal" hidden role="dialog" aria-modal="true" aria-labelledby="posterModalTitle">
+  <div class="pm-panel">
+    <button class="pm-close" id="posterClose" aria-label="閉じる">✕</button>
+    <div class="pm-figure">
+      <img src="img/event/kanshasai2026.jpg" alt="つどいの森感謝祭 令和8年10月18日(日) 10:00〜15:00 小雨決行のポスター" width="1061" height="1500" loading="lazy">
+    </div>
+    <div class="pm-caption">
+      <h3 id="posterModalTitle">つどいの森感謝祭</h3>
+      <p>実りの秋本番、盛岡市内ではいろいろなイベントが開催されています。<br>
+      都南つどいの森では10月18日(日)「つどいの森感謝祭」を開催します。<br>
+      つどいの森園内のひろーい敷地を利用して、ワークショップや青空木工体験、クラフト体験のほか、特設屋台コーナーでは、秋の味覚「津志田芋の芋の子汁」を販売いたします。<br>
+      また、フリーマーケットも開催しまーす。</p>
+      <p class="pm-note">※出店料無料（お1人2区画までOK）まだ若干空きがありますので、出店者希望の方はご連絡ください✨</p>
+
+      <p class="pm-label">【日時】</p>
+      <p>10月18日(日) 10:00〜15:00（小雨決行）</p>
+
+      <p class="pm-label">【場所】</p>
+      <p>都南つどいの森園内（つどいの森こもれびの宿、レストハウス跡地）</p>
+
+      <p class="pm-label">【内容】</p>
+      <ul>
+        <li>🔸体験コーナー
+          <ul>
+            <li>①森を愉しむワークショップ</li>
+            <li>・「薪割り」10:00〜12:00</li>
+            <li>・「ブーメランと弓矢とパチンコづくり」13:00〜15:00</li>
+            <li>②青空木工体験</li>
+            <li>・「森のちいさなりんご箱」11:00〜12:00／13:30〜14:30</li>
+            <li>③クラフト体験</li>
+            <li>・「クマ鈴を作ろう」10:00〜12:00／13:00〜15:00</li>
+            <li>・「松ぼっくりアート」10:00〜12:00／13:00〜15:00</li>
+          </ul>
+        </li>
+        <li>🔸フリーマーケット　30区画</li>
+        <li>🔸特設屋台コーナー　焼き鳥、芋の子汁、おにぎり</li>
+        <li>🔸芝生広場でのデイキャンプサイト開放<br>→区画なしのフリーサイトです（20区画）🏕️</li>
+      </ul>
+
+      <p class="pm-label">【イベントの参加申し込み】</p>
+      <p>当日、会場内のそれぞれのコーナーで受付いたします🙋‍♀️</p>
+
+      <p class="pm-label">【問い合わせ】</p>
+      <p>都南つどいの森 <a href="tel:0196370877">019-637-0877</a></p>
+
+      <p class="pm-signoff">みんなで自然を思いっきり楽しもう!!<br>つどいの森で待ってまーす(^^)/</p>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
@@ -251,6 +328,30 @@ var menuToggle = document.getElementById('menuToggle');
 menuToggle.addEventListener('click', function(){
   var open = navMain.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+var posterOpen = document.getElementById('posterOpen');
+var posterModal = document.getElementById('posterModal');
+var posterClose = document.getElementById('posterClose');
+
+function showPoster(){
+  posterModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  posterClose.focus();
+}
+function hidePoster(){
+  posterModal.hidden = true;
+  document.body.style.overflow = '';
+  posterOpen.focus();
+}
+
+posterOpen.addEventListener('click', showPoster);
+posterClose.addEventListener('click', hidePoster);
+posterModal.addEventListener('click', function(e){
+  if (e.target === posterModal) hidePoster();
+});
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && !posterModal.hidden) hidePoster();
 });
 </script>
 </body>
