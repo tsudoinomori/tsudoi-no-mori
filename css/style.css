@@ -345,6 +345,45 @@ tbody tr:hover{background:color-mix(in srgb, var(--paper-2) 60%, transparent);}
 .column-card.soon{opacity:.62;}
 .column-card.soon .thumb{background:repeating-linear-gradient(135deg,var(--paper-3),var(--paper-3) 10px,var(--paper-2) 10px,var(--paper-2) 20px);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);}
 
+/* ============ Column article ============ */
+.article{max-width:760px;margin:0 auto;}
+.article > * + *{margin-top:18px;}
+.article .lead{font-size:1.06rem;color:var(--ink);}
+.article h2{
+  font-size:1.3rem;color:var(--forest-900);
+  margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+}
+.article h3{font-size:1.02rem;color:var(--forest-700);margin-top:26px;}
+.article p{color:var(--ink);}
+.article ul,.article ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;color:var(--ink);}
+.article li::marker{color:var(--amber-600);font-weight:700;}
+.article .tips{list-style:none;padding:0;counter-reset:tip;}
+.article .tips li{
+  position:relative;padding:14px 18px 14px 52px;
+  background:var(--paper-2);border-radius:14px;
+}
+.article .tips li::before{
+  counter-increment:tip;content:counter(tip, lower-alpha);
+  position:absolute;left:18px;top:14px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--amber-500);color:var(--forest-900);
+  font-size:.78rem;font-weight:800;line-height:22px;text-align:center;
+}
+.article figure{margin:0;}
+.article figure img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);}
+.article figcaption{margin-top:10px;font-size:.82rem;color:var(--ink-soft);}
+.article .callout-box{
+  background:var(--paper-2);border-radius:18px;padding:22px 24px;
+}
+.article .callout-box h3{margin-top:0;}
+.article .source-list{list-style:none;padding:0;gap:10px;}
+.article .source-list a{color:var(--forest-500);font-weight:700;overflow-wrap:anywhere;}
+.article .byline{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  font-size:.85rem;color:var(--ink-soft);
+}
+.article-back{margin-top:48px;}
+
 /* ============ Poster banner ============ */
 .poster-banner{
   display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;
