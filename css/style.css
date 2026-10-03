@@ -392,6 +392,27 @@ tbody tr:hover{background:color-mix(in srgb, var(--paper-2) 60%, transparent);}
 }
 .article-back{margin-top:48px;}
 
+/* ============ Migration notice ============ */
+.site-notice{
+  background:color-mix(in srgb, var(--amber-500) 24%, var(--paper));
+  border-bottom:1px solid var(--line);
+  padding:14px 24px;
+}
+.site-notice .inner{
+  max-width:1080px;margin:0 auto;
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;
+  gap:6px 12px;text-align:center;
+}
+.site-notice p{font-size:.92rem;font-weight:700;color:var(--forest-900);}
+.site-notice .url{
+  font-weight:800;color:var(--ember-600);
+  letter-spacing:.01em;overflow-wrap:anywhere;
+}
+@media (prefers-color-scheme: dark){
+  .site-notice{background:color-mix(in srgb, var(--amber-500) 18%, var(--paper-2));}
+  .site-notice p{color:var(--ink);}
+}
+
 /* ============ Route stats ============ */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 @media (max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
