@@ -1,0 +1,4088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Super Dem App" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:kashmir3d="http://www.kashmir3d.com/namespace/kashmir3d" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.kashmir3d.com/namespace/kashmir3d http://www.kashmir3d.com/namespace/kashmir3d.xsd">
+<trk>
+<name><![CDATA[2025/10/13 09:35:15]]></name>
+<number>1</number>
+<extensions>
+<kashmir3d:line_color>0000FF</kashmir3d:line_color>
+<kashmir3d:line_size>2</kashmir3d:line_size>
+<kashmir3d:line_style>1</kashmir3d:line_style>
+<kashmir3d:icon>901001</kashmir3d:icon>
+<kashmir3d:rate>0</kashmir3d:rate>
+</extensions>
+<trkseg>
+<trkpt lat="39.639405" lon="141.033659">
+<ele>444.970823</ele>
+<time>2025-10-13T00:35:15Z</time>
+<extensions>
+<kashmir3d:speed>0.00</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639478" lon="141.033750">
+<ele>441.666626</ele>
+<time>2025-10-13T00:35:31Z</time>
+<extensions>
+<kashmir3d:speed>1.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639499" lon="141.033864">
+<ele>442.298603</ele>
+<time>2025-10-13T00:35:41Z</time>
+<extensions>
+<kashmir3d:speed>0.95</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639498" lon="141.033984">
+<ele>441.166389</ele>
+<time>2025-10-13T00:35:49Z</time>
+<extensions>
+<kashmir3d:speed>1.11</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639537" lon="141.034099">
+<ele>439.074118</ele>
+<time>2025-10-13T00:35:58Z</time>
+<extensions>
+<kashmir3d:speed>0.88</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639593" lon="141.034197">
+<ele>437.802270</ele>
+<time>2025-10-13T00:36:14Z</time>
+<extensions>
+<kashmir3d:speed>0.80</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639679" lon="141.034241">
+<ele>437.432803</ele>
+<time>2025-10-13T00:36:31Z</time>
+<extensions>
+<kashmir3d:speed>0.81</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639744" lon="141.034329">
+<ele>440.081900</ele>
+<time>2025-10-13T00:36:49Z</time>
+<extensions>
+<kashmir3d:speed>0.87</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639801" lon="141.034440">
+<ele>436.464907</ele>
+<time>2025-10-13T00:37:06Z</time>
+<extensions>
+<kashmir3d:speed>0.60</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639807" lon="141.034559">
+<ele>435.808739</ele>
+<time>2025-10-13T00:37:18Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639879" lon="141.034645">
+<ele>442.019087</ele>
+<time>2025-10-13T00:37:33Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639950" lon="141.034733">
+<ele>442.554479</ele>
+<time>2025-10-13T00:37:49Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639961" lon="141.034850">
+<ele>447.872406</ele>
+<time>2025-10-13T00:38:09Z</time>
+<extensions>
+<kashmir3d:speed>1.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640018" lon="141.034944">
+<ele>451.988752</ele>
+<time>2025-10-13T00:39:02Z</time>
+<extensions>
+<kashmir3d:speed>0.05</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640051" lon="141.035057">
+<ele>448.439747</ele>
+<time>2025-10-13T00:39:48Z</time>
+<extensions>
+<kashmir3d:speed>0.27</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640125" lon="141.035146">
+<ele>449.191495</ele>
+<time>2025-10-13T00:40:09Z</time>
+<extensions>
+<kashmir3d:speed>0.62</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640194" lon="141.035222">
+<ele>450.421159</ele>
+<time>2025-10-13T00:40:35Z</time>
+<extensions>
+<kashmir3d:speed>0.08</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640244" lon="141.035320">
+<ele>449.133574</ele>
+<time>2025-10-13T00:44:50Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640308" lon="141.035415">
+<ele>448.446993</ele>
+<time>2025-10-13T00:45:11Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640340" lon="141.035529">
+<ele>444.066058</ele>
+<time>2025-10-13T00:45:34Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640384" lon="141.035644">
+<ele>443.831384</ele>
+<time>2025-10-13T00:47:05Z</time>
+<extensions>
+<kashmir3d:speed>0.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640421" lon="141.035759">
+<ele>448.793056</ele>
+<time>2025-10-13T00:47:45Z</time>
+<extensions>
+<kashmir3d:speed>0.06</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640446" lon="141.035879">
+<ele>450.289255</ele>
+<time>2025-10-13T00:48:50Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640497" lon="141.035986">
+<ele>451.220609</ele>
+<time>2025-10-13T00:49:13Z</time>
+<extensions>
+<kashmir3d:speed>0.07</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640558" lon="141.036091">
+<ele>452.338029</ele>
+<time>2025-10-13T00:50:04Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640588" lon="141.036211">
+<ele>451.625585</ele>
+<time>2025-10-13T00:51:43Z</time>
+<extensions>
+<kashmir3d:speed>0.30</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640539" lon="141.036311">
+<ele>454.671357</ele>
+<time>2025-10-13T00:52:01Z</time>
+<extensions>
+<kashmir3d:speed>0.21</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640571" lon="141.036426">
+<ele>456.206066</ele>
+<time>2025-10-13T00:53:47Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640611" lon="141.036533">
+<ele>457.704743</ele>
+<time>2025-10-13T00:54:09Z</time>
+<extensions>
+<kashmir3d:speed>0.31</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640683" lon="141.036616">
+<ele>459.386153</ele>
+<time>2025-10-13T00:55:21Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640758" lon="141.036692">
+<ele>464.523961</ele>
+<time>2025-10-13T00:55:57Z</time>
+<extensions>
+<kashmir3d:speed>0.11</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640777" lon="141.036812">
+<ele>464.081042</ele>
+<time>2025-10-13T00:58:23Z</time>
+<extensions>
+<kashmir3d:speed>1.14</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640785" lon="141.036934">
+<ele>467.898037</ele>
+<time>2025-10-13T00:58:42Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640868" lon="141.036979">
+<ele>462.632496</ele>
+<time>2025-10-13T01:02:01Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640897" lon="141.037096">
+<ele>467.416588</ele>
+<time>2025-10-13T01:02:23Z</time>
+<extensions>
+<kashmir3d:speed>0.12</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640900" lon="141.037222">
+<ele>470.660546</ele>
+<time>2025-10-13T01:03:30Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640870" lon="141.037344">
+<ele>470.791367</ele>
+<time>2025-10-13T01:04:00Z</time>
+<extensions>
+<kashmir3d:speed>0.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640853" lon="141.037462">
+<ele>468.367278</ele>
+<time>2025-10-13T01:04:28Z</time>
+<extensions>
+<kashmir3d:speed>0.90</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640828" lon="141.037581">
+<ele>470.295478</ele>
+<time>2025-10-13T01:04:56Z</time>
+<extensions>
+<kashmir3d:speed>0.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640763" lon="141.037674">
+<ele>472.858619</ele>
+<time>2025-10-13T01:05:26Z</time>
+<extensions>
+<kashmir3d:speed>0.18</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640746" lon="141.037794">
+<ele>473.250175</ele>
+<time>2025-10-13T01:07:15Z</time>
+<extensions>
+<kashmir3d:speed>0.23</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640718" lon="141.037909">
+<ele>472.723122</ele>
+<time>2025-10-13T01:09:51Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640712" lon="141.038032">
+<ele>477.506580</ele>
+<time>2025-10-13T01:10:15Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640812" lon="141.038068">
+<ele>473.511255</ele>
+<time>2025-10-13T01:14:07Z</time>
+<extensions>
+<kashmir3d:speed>2.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640722" lon="141.038108">
+<ele>475.581697</ele>
+<time>2025-10-13T01:15:05Z</time>
+<extensions>
+<kashmir3d:speed>0.09</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640702" lon="141.038231">
+<ele>477.285414</ele>
+<time>2025-10-13T01:15:31Z</time>
+<extensions>
+<kashmir3d:speed>1.06</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640724" lon="141.038345">
+<ele>476.923414</ele>
+<time>2025-10-13T01:16:22Z</time>
+<extensions>
+<kashmir3d:speed>0.03</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640714" lon="141.038462">
+<ele>476.009095</ele>
+<time>2025-10-13T01:17:18Z</time>
+<extensions>
+<kashmir3d:speed>0.41</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640734" lon="141.038583">
+<ele>475.439675</ele>
+<time>2025-10-13T01:20:11Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640718" lon="141.038707">
+<ele>476.851079</ele>
+<time>2025-10-13T01:20:29Z</time>
+<extensions>
+<kashmir3d:speed>0.98</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640750" lon="141.038822">
+<ele>480.630178</ele>
+<time>2025-10-13T01:20:46Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640749" lon="141.038944">
+<ele>479.713162</ele>
+<time>2025-10-13T01:21:00Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640721" lon="141.039065">
+<ele>480.974439</ele>
+<time>2025-10-13T01:21:13Z</time>
+<extensions>
+<kashmir3d:speed>0.83</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640722" lon="141.039190">
+<ele>480.339909</ele>
+<time>2025-10-13T01:21:28Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640756" lon="141.039308">
+<ele>481.445220</ele>
+<time>2025-10-13T01:21:47Z</time>
+<extensions>
+<kashmir3d:speed>0.82</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640690" lon="141.039400">
+<ele>482.357397</ele>
+<time>2025-10-13T01:23:00Z</time>
+<extensions>
+<kashmir3d:speed>0.80</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640591" lon="141.039404">
+<ele>485.916707</ele>
+<time>2025-10-13T01:23:51Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640512" lon="141.039488">
+<ele>486.114205</ele>
+<time>2025-10-13T01:24:06Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640418" lon="141.039521">
+<ele>491.141361</ele>
+<time>2025-10-13T01:24:41Z</time>
+<extensions>
+<kashmir3d:speed>0.41</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640331" lon="141.039570">
+<ele>491.620441</ele>
+<time>2025-10-13T01:24:55Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640275" lon="141.039663">
+<ele>492.522251</ele>
+<time>2025-10-13T01:25:16Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640234" lon="141.039767">
+<ele>494.247692</ele>
+<time>2025-10-13T01:25:38Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640187" lon="141.039880">
+<ele>495.006263</ele>
+<time>2025-10-13T01:27:00Z</time>
+<extensions>
+<kashmir3d:speed>0.13</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640165" lon="141.039999">
+<ele>497.371133</ele>
+<time>2025-10-13T01:27:19Z</time>
+<extensions>
+<kashmir3d:speed>0.16</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640154" lon="141.040118">
+<ele>496.093613</ele>
+<time>2025-10-13T01:27:38Z</time>
+<extensions>
+<kashmir3d:speed>0.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640180" lon="141.040240">
+<ele>495.531564</ele>
+<time>2025-10-13T01:28:49Z</time>
+<extensions>
+<kashmir3d:speed>0.02</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640122" lon="141.040341">
+<ele>499.305155</ele>
+<time>2025-10-13T01:29:49Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640113" lon="141.040465">
+<ele>497.975340</ele>
+<time>2025-10-13T01:30:07Z</time>
+<extensions>
+<kashmir3d:speed>0.93</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640063" lon="141.040566">
+<ele>503.199817</ele>
+<time>2025-10-13T01:31:04Z</time>
+<extensions>
+<kashmir3d:speed>0.05</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640051" lon="141.040692">
+<ele>497.894734</ele>
+<time>2025-10-13T01:31:28Z</time>
+<extensions>
+<kashmir3d:speed>0.09</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640012" lon="141.040809">
+<ele>500.698345</ele>
+<time>2025-10-13T01:32:40Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639990" lon="141.040925">
+<ele>503.466457</ele>
+<time>2025-10-13T01:33:10Z</time>
+<extensions>
+<kashmir3d:speed>0.24</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639985" lon="141.041048">
+<ele>507.771968</ele>
+<time>2025-10-13T01:33:52Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639895" lon="141.041071">
+<ele>510.444180</ele>
+<time>2025-10-13T01:34:13Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639911" lon="141.041188">
+<ele>508.247762</ele>
+<time>2025-10-13T01:36:17Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639889" lon="141.041304">
+<ele>504.504948</ele>
+<time>2025-10-13T01:36:36Z</time>
+<extensions>
+<kashmir3d:speed>0.33</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639859" lon="141.041414">
+<ele>506.090613</ele>
+<time>2025-10-13T01:37:07Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639870" lon="141.041539">
+<ele>511.725512</ele>
+<time>2025-10-13T01:37:28Z</time>
+<extensions>
+<kashmir3d:speed>0.69</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639878" lon="141.041663">
+<ele>508.903324</ele>
+<time>2025-10-13T01:38:37Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639849" lon="141.041775">
+<ele>508.468419</ele>
+<time>2025-10-13T01:38:59Z</time>
+<extensions>
+<kashmir3d:speed>0.55</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639813" lon="141.041893">
+<ele>513.305160</ele>
+<time>2025-10-13T01:39:19Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639766" lon="141.042001">
+<ele>515.564804</ele>
+<time>2025-10-13T01:40:57Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639746" lon="141.042124">
+<ele>515.888144</ele>
+<time>2025-10-13T01:41:14Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639705" lon="141.042244">
+<ele>518.262346</ele>
+<time>2025-10-13T01:41:41Z</time>
+<extensions>
+<kashmir3d:speed>1.01</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639676" lon="141.042362">
+<ele>520.678469</ele>
+<time>2025-10-13T01:42:07Z</time>
+<extensions>
+<kashmir3d:speed>0.20</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639659" lon="141.042485">
+<ele>520.041037</ele>
+<time>2025-10-13T01:42:44Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639655" lon="141.042609">
+<ele>519.241924</ele>
+<time>2025-10-13T01:43:49Z</time>
+<extensions>
+<kashmir3d:speed>0.23</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639634" lon="141.042738">
+<ele>522.288835</ele>
+<time>2025-10-13T01:44:05Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639585" lon="141.042845">
+<ele>523.103924</ele>
+<time>2025-10-13T01:44:47Z</time>
+<extensions>
+<kashmir3d:speed>0.33</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639583" lon="141.042964">
+<ele>522.952534</ele>
+<time>2025-10-13T01:45:01Z</time>
+<extensions>
+<kashmir3d:speed>1.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639555" lon="141.043085">
+<ele>525.027367</ele>
+<time>2025-10-13T01:45:21Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639485" lon="141.043169">
+<ele>529.563012</ele>
+<time>2025-10-13T01:49:47Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639425" lon="141.043269">
+<ele>532.554334</ele>
+<time>2025-10-13T01:50:09Z</time>
+<extensions>
+<kashmir3d:speed>0.89</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639412" lon="141.043396">
+<ele>534.124113</ele>
+<time>2025-10-13T01:50:27Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639373" lon="141.043524">
+<ele>537.081450</ele>
+<time>2025-10-13T01:50:46Z</time>
+<extensions>
+<kashmir3d:speed>0.73</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639338" lon="141.043645">
+<ele>538.267518</ele>
+<time>2025-10-13T01:51:05Z</time>
+<extensions>
+<kashmir3d:speed>0.56</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639339" lon="141.043762">
+<ele>538.008271</ele>
+<time>2025-10-13T01:51:18Z</time>
+<extensions>
+<kashmir3d:speed>0.65</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639301" lon="141.043872">
+<ele>539.440308</ele>
+<time>2025-10-13T01:51:36Z</time>
+<extensions>
+<kashmir3d:speed>0.41</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639266" lon="141.043982">
+<ele>540.024695</ele>
+<time>2025-10-13T01:55:53Z</time>
+<extensions>
+<kashmir3d:speed>0.69</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639224" lon="141.044088">
+<ele>543.309222</ele>
+<time>2025-10-13T01:56:42Z</time>
+<extensions>
+<kashmir3d:speed>0.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639193" lon="141.044203">
+<ele>543.809932</ele>
+<time>2025-10-13T01:57:32Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639173" lon="141.044331">
+<ele>543.759755</ele>
+<time>2025-10-13T01:57:55Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639152" lon="141.044454">
+<ele>546.083715</ele>
+<time>2025-10-13T01:58:20Z</time>
+<extensions>
+<kashmir3d:speed>0.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639179" lon="141.044573">
+<ele>548.862413</ele>
+<time>2025-10-13T01:58:37Z</time>
+<extensions>
+<kashmir3d:speed>0.59</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639187" lon="141.044692">
+<ele>548.829122</ele>
+<time>2025-10-13T01:58:59Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639171" lon="141.044818">
+<ele>546.372669</ele>
+<time>2025-10-13T02:00:26Z</time>
+<extensions>
+<kashmir3d:speed>0.35</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639189" lon="141.044941">
+<ele>544.775680</ele>
+<time>2025-10-13T02:02:56Z</time>
+<extensions>
+<kashmir3d:speed>0.24</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639174" lon="141.045058">
+<ele>546.127237</ele>
+<time>2025-10-13T02:03:22Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639176" lon="141.045178">
+<ele>545.837662</ele>
+<time>2025-10-13T02:04:05Z</time>
+<extensions>
+<kashmir3d:speed>0.72</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639227" lon="141.045278">
+<ele>543.797310</ele>
+<time>2025-10-13T02:04:58Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639264" lon="141.045397">
+<ele>541.576771</ele>
+<time>2025-10-13T02:05:19Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639295" lon="141.045513">
+<ele>544.514701</ele>
+<time>2025-10-13T02:07:59Z</time>
+<extensions>
+<kashmir3d:speed>0.24</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639368" lon="141.045603">
+<ele>545.135845</ele>
+<time>2025-10-13T02:08:26Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639392" lon="141.045722">
+<ele>549.667598</ele>
+<time>2025-10-13T02:08:53Z</time>
+<extensions>
+<kashmir3d:speed>1.11</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639442" lon="141.045827">
+<ele>557.680627</ele>
+<time>2025-10-13T02:10:42Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639461" lon="141.045954">
+<ele>553.098380</ele>
+<time>2025-10-13T02:10:55Z</time>
+<extensions>
+<kashmir3d:speed>0.88</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639516" lon="141.046053">
+<ele>554.675949</ele>
+<time>2025-10-13T02:14:45Z</time>
+<extensions>
+<kashmir3d:speed>1.20</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639492" lon="141.046193">
+<ele>559.770711</ele>
+<time>2025-10-13T02:15:13Z</time>
+<extensions>
+<kashmir3d:speed>1.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639566" lon="141.046279">
+<ele>563.031910</ele>
+<time>2025-10-13T02:15:38Z</time>
+<extensions>
+<kashmir3d:speed>0.19</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639623" lon="141.046377">
+<ele>560.213157</ele>
+<time>2025-10-13T02:18:00Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639712" lon="141.046424">
+<ele>563.996106</ele>
+<time>2025-10-13T02:18:20Z</time>
+<extensions>
+<kashmir3d:speed>0.55</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639792" lon="141.046486">
+<ele>566.565246</ele>
+<time>2025-10-13T02:20:08Z</time>
+<extensions>
+<kashmir3d:speed>0.22</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639834" lon="141.046604">
+<ele>565.402161</ele>
+<time>2025-10-13T02:20:24Z</time>
+<extensions>
+<kashmir3d:speed>0.62</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639901" lon="141.046701">
+<ele>565.335174</ele>
+<time>2025-10-13T02:20:40Z</time>
+<extensions>
+<kashmir3d:speed>0.59</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639989" lon="141.046749">
+<ele>572.120177</ele>
+<time>2025-10-13T02:21:03Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640077" lon="141.046775">
+<ele>573.126521</ele>
+<time>2025-10-13T02:21:20Z</time>
+<extensions>
+<kashmir3d:speed>0.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640134" lon="141.046875">
+<ele>573.713570</ele>
+<time>2025-10-13T02:22:32Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640163" lon="141.046989">
+<ele>577.875631</ele>
+<time>2025-10-13T02:26:36Z</time>
+<extensions>
+<kashmir3d:speed>0.01</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640211" lon="141.047102">
+<ele>581.460025</ele>
+<time>2025-10-13T02:28:34Z</time>
+<extensions>
+<kashmir3d:speed>0.90</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640297" lon="141.047143">
+<ele>579.899226</ele>
+<time>2025-10-13T02:28:48Z</time>
+<extensions>
+<kashmir3d:speed>0.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640347" lon="141.047247">
+<ele>583.275114</ele>
+<time>2025-10-13T02:29:36Z</time>
+<extensions>
+<kashmir3d:speed>1.38</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640404" lon="141.047142">
+<ele>583.990205</ele>
+<time>2025-10-13T02:29:39Z</time>
+<extensions>
+<kashmir3d:speed>2.19</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640367" lon="141.047251">
+<ele>585.315305</ele>
+<time>2025-10-13T02:29:42Z</time>
+<extensions>
+<kashmir3d:speed>2.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640457" lon="141.047351">
+<ele>589.454589</ele>
+<time>2025-10-13T02:29:56Z</time>
+<extensions>
+<kashmir3d:speed>3.01</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640524" lon="141.047225">
+<ele>595.299454</ele>
+<time>2025-10-13T02:30:16Z</time>
+<extensions>
+<kashmir3d:speed>1.91</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640565" lon="141.047338">
+<ele>599.170779</ele>
+<time>2025-10-13T02:30:30Z</time>
+<extensions>
+<kashmir3d:speed>0.57</kashmir3d:speed>
+<kashmir3d:accuracy>5</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640659" lon="141.047400">
+<ele>598.816995</ele>
+<time>2025-10-13T02:30:51Z</time>
+<extensions>
+<kashmir3d:speed>1.15</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640753" lon="141.047452">
+<ele>594.781017</ele>
+<time>2025-10-13T02:31:14Z</time>
+<extensions>
+<kashmir3d:speed>0.88</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640840" lon="141.047512">
+<ele>597.252062</ele>
+<time>2025-10-13T02:32:13Z</time>
+<extensions>
+<kashmir3d:speed>0.88</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640915" lon="141.047582">
+<ele>599.516564</ele>
+<time>2025-10-13T02:32:27Z</time>
+<extensions>
+<kashmir3d:speed>0.79</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640998" lon="141.047641">
+<ele>605.851663</ele>
+<time>2025-10-13T02:32:45Z</time>
+<extensions>
+<kashmir3d:speed>1.69</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641092" lon="141.047613">
+<ele>608.027096</ele>
+<time>2025-10-13T02:33:22Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641188" lon="141.047662">
+<ele>609.265940</ele>
+<time>2025-10-13T02:33:48Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641274" lon="141.047717">
+<ele>610.993070</ele>
+<time>2025-10-13T02:34:10Z</time>
+<extensions>
+<kashmir3d:speed>0.75</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641348" lon="141.047791">
+<ele>620.917702</ele>
+<time>2025-10-13T02:38:07Z</time>
+<extensions>
+<kashmir3d:speed>0.18</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641442" lon="141.047806">
+<ele>618.637234</ele>
+<time>2025-10-13T02:39:23Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641527" lon="141.047866">
+<ele>618.909627</ele>
+<time>2025-10-13T02:40:28Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641621" lon="141.047830">
+<ele>617.715352</ele>
+<time>2025-10-13T02:41:06Z</time>
+<extensions>
+<kashmir3d:speed>1.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641685" lon="141.047932">
+<ele>618.165347</ele>
+<time>2025-10-13T02:41:31Z</time>
+<extensions>
+<kashmir3d:speed>0.55</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641759" lon="141.048006">
+<ele>621.331010</ele>
+<time>2025-10-13T02:42:50Z</time>
+<extensions>
+<kashmir3d:speed>0.41</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641845" lon="141.048058">
+<ele>625.245881</ele>
+<time>2025-10-13T02:43:49Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641925" lon="141.048113">
+<ele>622.893561</ele>
+<time>2025-10-13T02:44:27Z</time>
+<extensions>
+<kashmir3d:speed>0.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641926" lon="141.048235">
+<ele>633.492938</ele>
+<time>2025-10-13T02:50:10Z</time>
+<extensions>
+<kashmir3d:speed>0.09</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642020" lon="141.048202">
+<ele>631.097266</ele>
+<time>2025-10-13T02:51:17Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642102" lon="141.048142">
+<ele>629.663115</ele>
+<time>2025-10-13T02:51:35Z</time>
+<extensions>
+<kashmir3d:speed>0.22</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642179" lon="141.048209">
+<ele>632.090186</ele>
+<time>2025-10-13T02:51:53Z</time>
+<extensions>
+<kashmir3d:speed>0.72</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642260" lon="141.048272">
+<ele>635.244122</ele>
+<time>2025-10-13T02:53:07Z</time>
+<extensions>
+<kashmir3d:speed>0.25</kashmir3d:speed>
+<kashmir3d:accuracy>5</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642340" lon="141.048333">
+<ele>633.667980</ele>
+<time>2025-10-13T02:55:11Z</time>
+<extensions>
+<kashmir3d:speed>0.23</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642419" lon="141.048405">
+<ele>637.756979</ele>
+<time>2025-10-13T02:55:36Z</time>
+<extensions>
+<kashmir3d:speed>0.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642518" lon="141.048461">
+<ele>644.182733</ele>
+<time>2025-10-13T02:56:16Z</time>
+<extensions>
+<kashmir3d:speed>0.78</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642602" lon="141.048517">
+<ele>639.433610</ele>
+<time>2025-10-13T02:56:40Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642699" lon="141.048532">
+<ele>635.861822</ele>
+<time>2025-10-13T02:57:23Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642802" lon="141.048558">
+<ele>632.903036</ele>
+<time>2025-10-13T02:57:44Z</time>
+<extensions>
+<kashmir3d:speed>0.82</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642811" lon="141.048682">
+<ele>638.288322</ele>
+<time>2025-10-13T02:59:12Z</time>
+<extensions>
+<kashmir3d:speed>0.16</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642897" lon="141.048737">
+<ele>640.524534</ele>
+<time>2025-10-13T03:00:08Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642971" lon="141.048811">
+<ele>641.192213</ele>
+<time>2025-10-13T03:02:41Z</time>
+<extensions>
+<kashmir3d:speed>0.32</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643043" lon="141.048891">
+<ele>650.353097</ele>
+<time>2025-10-13T03:03:34Z</time>
+<extensions>
+<kashmir3d:speed>0.45</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643096" lon="141.048990">
+<ele>645.900156</ele>
+<time>2025-10-13T03:04:04Z</time>
+<extensions>
+<kashmir3d:speed>1.00</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643101" lon="141.049113">
+<ele>646.390988</ele>
+<time>2025-10-13T03:05:25Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643104" lon="141.049248">
+<ele>647.445095</ele>
+<time>2025-10-13T03:06:25Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643122" lon="141.049374">
+<ele>654.343553</ele>
+<time>2025-10-13T03:08:30Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643184" lon="141.049461">
+<ele>657.441430</ele>
+<time>2025-10-13T03:09:24Z</time>
+<extensions>
+<kashmir3d:speed>0.25</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643218" lon="141.049576">
+<ele>661.005864</ele>
+<time>2025-10-13T03:11:22Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643303" lon="141.049627">
+<ele>659.759047</ele>
+<time>2025-10-13T03:11:51Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643391" lon="141.049653">
+<ele>665.323062</ele>
+<time>2025-10-13T03:12:32Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643480" lon="141.049693">
+<ele>671.978586</ele>
+<time>2025-10-13T03:15:28Z</time>
+<extensions>
+<kashmir3d:speed>0.21</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643554" lon="141.049785">
+<ele>673.108000</ele>
+<time>2025-10-13T03:15:59Z</time>
+<extensions>
+<kashmir3d:speed>0.85</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643649" lon="141.049749">
+<ele>675.667585</ele>
+<time>2025-10-13T03:16:34Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643729" lon="141.049817">
+<ele>682.668552</ele>
+<time>2025-10-13T03:17:30Z</time>
+<extensions>
+<kashmir3d:speed>0.22</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643824" lon="141.049852">
+<ele>687.086229</ele>
+<time>2025-10-13T03:18:13Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643914" lon="141.049844">
+<ele>690.455081</ele>
+<time>2025-10-13T03:18:41Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643988" lon="141.049910">
+<ele>693.053822</ele>
+<time>2025-10-13T03:20:03Z</time>
+<extensions>
+<kashmir3d:speed>1.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644087" lon="141.049898">
+<ele>701.873236</ele>
+<time>2025-10-13T03:21:26Z</time>
+<extensions>
+<kashmir3d:speed>0.06</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644195" lon="141.049933">
+<ele>702.474688</ele>
+<time>2025-10-13T03:22:15Z</time>
+<extensions>
+<kashmir3d:speed>1.24</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644291" lon="141.049973">
+<ele>709.684684</ele>
+<time>2025-10-13T03:25:09Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644387" lon="141.049977">
+<ele>714.910211</ele>
+<time>2025-10-13T03:26:29Z</time>
+<extensions>
+<kashmir3d:speed>0.14</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644480" lon="141.050011">
+<ele>715.225146</ele>
+<time>2025-10-13T03:26:57Z</time>
+<extensions>
+<kashmir3d:speed>0.56</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644564" lon="141.050065">
+<ele>715.106149</ele>
+<time>2025-10-13T03:27:21Z</time>
+<extensions>
+<kashmir3d:speed>0.38</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644650" lon="141.050129">
+<ele>718.796178</ele>
+<time>2025-10-13T03:27:34Z</time>
+<extensions>
+<kashmir3d:speed>2.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644703" lon="141.050031">
+<ele>713.874835</ele>
+<time>2025-10-13T03:27:45Z</time>
+<extensions>
+<kashmir3d:speed>2.27</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644782" lon="141.050126">
+<ele>724.278929</ele>
+<time>2025-10-13T03:28:07Z</time>
+<extensions>
+<kashmir3d:speed>1.96</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644866" lon="141.050179">
+<ele>720.332430</ele>
+<time>2025-10-13T03:28:33Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644878" lon="141.050046">
+<ele>727.288247</ele>
+<time>2025-10-13T03:32:15Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644901" lon="141.049930">
+<ele>730.655536</ele>
+<time>2025-10-13T03:32:30Z</time>
+<extensions>
+<kashmir3d:speed>0.30</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644951" lon="141.049832">
+<ele>731.702864</ele>
+<time>2025-10-13T03:32:55Z</time>
+<extensions>
+<kashmir3d:speed>0.11</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645011" lon="141.049740">
+<ele>734.450579</ele>
+<time>2025-10-13T03:33:25Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645055" lon="141.049631">
+<ele>737.524312</ele>
+<time>2025-10-13T03:34:16Z</time>
+<extensions>
+<kashmir3d:speed>0.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645037" lon="141.049511">
+<ele>741.618191</ele>
+<time>2025-10-13T03:34:51Z</time>
+<extensions>
+<kashmir3d:speed>0.79</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645087" lon="141.049378">
+<ele>743.931177</ele>
+<time>2025-10-13T03:35:15Z</time>
+<extensions>
+<kashmir3d:speed>0.92</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645055" lon="141.049267">
+<ele>748.240467</ele>
+<time>2025-10-13T03:35:30Z</time>
+<extensions>
+<kashmir3d:speed>1.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645072" lon="141.049144">
+<ele>748.912336</ele>
+<time>2025-10-13T03:35:54Z</time>
+<extensions>
+<kashmir3d:speed>0.54</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645134" lon="141.049021">
+<ele>751.196410</ele>
+<time>2025-10-13T03:36:06Z</time>
+<extensions>
+<kashmir3d:speed>1.83</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645153" lon="141.048900">
+<ele>747.521172</ele>
+<time>2025-10-13T03:36:25Z</time>
+<extensions>
+<kashmir3d:speed>0.60</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645254" lon="141.048844">
+<ele>742.429943</ele>
+<time>2025-10-13T03:36:44Z</time>
+<extensions>
+<kashmir3d:speed>1.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645294" lon="141.048734">
+<ele>743.521452</ele>
+<time>2025-10-13T03:36:48Z</time>
+<extensions>
+<kashmir3d:speed>1.41</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645298" lon="141.048613">
+<ele>742.142467</ele>
+<time>2025-10-13T03:37:05Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645307" lon="141.048497">
+<ele>737.095393</ele>
+<time>2025-10-13T03:37:36Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645358" lon="141.048394">
+<ele>736.898977</ele>
+<time>2025-10-13T03:37:46Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645410" lon="141.048294">
+<ele>735.874229</ele>
+<time>2025-10-13T03:38:01Z</time>
+<extensions>
+<kashmir3d:speed>0.07</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645446" lon="141.048159">
+<ele>735.345029</ele>
+<time>2025-10-13T03:38:15Z</time>
+<extensions>
+<kashmir3d:speed>0.85</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645518" lon="141.048078">
+<ele>734.224280</ele>
+<time>2025-10-13T03:38:35Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645619" lon="141.048046">
+<ele>738.866876</ele>
+<time>2025-10-13T03:38:54Z</time>
+<extensions>
+<kashmir3d:speed>0.95</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645697" lon="141.047968">
+<ele>742.170371</ele>
+<time>2025-10-13T03:39:14Z</time>
+<extensions>
+<kashmir3d:speed>0.57</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645769" lon="141.047893">
+<ele>742.194804</ele>
+<time>2025-10-13T03:39:32Z</time>
+<extensions>
+<kashmir3d:speed>0.45</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645848" lon="141.047810">
+<ele>748.376395</ele>
+<time>2025-10-13T03:41:02Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645877" lon="141.047694">
+<ele>751.099926</ele>
+<time>2025-10-13T03:41:16Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645917" lon="141.047585">
+<ele>751.215109</ele>
+<time>2025-10-13T03:41:36Z</time>
+<extensions>
+<kashmir3d:speed>0.03</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645922" lon="141.047460">
+<ele>748.927338</ele>
+<time>2025-10-13T03:41:54Z</time>
+<extensions>
+<kashmir3d:speed>0.15</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645903" lon="141.047327">
+<ele>753.548831</ele>
+<time>2025-10-13T03:42:26Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645934" lon="141.047208">
+<ele>757.776410</ele>
+<time>2025-10-13T03:42:45Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645924" lon="141.047084">
+<ele>761.178222</ele>
+<time>2025-10-13T03:43:13Z</time>
+<extensions>
+<kashmir3d:speed>0.24</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645944" lon="141.046964">
+<ele>764.934121</ele>
+<time>2025-10-13T03:43:39Z</time>
+<extensions>
+<kashmir3d:speed>0.12</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646033" lon="141.046927">
+<ele>776.250213</ele>
+<time>2025-10-13T03:46:02Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646118" lon="141.046876">
+<ele>777.706661</ele>
+<time>2025-10-13T03:46:38Z</time>
+<extensions>
+<kashmir3d:speed>0.55</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646090" lon="141.046752">
+<ele>776.134376</ele>
+<time>2025-10-13T03:47:02Z</time>
+<extensions>
+<kashmir3d:speed>0.21</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646082" lon="141.046636">
+<ele>780.250484</ele>
+<time>2025-10-13T03:47:30Z</time>
+<extensions>
+<kashmir3d:speed>0.63</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646114" lon="141.046525">
+<ele>783.107224</ele>
+<time>2025-10-13T03:48:12Z</time>
+<extensions>
+<kashmir3d:speed>0.35</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646180" lon="141.046438">
+<ele>793.225832</ele>
+<time>2025-10-13T03:50:23Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646172" lon="141.046321">
+<ele>795.571033</ele>
+<time>2025-10-13T03:50:48Z</time>
+<extensions>
+<kashmir3d:speed>0.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646262" lon="141.046328">
+<ele>807.353909</ele>
+<time>2025-10-13T03:51:45Z</time>
+<extensions>
+<kashmir3d:speed>0.03</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646348" lon="141.046283">
+<ele>812.404468</ele>
+<time>2025-10-13T03:53:18Z</time>
+<extensions>
+<kashmir3d:speed>0.06</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646407" lon="141.046181">
+<ele>817.724407</ele>
+<time>2025-10-13T03:54:53Z</time>
+<extensions>
+<kashmir3d:speed>0.30</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646507" lon="141.046185">
+<ele>828.767188</ele>
+<time>2025-10-13T03:55:23Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646605" lon="141.046228">
+<ele>829.856702</ele>
+<time>2025-10-13T03:55:47Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646674" lon="141.046311">
+<ele>828.951563</ele>
+<time>2025-10-13T03:56:05Z</time>
+<extensions>
+<kashmir3d:speed>0.82</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646734" lon="141.046404">
+<ele>834.878095</ele>
+<time>2025-10-13T03:56:26Z</time>
+<extensions>
+<kashmir3d:speed>0.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646820" lon="141.046483">
+<ele>838.098421</ele>
+<time>2025-10-13T03:56:46Z</time>
+<extensions>
+<kashmir3d:speed>0.80</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646918" lon="141.046456">
+<ele>839.647841</ele>
+<time>2025-10-13T03:57:03Z</time>
+<extensions>
+<kashmir3d:speed>0.72</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647008" lon="141.046459">
+<ele>841.953773</ele>
+<time>2025-10-13T03:57:23Z</time>
+<extensions>
+<kashmir3d:speed>0.81</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647101" lon="141.046483">
+<ele>848.080405</ele>
+<time>2025-10-13T03:57:58Z</time>
+<extensions>
+<kashmir3d:speed>0.22</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647197" lon="141.046502">
+<ele>850.806932</ele>
+<time>2025-10-13T03:58:20Z</time>
+<extensions>
+<kashmir3d:speed>0.38</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647295" lon="141.046503">
+<ele>852.764309</ele>
+<time>2025-10-13T03:58:44Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647389" lon="141.046527">
+<ele>854.644583</ele>
+<time>2025-10-13T03:59:09Z</time>
+<extensions>
+<kashmir3d:speed>0.72</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647477" lon="141.046572">
+<ele>859.134161</ele>
+<time>2025-10-13T03:59:30Z</time>
+<extensions>
+<kashmir3d:speed>0.71</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647577" lon="141.046585">
+<ele>861.267864</ele>
+<time>2025-10-13T03:59:51Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647673" lon="141.046638">
+<ele>861.029547</ele>
+<time>2025-10-13T04:00:06Z</time>
+<extensions>
+<kashmir3d:speed>0.80</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647745" lon="141.046716">
+<ele>860.979810</ele>
+<time>2025-10-13T04:00:22Z</time>
+<extensions>
+<kashmir3d:speed>0.54</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647816" lon="141.046802">
+<ele>863.185439</ele>
+<time>2025-10-13T04:00:34Z</time>
+<extensions>
+<kashmir3d:speed>1.25</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647897" lon="141.046862">
+<ele>863.490318</ele>
+<time>2025-10-13T04:00:48Z</time>
+<extensions>
+<kashmir3d:speed>0.83</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647992" lon="141.046865">
+<ele>864.274109</ele>
+<time>2025-10-13T04:01:02Z</time>
+<extensions>
+<kashmir3d:speed>0.92</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.648088" lon="141.046820">
+<ele>866.527958</ele>
+<time>2025-10-13T04:01:17Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.648171" lon="141.046757">
+<ele>866.226478</ele>
+<time>2025-10-13T04:02:14Z</time>
+<extensions>
+<kashmir3d:speed>0.51</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.648261" lon="141.046773">
+<ele>867.446203</ele>
+<time>2025-10-13T04:03:14Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.648166" lon="141.046740">
+<ele>867.057290</ele>
+<time>2025-10-13T04:25:51Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.648102" lon="141.046825">
+<ele>865.232402</ele>
+<time>2025-10-13T04:31:49Z</time>
+<extensions>
+<kashmir3d:speed>0.15</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.648007" lon="141.046838">
+<ele>863.110511</ele>
+<time>2025-10-13T04:32:08Z</time>
+<extensions>
+<kashmir3d:speed>0.11</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647911" lon="141.046808">
+<ele>860.606303</ele>
+<time>2025-10-13T04:32:22Z</time>
+<extensions>
+<kashmir3d:speed>0.13</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647839" lon="141.046734">
+<ele>861.291422</ele>
+<time>2025-10-13T04:32:37Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647779" lon="141.046637">
+<ele>857.517607</ele>
+<time>2025-10-13T04:32:52Z</time>
+<extensions>
+<kashmir3d:speed>0.60</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647689" lon="141.046591">
+<ele>855.319044</ele>
+<time>2025-10-13T04:33:03Z</time>
+<extensions>
+<kashmir3d:speed>1.05</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647599" lon="141.046531">
+<ele>855.839346</ele>
+<time>2025-10-13T04:33:14Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647509" lon="141.046542">
+<ele>852.899287</ele>
+<time>2025-10-13T04:33:25Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647408" lon="141.046516">
+<ele>851.967473</ele>
+<time>2025-10-13T04:33:40Z</time>
+<extensions>
+<kashmir3d:speed>0.71</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647314" lon="141.046494">
+<ele>848.031300</ele>
+<time>2025-10-13T04:33:56Z</time>
+<extensions>
+<kashmir3d:speed>0.71</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647233" lon="141.046433">
+<ele>845.150910</ele>
+<time>2025-10-13T04:34:15Z</time>
+<extensions>
+<kashmir3d:speed>0.54</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647134" lon="141.046454">
+<ele>842.733700</ele>
+<time>2025-10-13T04:34:36Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.647039" lon="141.046447">
+<ele>834.797023</ele>
+<time>2025-10-13T04:34:53Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646947" lon="141.046453">
+<ele>834.646072</ele>
+<time>2025-10-13T04:35:09Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646846" lon="141.046440">
+<ele>833.356068</ele>
+<time>2025-10-13T04:35:22Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646776" lon="141.046347">
+<ele>826.995608</ele>
+<time>2025-10-13T04:35:43Z</time>
+<extensions>
+<kashmir3d:speed>0.45</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646703" lon="141.046261">
+<ele>824.078994</ele>
+<time>2025-10-13T04:36:21Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646615" lon="141.046224">
+<ele>822.846164</ele>
+<time>2025-10-13T04:36:44Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646531" lon="141.046173">
+<ele>821.543408</ele>
+<time>2025-10-13T04:36:59Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646440" lon="141.046170">
+<ele>817.215925</ele>
+<time>2025-10-13T04:37:40Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646364" lon="141.046255">
+<ele>813.656726</ele>
+<time>2025-10-13T04:38:13Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646275" lon="141.046298">
+<ele>804.933246</ele>
+<time>2025-10-13T04:38:54Z</time>
+<extensions>
+<kashmir3d:speed>0.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646178" lon="141.046290">
+<ele>801.478583</ele>
+<time>2025-10-13T04:39:25Z</time>
+<extensions>
+<kashmir3d:speed>0.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646157" lon="141.046414">
+<ele>791.454666</ele>
+<time>2025-10-13T04:39:57Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646106" lon="141.046520">
+<ele>783.885218</ele>
+<time>2025-10-13T04:40:51Z</time>
+<extensions>
+<kashmir3d:speed>0.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646091" lon="141.046652">
+<ele>780.060910</ele>
+<time>2025-10-13T04:41:12Z</time>
+<extensions>
+<kashmir3d:speed>0.07</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646098" lon="141.046771">
+<ele>778.122347</ele>
+<time>2025-10-13T04:41:40Z</time>
+<extensions>
+<kashmir3d:speed>0.56</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.646085" lon="141.046892">
+<ele>773.812840</ele>
+<time>2025-10-13T04:42:07Z</time>
+<extensions>
+<kashmir3d:speed>0.19</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645986" lon="141.046863">
+<ele>764.027847</ele>
+<time>2025-10-13T04:42:50Z</time>
+<extensions>
+<kashmir3d:speed>0.35</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645934" lon="141.046971">
+<ele>761.265344</ele>
+<time>2025-10-13T04:43:17Z</time>
+<extensions>
+<kashmir3d:speed>0.32</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645901" lon="141.047090">
+<ele>759.600591</ele>
+<time>2025-10-13T04:43:44Z</time>
+<extensions>
+<kashmir3d:speed>0.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645906" lon="141.047214">
+<ele>754.651880</ele>
+<time>2025-10-13T04:44:02Z</time>
+<extensions>
+<kashmir3d:speed>0.23</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645900" lon="141.047331">
+<ele>753.136715</ele>
+<time>2025-10-13T04:44:19Z</time>
+<extensions>
+<kashmir3d:speed>0.45</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645906" lon="141.047453">
+<ele>750.605584</ele>
+<time>2025-10-13T04:44:38Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645892" lon="141.047571">
+<ele>744.408741</ele>
+<time>2025-10-13T04:45:02Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645862" lon="141.047681">
+<ele>746.078316</ele>
+<time>2025-10-13T04:45:22Z</time>
+<extensions>
+<kashmir3d:speed>0.15</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645805" lon="141.047783">
+<ele>744.459674</ele>
+<time>2025-10-13T04:45:44Z</time>
+<extensions>
+<kashmir3d:speed>0.02</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645730" lon="141.047883">
+<ele>742.400763</ele>
+<time>2025-10-13T04:46:10Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645650" lon="141.047945">
+<ele>737.094173</ele>
+<time>2025-10-13T04:46:30Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645567" lon="141.047992">
+<ele>735.409048</ele>
+<time>2025-10-13T04:46:44Z</time>
+<extensions>
+<kashmir3d:speed>0.88</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645499" lon="141.048071">
+<ele>733.175036</ele>
+<time>2025-10-13T04:47:12Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645435" lon="141.048169">
+<ele>737.962378</ele>
+<time>2025-10-13T04:47:32Z</time>
+<extensions>
+<kashmir3d:speed>0.94</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645401" lon="141.048281">
+<ele>731.902650</ele>
+<time>2025-10-13T04:47:53Z</time>
+<extensions>
+<kashmir3d:speed>0.77</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645335" lon="141.048377">
+<ele>738.973832</ele>
+<time>2025-10-13T04:48:11Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645293" lon="141.048494">
+<ele>733.835881</ele>
+<time>2025-10-13T04:48:33Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645264" lon="141.048624">
+<ele>735.953495</ele>
+<time>2025-10-13T04:50:49Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645266" lon="141.048748">
+<ele>736.100716</ele>
+<time>2025-10-13T04:51:03Z</time>
+<extensions>
+<kashmir3d:speed>1.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645215" lon="141.048854">
+<ele>736.976680</ele>
+<time>2025-10-13T04:51:14Z</time>
+<extensions>
+<kashmir3d:speed>1.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645160" lon="141.048957">
+<ele>740.554692</ele>
+<time>2025-10-13T04:51:32Z</time>
+<extensions>
+<kashmir3d:speed>0.79</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645091" lon="141.049033">
+<ele>742.354320</ele>
+<time>2025-10-13T04:51:48Z</time>
+<extensions>
+<kashmir3d:speed>1.05</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645075" lon="141.049154">
+<ele>745.154772</ele>
+<time>2025-10-13T04:52:03Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645054" lon="141.049277">
+<ele>744.707096</ele>
+<time>2025-10-13T04:52:17Z</time>
+<extensions>
+<kashmir3d:speed>0.59</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645079" lon="141.049391">
+<ele>743.717734</ele>
+<time>2025-10-13T04:52:31Z</time>
+<extensions>
+<kashmir3d:speed>0.75</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645072" lon="141.049509">
+<ele>737.382898</ele>
+<time>2025-10-13T04:52:48Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645071" lon="141.049644">
+<ele>734.565024</ele>
+<time>2025-10-13T04:53:08Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.645031" lon="141.049756">
+<ele>732.450732</ele>
+<time>2025-10-13T04:53:26Z</time>
+<extensions>
+<kashmir3d:speed>0.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644969" lon="141.049864">
+<ele>726.609484</ele>
+<time>2025-10-13T04:53:49Z</time>
+<extensions>
+<kashmir3d:speed>0.31</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644918" lon="141.049968">
+<ele>722.622937</ele>
+<time>2025-10-13T04:54:04Z</time>
+<extensions>
+<kashmir3d:speed>0.51</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644882" lon="141.050080">
+<ele>719.929448</ele>
+<time>2025-10-13T04:54:19Z</time>
+<extensions>
+<kashmir3d:speed>0.33</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644791" lon="141.050116">
+<ele>719.777175</ele>
+<time>2025-10-13T04:55:05Z</time>
+<extensions>
+<kashmir3d:speed>0.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644707" lon="141.050068">
+<ele>717.645488</ele>
+<time>2025-10-13T04:55:25Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644608" lon="141.050107">
+<ele>716.587919</ele>
+<time>2025-10-13T04:55:50Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644521" lon="141.050050">
+<ele>715.593958</ele>
+<time>2025-10-13T04:56:08Z</time>
+<extensions>
+<kashmir3d:speed>0.51</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644432" lon="141.050017">
+<ele>713.393760</ele>
+<time>2025-10-13T04:56:29Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644340" lon="141.049993">
+<ele>708.960679</ele>
+<time>2025-10-13T04:56:54Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644270" lon="141.049908">
+<ele>705.046509</ele>
+<time>2025-10-13T05:00:12Z</time>
+<extensions>
+<kashmir3d:speed>0.62</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644175" lon="141.049873">
+<ele>699.430205</ele>
+<time>2025-10-13T05:00:31Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.644083" lon="141.049849">
+<ele>693.121999</ele>
+<time>2025-10-13T05:01:39Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643984" lon="141.049848">
+<ele>687.889854</ele>
+<time>2025-10-13T05:02:24Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643892" lon="141.049809">
+<ele>683.545532</ele>
+<time>2025-10-13T05:03:12Z</time>
+<extensions>
+<kashmir3d:speed>0.30</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643800" lon="141.049760">
+<ele>681.507435</ele>
+<time>2025-10-13T05:03:31Z</time>
+<extensions>
+<kashmir3d:speed>0.14</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643709" lon="141.049772">
+<ele>678.617534</ele>
+<time>2025-10-13T05:04:20Z</time>
+<extensions>
+<kashmir3d:speed>0.13</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643615" lon="141.049767">
+<ele>673.645404</ele>
+<time>2025-10-13T05:06:17Z</time>
+<extensions>
+<kashmir3d:speed>0.08</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643524" lon="141.049798">
+<ele>673.893302</ele>
+<time>2025-10-13T05:06:44Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643443" lon="141.049723">
+<ele>673.998461</ele>
+<time>2025-10-13T05:07:47Z</time>
+<extensions>
+<kashmir3d:speed>0.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643370" lon="141.049629">
+<ele>670.005472</ele>
+<time>2025-10-13T05:09:28Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643292" lon="141.049571">
+<ele>667.064607</ele>
+<time>2025-10-13T05:09:51Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643215" lon="141.049501">
+<ele>661.572993</ele>
+<time>2025-10-13T05:11:31Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643170" lon="141.049393">
+<ele>656.253058</ele>
+<time>2025-10-13T05:14:22Z</time>
+<extensions>
+<kashmir3d:speed>0.05</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643122" lon="141.049294">
+<ele>653.433178</ele>
+<time>2025-10-13T05:14:50Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643115" lon="141.049161">
+<ele>648.381947</ele>
+<time>2025-10-13T05:15:13Z</time>
+<extensions>
+<kashmir3d:speed>0.93</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643159" lon="141.049058">
+<ele>650.560127</ele>
+<time>2025-10-13T05:17:00Z</time>
+<extensions>
+<kashmir3d:speed>0.09</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643124" lon="141.048945">
+<ele>648.114598</ele>
+<time>2025-10-13T05:17:43Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.643074" lon="141.048843">
+<ele>648.996514</ele>
+<time>2025-10-13T05:20:33Z</time>
+<extensions>
+<kashmir3d:speed>0.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642988" lon="141.048785">
+<ele>644.166009</ele>
+<time>2025-10-13T05:22:06Z</time>
+<extensions>
+<kashmir3d:speed>0.84</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642898" lon="141.048749">
+<ele>639.954986</ele>
+<time>2025-10-13T05:22:39Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642861" lon="141.048640">
+<ele>637.505110</ele>
+<time>2025-10-13T05:23:01Z</time>
+<extensions>
+<kashmir3d:speed>0.79</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642805" lon="141.048546">
+<ele>634.216697</ele>
+<time>2025-10-13T05:23:36Z</time>
+<extensions>
+<kashmir3d:speed>0.59</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642730" lon="141.048460">
+<ele>631.126799</ele>
+<time>2025-10-13T05:23:57Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642641" lon="141.048401">
+<ele>630.678517</ele>
+<time>2025-10-13T05:24:22Z</time>
+<extensions>
+<kashmir3d:speed>0.64</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642546" lon="141.048368">
+<ele>628.118586</ele>
+<time>2025-10-13T05:24:35Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642443" lon="141.048352">
+<ele>629.041839</ele>
+<time>2025-10-13T05:24:54Z</time>
+<extensions>
+<kashmir3d:speed>0.82</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642348" lon="141.048312">
+<ele>626.646539</ele>
+<time>2025-10-13T05:25:19Z</time>
+<extensions>
+<kashmir3d:speed>0.65</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642275" lon="141.048228">
+<ele>626.658828</ele>
+<time>2025-10-13T05:26:14Z</time>
+<extensions>
+<kashmir3d:speed>0.18</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642204" lon="141.048141">
+<ele>617.447275</ele>
+<time>2025-10-13T05:26:45Z</time>
+<extensions>
+<kashmir3d:speed>0.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642109" lon="141.048126">
+<ele>619.946070</ele>
+<time>2025-10-13T05:27:01Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.642014" lon="141.048147">
+<ele>620.186987</ele>
+<time>2025-10-13T05:28:21Z</time>
+<extensions>
+<kashmir3d:speed>0.62</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641931" lon="141.048085">
+<ele>615.249032</ele>
+<time>2025-10-13T05:29:05Z</time>
+<extensions>
+<kashmir3d:speed>0.12</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641871" lon="141.047990">
+<ele>615.370671</ele>
+<time>2025-10-13T05:29:46Z</time>
+<extensions>
+<kashmir3d:speed>0.14</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641767" lon="141.047978">
+<ele>616.379370</ele>
+<time>2025-10-13T05:31:19Z</time>
+<extensions>
+<kashmir3d:speed>0.86</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641698" lon="141.047891">
+<ele>613.760791</ele>
+<time>2025-10-13T05:32:17Z</time>
+<extensions>
+<kashmir3d:speed>0.09</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641613" lon="141.047851">
+<ele>609.342533</ele>
+<time>2025-10-13T05:33:57Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641533" lon="141.047791">
+<ele>607.653671</ele>
+<time>2025-10-13T05:34:29Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641440" lon="141.047755">
+<ele>605.830597</ele>
+<time>2025-10-13T05:35:30Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641344" lon="141.047732">
+<ele>604.995023</ele>
+<time>2025-10-13T05:36:07Z</time>
+<extensions>
+<kashmir3d:speed>0.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641264" lon="141.047672">
+<ele>609.661940</ele>
+<time>2025-10-13T05:36:29Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641174" lon="141.047663">
+<ele>601.968837</ele>
+<time>2025-10-13T05:36:53Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.641078" lon="141.047646">
+<ele>604.715543</ele>
+<time>2025-10-13T05:39:32Z</time>
+<extensions>
+<kashmir3d:speed>0.45</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640983" lon="141.047604">
+<ele>598.698770</ele>
+<time>2025-10-13T05:39:52Z</time>
+<extensions>
+<kashmir3d:speed>1.25</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640900" lon="141.047551">
+<ele>596.766568</ele>
+<time>2025-10-13T05:40:11Z</time>
+<extensions>
+<kashmir3d:speed>0.86</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640810" lon="141.047512">
+<ele>593.416905</ele>
+<time>2025-10-13T05:40:31Z</time>
+<extensions>
+<kashmir3d:speed>0.52</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640767" lon="141.047403">
+<ele>588.366717</ele>
+<time>2025-10-13T05:40:53Z</time>
+<extensions>
+<kashmir3d:speed>0.54</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640668" lon="141.047379">
+<ele>585.944945</ele>
+<time>2025-10-13T05:41:09Z</time>
+<extensions>
+<kashmir3d:speed>1.20</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640588" lon="141.047321">
+<ele>583.860355</ele>
+<time>2025-10-13T05:41:31Z</time>
+<extensions>
+<kashmir3d:speed>0.69</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640493" lon="141.047297">
+<ele>583.391771</ele>
+<time>2025-10-13T05:41:43Z</time>
+<extensions>
+<kashmir3d:speed>0.86</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640400" lon="141.047255">
+<ele>581.655062</ele>
+<time>2025-10-13T05:41:58Z</time>
+<extensions>
+<kashmir3d:speed>0.78</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640339" lon="141.047167">
+<ele>577.594855</ele>
+<time>2025-10-13T05:42:17Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640260" lon="141.047104">
+<ele>575.932019</ele>
+<time>2025-10-13T05:42:37Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640200" lon="141.047010">
+<ele>572.447305</ele>
+<time>2025-10-13T05:43:14Z</time>
+<extensions>
+<kashmir3d:speed>0.92</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640153" lon="141.047109">
+<ele>576.800617</ele>
+<time>2025-10-13T05:43:33Z</time>
+<extensions>
+<kashmir3d:speed>0.97</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640171" lon="141.046985">
+<ele>575.171212</ele>
+<time>2025-10-13T05:45:07Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640160" lon="141.046869">
+<ele>570.659054</ele>
+<time>2025-10-13T05:46:45Z</time>
+<extensions>
+<kashmir3d:speed>0.03</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640096" lon="141.046781">
+<ele>570.113825</ele>
+<time>2025-10-13T05:47:07Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640006" lon="141.046762">
+<ele>569.198171</ele>
+<time>2025-10-13T05:47:35Z</time>
+<extensions>
+<kashmir3d:speed>1.33</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639919" lon="141.046720">
+<ele>567.141163</ele>
+<time>2025-10-13T05:48:13Z</time>
+<extensions>
+<kashmir3d:speed>0.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639846" lon="141.046651">
+<ele>568.372469</ele>
+<time>2025-10-13T05:48:38Z</time>
+<extensions>
+<kashmir3d:speed>0.49</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639804" lon="141.046541">
+<ele>565.023577</ele>
+<time>2025-10-13T05:49:00Z</time>
+<extensions>
+<kashmir3d:speed>0.57</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639730" lon="141.046469">
+<ele>564.955767</ele>
+<time>2025-10-13T05:49:26Z</time>
+<extensions>
+<kashmir3d:speed>0.54</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639638" lon="141.046445">
+<ele>562.433596</ele>
+<time>2025-10-13T05:49:52Z</time>
+<extensions>
+<kashmir3d:speed>0.20</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639557" lon="141.046380">
+<ele>560.071937</ele>
+<time>2025-10-13T05:50:18Z</time>
+<extensions>
+<kashmir3d:speed>1.00</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639525" lon="141.046267">
+<ele>563.434432</ele>
+<time>2025-10-13T05:51:53Z</time>
+<extensions>
+<kashmir3d:speed>0.15</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639499" lon="141.046149">
+<ele>563.370825</ele>
+<time>2025-10-13T05:52:10Z</time>
+<extensions>
+<kashmir3d:speed>0.25</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639443" lon="141.046041">
+<ele>562.577663</ele>
+<time>2025-10-13T05:55:44Z</time>
+<extensions>
+<kashmir3d:speed>0.72</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639469" lon="141.045921">
+<ele>562.509626</ele>
+<time>2025-10-13T05:55:57Z</time>
+<extensions>
+<kashmir3d:speed>0.94</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639427" lon="141.045809">
+<ele>567.671227</ele>
+<time>2025-10-13T05:56:28Z</time>
+<extensions>
+<kashmir3d:speed>0.22</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639393" lon="141.045693">
+<ele>566.715566</ele>
+<time>2025-10-13T05:57:49Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639365" lon="141.045571">
+<ele>556.468160</ele>
+<time>2025-10-13T05:58:41Z</time>
+<extensions>
+<kashmir3d:speed>0.79</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639324" lon="141.045466">
+<ele>557.816586</ele>
+<time>2025-10-13T05:59:15Z</time>
+<extensions>
+<kashmir3d:speed>0.65</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639272" lon="141.045356">
+<ele>555.570009</ele>
+<time>2025-10-13T05:59:34Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639361" lon="141.045310">
+<ele>573.570986</ele>
+<time>2025-10-13T06:03:34Z</time>
+<extensions>
+<kashmir3d:speed>0.82</kashmir3d:speed>
+<kashmir3d:accuracy>6</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639269" lon="141.045363">
+<ele>565.381469</ele>
+<time>2025-10-13T06:03:59Z</time>
+<extensions>
+<kashmir3d:speed>0.02</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639249" lon="141.045244">
+<ele>562.776211</ele>
+<time>2025-10-13T06:08:16Z</time>
+<extensions>
+<kashmir3d:speed>0.46</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639230" lon="141.045126">
+<ele>563.588125</ele>
+<time>2025-10-13T06:08:41Z</time>
+<extensions>
+<kashmir3d:speed>0.74</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639219" lon="141.045003">
+<ele>560.123747</ele>
+<time>2025-10-13T06:08:59Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639172" lon="141.044888">
+<ele>558.869371</ele>
+<time>2025-10-13T06:09:58Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639216" lon="141.044777">
+<ele>555.346371</ele>
+<time>2025-10-13T06:10:41Z</time>
+<extensions>
+<kashmir3d:speed>0.08</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639229" lon="141.044652">
+<ele>559.367914</ele>
+<time>2025-10-13T06:11:24Z</time>
+<extensions>
+<kashmir3d:speed>0.30</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639210" lon="141.044535">
+<ele>557.425421</ele>
+<time>2025-10-13T06:11:42Z</time>
+<extensions>
+<kashmir3d:speed>0.83</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639199" lon="141.044409">
+<ele>556.195972</ele>
+<time>2025-10-13T06:12:04Z</time>
+<extensions>
+<kashmir3d:speed>0.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639147" lon="141.044311">
+<ele>557.987218</ele>
+<time>2025-10-13T06:12:19Z</time>
+<extensions>
+<kashmir3d:speed>0.05</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639220" lon="141.044380">
+<ele>563.875155</ele>
+<time>2025-10-13T06:14:04Z</time>
+<extensions>
+<kashmir3d:speed>0.00</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639226" lon="141.044262">
+<ele>564.080717</ele>
+<time>2025-10-13T06:14:56Z</time>
+<extensions>
+<kashmir3d:speed>0.21</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639256" lon="141.044152">
+<ele>565.688928</ele>
+<time>2025-10-13T06:15:20Z</time>
+<extensions>
+<kashmir3d:speed>0.21</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639263" lon="141.044028">
+<ele>563.794504</ele>
+<time>2025-10-13T06:15:54Z</time>
+<extensions>
+<kashmir3d:speed>0.60</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639258" lon="141.043911">
+<ele>563.805166</ele>
+<time>2025-10-13T06:16:28Z</time>
+<extensions>
+<kashmir3d:speed>0.79</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639342" lon="141.043864">
+<ele>557.624294</ele>
+<time>2025-10-13T06:17:13Z</time>
+<extensions>
+<kashmir3d:speed>0.43</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639383" lon="141.043758">
+<ele>553.421052</ele>
+<time>2025-10-13T06:18:11Z</time>
+<extensions>
+<kashmir3d:speed>0.83</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639384" lon="141.043631">
+<ele>549.414708</ele>
+<time>2025-10-13T06:18:38Z</time>
+<extensions>
+<kashmir3d:speed>1.03</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639398" lon="141.043512">
+<ele>547.971497</ele>
+<time>2025-10-13T06:19:36Z</time>
+<extensions>
+<kashmir3d:speed>0.19</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639443" lon="141.043401">
+<ele>547.357069</ele>
+<time>2025-10-13T06:20:03Z</time>
+<extensions>
+<kashmir3d:speed>0.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639451" lon="141.043284">
+<ele>547.874079</ele>
+<time>2025-10-13T06:20:31Z</time>
+<extensions>
+<kashmir3d:speed>0.59</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639512" lon="141.043193">
+<ele>543.931269</ele>
+<time>2025-10-13T06:20:52Z</time>
+<extensions>
+<kashmir3d:speed>0.65</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639574" lon="141.043088">
+<ele>538.920485</ele>
+<time>2025-10-13T06:21:26Z</time>
+<extensions>
+<kashmir3d:speed>1.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639607" lon="141.042977">
+<ele>532.016029</ele>
+<time>2025-10-13T06:21:45Z</time>
+<extensions>
+<kashmir3d:speed>0.26</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639645" lon="141.042869">
+<ele>529.919587</ele>
+<time>2025-10-13T06:22:26Z</time>
+<extensions>
+<kashmir3d:speed>0.29</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639642" lon="141.042732">
+<ele>527.058109</ele>
+<time>2025-10-13T06:22:41Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639682" lon="141.042607">
+<ele>521.423976</ele>
+<time>2025-10-13T06:24:04Z</time>
+<extensions>
+<kashmir3d:speed>0.47</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639655" lon="141.042495">
+<ele>523.262235</ele>
+<time>2025-10-13T06:25:18Z</time>
+<extensions>
+<kashmir3d:speed>0.62</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639694" lon="141.042382">
+<ele>517.528619</ele>
+<time>2025-10-13T06:26:04Z</time>
+<extensions>
+<kashmir3d:speed>0.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639740" lon="141.042279">
+<ele>515.989115</ele>
+<time>2025-10-13T06:26:25Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639773" lon="141.042161">
+<ele>514.530817</ele>
+<time>2025-10-13T06:26:57Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639798" lon="141.042046">
+<ele>515.349857</ele>
+<time>2025-10-13T06:27:26Z</time>
+<extensions>
+<kashmir3d:speed>0.51</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639810" lon="141.041922">
+<ele>514.905815</ele>
+<time>2025-10-13T06:28:18Z</time>
+<extensions>
+<kashmir3d:speed>0.22</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639836" lon="141.041799">
+<ele>516.278943</ele>
+<time>2025-10-13T06:28:41Z</time>
+<extensions>
+<kashmir3d:speed>0.56</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639878" lon="141.041690">
+<ele>512.213215</ele>
+<time>2025-10-13T06:28:58Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639900" lon="141.041567">
+<ele>512.001960</ele>
+<time>2025-10-13T06:29:14Z</time>
+<extensions>
+<kashmir3d:speed>1.07</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639895" lon="141.041448">
+<ele>512.239486</ele>
+<time>2025-10-13T06:29:38Z</time>
+<extensions>
+<kashmir3d:speed>0.35</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639921" lon="141.041327">
+<ele>507.821991</ele>
+<time>2025-10-13T06:30:20Z</time>
+<extensions>
+<kashmir3d:speed>0.56</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639926" lon="141.041203">
+<ele>508.409504</ele>
+<time>2025-10-13T06:30:48Z</time>
+<extensions>
+<kashmir3d:speed>0.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639977" lon="141.041091">
+<ele>510.993677</ele>
+<time>2025-10-13T06:33:09Z</time>
+<extensions>
+<kashmir3d:speed>1.00</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640014" lon="141.040978">
+<ele>510.408286</ele>
+<time>2025-10-13T06:33:39Z</time>
+<extensions>
+<kashmir3d:speed>1.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640029" lon="141.040855">
+<ele>508.770715</ele>
+<time>2025-10-13T06:34:06Z</time>
+<extensions>
+<kashmir3d:speed>0.28</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640059" lon="141.040742">
+<ele>505.620980</ele>
+<time>2025-10-13T06:34:32Z</time>
+<extensions>
+<kashmir3d:speed>0.35</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640086" lon="141.040622">
+<ele>498.905044</ele>
+<time>2025-10-13T06:35:15Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640110" lon="141.040499">
+<ele>495.231670</ele>
+<time>2025-10-13T06:35:39Z</time>
+<extensions>
+<kashmir3d:speed>1.20</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640158" lon="141.040387">
+<ele>497.601422</ele>
+<time>2025-10-13T06:35:56Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640203" lon="141.040279">
+<ele>496.784845</ele>
+<time>2025-10-13T06:36:18Z</time>
+<extensions>
+<kashmir3d:speed>0.10</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640195" lon="141.040151">
+<ele>495.694232</ele>
+<time>2025-10-13T06:36:41Z</time>
+<extensions>
+<kashmir3d:speed>0.24</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640192" lon="141.040026">
+<ele>492.144775</ele>
+<time>2025-10-13T06:37:27Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640189" lon="141.039898">
+<ele>486.861422</ele>
+<time>2025-10-13T06:38:25Z</time>
+<extensions>
+<kashmir3d:speed>0.95</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640177" lon="141.039768">
+<ele>486.963556</ele>
+<time>2025-10-13T06:38:44Z</time>
+<extensions>
+<kashmir3d:speed>0.38</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640274" lon="141.039737">
+<ele>486.217115</ele>
+<time>2025-10-13T06:39:07Z</time>
+<extensions>
+<kashmir3d:speed>0.16</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640343" lon="141.039660">
+<ele>490.644209</ele>
+<time>2025-10-13T06:40:10Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640401" lon="141.039569">
+<ele>490.373520</ele>
+<time>2025-10-13T06:40:30Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640499" lon="141.039550">
+<ele>490.627117</ele>
+<time>2025-10-13T06:42:09Z</time>
+<extensions>
+<kashmir3d:speed>0.60</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640587" lon="141.039481">
+<ele>489.085366</ele>
+<time>2025-10-13T06:42:27Z</time>
+<extensions>
+<kashmir3d:speed>0.57</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640666" lon="141.039406">
+<ele>486.965156</ele>
+<time>2025-10-13T06:42:46Z</time>
+<extensions>
+<kashmir3d:speed>0.45</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640754" lon="141.039351">
+<ele>485.857395</ele>
+<time>2025-10-13T06:43:17Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640783" lon="141.039237">
+<ele>481.342087</ele>
+<time>2025-10-13T06:43:41Z</time>
+<extensions>
+<kashmir3d:speed>0.34</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640771" lon="141.039111">
+<ele>480.200340</ele>
+<time>2025-10-13T06:44:04Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640770" lon="141.038982">
+<ele>483.465714</ele>
+<time>2025-10-13T06:44:33Z</time>
+<extensions>
+<kashmir3d:speed>0.60</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640791" lon="141.038865">
+<ele>482.918634</ele>
+<time>2025-10-13T06:44:56Z</time>
+<extensions>
+<kashmir3d:speed>0.61</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640774" lon="141.038729">
+<ele>483.594923</ele>
+<time>2025-10-13T06:45:12Z</time>
+<extensions>
+<kashmir3d:speed>0.55</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640804" lon="141.038609">
+<ele>477.987613</ele>
+<time>2025-10-13T06:45:35Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640800" lon="141.038491">
+<ele>473.286368</ele>
+<time>2025-10-13T06:45:49Z</time>
+<extensions>
+<kashmir3d:speed>0.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640739" lon="141.038390">
+<ele>474.405224</ele>
+<time>2025-10-13T06:46:08Z</time>
+<extensions>
+<kashmir3d:speed>0.15</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640742" lon="141.038273">
+<ele>477.376169</ele>
+<time>2025-10-13T06:48:09Z</time>
+<extensions>
+<kashmir3d:speed>0.38</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640778" lon="141.038162">
+<ele>477.895567</ele>
+<time>2025-10-13T06:48:34Z</time>
+<extensions>
+<kashmir3d:speed>0.67</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640770" lon="141.038040">
+<ele>477.520461</ele>
+<time>2025-10-13T06:48:54Z</time>
+<extensions>
+<kashmir3d:speed>0.09</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640748" lon="141.037903">
+<ele>470.312660</ele>
+<time>2025-10-13T06:49:24Z</time>
+<extensions>
+<kashmir3d:speed>1.04</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640806" lon="141.037792">
+<ele>473.428256</ele>
+<time>2025-10-13T06:50:08Z</time>
+<extensions>
+<kashmir3d:speed>0.99</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640828" lon="141.037662">
+<ele>478.407663</ele>
+<time>2025-10-13T06:50:38Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640877" lon="141.037562">
+<ele>471.659867</ele>
+<time>2025-10-13T06:50:58Z</time>
+<extensions>
+<kashmir3d:speed>0.08</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640911" lon="141.037454">
+<ele>465.714086</ele>
+<time>2025-10-13T06:51:23Z</time>
+<extensions>
+<kashmir3d:speed>0.16</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640910" lon="141.037334">
+<ele>468.996410</ele>
+<time>2025-10-13T06:51:37Z</time>
+<extensions>
+<kashmir3d:speed>0.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640938" lon="141.037215">
+<ele>470.374201</ele>
+<time>2025-10-13T06:52:10Z</time>
+<extensions>
+<kashmir3d:speed>0.14</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640949" lon="141.037093">
+<ele>469.154358</ele>
+<time>2025-10-13T06:52:30Z</time>
+<extensions>
+<kashmir3d:speed>0.36</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640922" lon="141.036982">
+<ele>466.211786</ele>
+<time>2025-10-13T06:52:49Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640857" lon="141.036877">
+<ele>459.923375</ele>
+<time>2025-10-13T06:53:33Z</time>
+<extensions>
+<kashmir3d:speed>0.58</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640814" lon="141.036769">
+<ele>459.672887</ele>
+<time>2025-10-13T06:53:53Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640740" lon="141.036700">
+<ele>455.999586</ele>
+<time>2025-10-13T06:54:23Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640704" lon="141.036582">
+<ele>455.656454</ele>
+<time>2025-10-13T06:54:52Z</time>
+<extensions>
+<kashmir3d:speed>0.37</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640601" lon="141.036535">
+<ele>455.942210</ele>
+<time>2025-10-13T06:55:29Z</time>
+<extensions>
+<kashmir3d:speed>1.32</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640596" lon="141.036407">
+<ele>452.976304</ele>
+<time>2025-10-13T06:56:00Z</time>
+<extensions>
+<kashmir3d:speed>0.51</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640578" lon="141.036292">
+<ele>451.464708</ele>
+<time>2025-10-13T06:56:48Z</time>
+<extensions>
+<kashmir3d:speed>0.17</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640576" lon="141.036173">
+<ele>447.317175</ele>
+<time>2025-10-13T06:57:19Z</time>
+<extensions>
+<kashmir3d:speed>0.75</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640587" lon="141.036050">
+<ele>449.241250</ele>
+<time>2025-10-13T06:57:34Z</time>
+<extensions>
+<kashmir3d:speed>0.40</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640555" lon="141.036173">
+<ele>448.634557</ele>
+<time>2025-10-13T06:57:58Z</time>
+<extensions>
+<kashmir3d:speed>0.89</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640574" lon="141.036297">
+<ele>448.683671</ele>
+<time>2025-10-13T06:58:18Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640573" lon="141.036167">
+<ele>448.445077</ele>
+<time>2025-10-13T06:59:53Z</time>
+<extensions>
+<kashmir3d:speed>0.73</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640566" lon="141.036038">
+<ele>446.050390</ele>
+<time>2025-10-13T07:00:18Z</time>
+<extensions>
+<kashmir3d:speed>0.48</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640541" lon="141.035911">
+<ele>446.235476</ele>
+<time>2025-10-13T07:00:48Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640520" lon="141.035793">
+<ele>447.106111</ele>
+<time>2025-10-13T07:01:11Z</time>
+<extensions>
+<kashmir3d:speed>0.30</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640472" lon="141.035681">
+<ele>443.645472</ele>
+<time>2025-10-13T07:01:50Z</time>
+<extensions>
+<kashmir3d:speed>0.20</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640436" lon="141.035570">
+<ele>439.384381</ele>
+<time>2025-10-13T07:02:19Z</time>
+<extensions>
+<kashmir3d:speed>0.65</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640392" lon="141.035464">
+<ele>440.232100</ele>
+<time>2025-10-13T07:03:24Z</time>
+<extensions>
+<kashmir3d:speed>0.51</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640332" lon="141.035362">
+<ele>438.474071</ele>
+<time>2025-10-13T07:04:43Z</time>
+<extensions>
+<kashmir3d:speed>0.42</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640246" lon="141.035328">
+<ele>436.037286</ele>
+<time>2025-10-13T07:06:25Z</time>
+<extensions>
+<kashmir3d:speed>0.63</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640238" lon="141.035206">
+<ele>435.153103</ele>
+<time>2025-10-13T07:06:48Z</time>
+<extensions>
+<kashmir3d:speed>0.50</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640168" lon="141.035131">
+<ele>436.846793</ele>
+<time>2025-10-13T07:07:13Z</time>
+<extensions>
+<kashmir3d:speed>0.75</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640119" lon="141.035021">
+<ele>433.981670</ele>
+<time>2025-10-13T07:07:41Z</time>
+<extensions>
+<kashmir3d:speed>0.70</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640047" lon="141.034945">
+<ele>435.618691</ele>
+<time>2025-10-13T07:08:12Z</time>
+<extensions>
+<kashmir3d:speed>0.39</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.640027" lon="141.034829">
+<ele>432.181762</ele>
+<time>2025-10-13T07:08:42Z</time>
+<extensions>
+<kashmir3d:speed>0.66</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639944" lon="141.034741">
+<ele>428.986154</ele>
+<time>2025-10-13T07:09:05Z</time>
+<extensions>
+<kashmir3d:speed>0.82</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639868" lon="141.034664">
+<ele>428.337190</ele>
+<time>2025-10-13T07:09:21Z</time>
+<extensions>
+<kashmir3d:speed>0.78</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639858" lon="141.034547">
+<ele>426.856787</ele>
+<time>2025-10-13T07:09:36Z</time>
+<extensions>
+<kashmir3d:speed>0.53</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639794" lon="141.034442">
+<ele>428.400906</ele>
+<time>2025-10-13T07:09:50Z</time>
+<extensions>
+<kashmir3d:speed>0.75</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639738" lon="141.034340">
+<ele>425.373477</ele>
+<time>2025-10-13T07:13:42Z</time>
+<extensions>
+<kashmir3d:speed>0.81</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639691" lon="141.034235">
+<ele>426.155447</ele>
+<time>2025-10-13T07:14:01Z</time>
+<extensions>
+<kashmir3d:speed>0.64</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639634" lon="141.034140">
+<ele>425.376297</ele>
+<time>2025-10-13T07:14:18Z</time>
+<extensions>
+<kashmir3d:speed>0.68</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639570" lon="141.034031">
+<ele>426.586840</ele>
+<time>2025-10-13T07:14:35Z</time>
+<extensions>
+<kashmir3d:speed>1.00</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639542" lon="141.033915">
+<ele>427.130631</ele>
+<time>2025-10-13T07:14:49Z</time>
+<extensions>
+<kashmir3d:speed>0.76</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639531" lon="141.033797">
+<ele>427.775396</ele>
+<time>2025-10-13T07:14:59Z</time>
+<extensions>
+<kashmir3d:speed>1.01</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639473" lon="141.033695">
+<ele>428.984167</ele>
+<time>2025-10-13T07:15:11Z</time>
+<extensions>
+<kashmir3d:speed>0.95</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+<trkpt lat="39.639397" lon="141.033579">
+<ele>432.060954</ele>
+<time>2025-10-13T07:16:51Z</time>
+<extensions>
+<kashmir3d:speed>1.44</kashmir3d:speed>
+<kashmir3d:accuracy>4</kashmir3d:accuracy>
+</extensions>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>

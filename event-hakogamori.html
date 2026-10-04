@@ -71,6 +71,34 @@
       </div>
       <p class="pm-note" style="font-size:.84rem;color:var(--ink-soft)">※定員に達している場合があります。参加をご検討の方は、まずお電話でお問い合わせください。</p>
 
+      <h2>当日の写真集（2026年10月4日）</h2>
+      <div class="guide-note">
+        <p>今日はお疲れさまでした。ヤブ漕ぎはほとんどないと書きましたが、倒木の多さにはヤブ漕ぎに匹敵するほどの体力消耗を強いられましたね。割と簡単に行けるようなことを書いてその実、困難な沢歩きになったことをお詫びします。</p>
+        <p class="sign">川村</p>
+      </div>
+
+      <p>写真をクリックすると大きく表示されます。左上の丸をクリックして選んだ写真は、まとめてダウンロードできます。</p>
+
+      <div class="gallery-bar">
+        <span class="count"><b id="selCount">0</b> 枚を選択中</span>
+        <button class="btn btn-ghost btn-sm" id="selAll" type="button">すべて選択</button>
+        <button class="btn btn-ghost btn-sm" id="selNone" type="button">選択を解除</button>
+        <button class="btn btn-primary btn-sm" id="dlSel" type="button" disabled>選択した写真をダウンロード</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery"></div>
+
+      <p class="pm-note" style="font-size:.84rem;color:var(--ink-soft)">※ 複数枚をまとめてダウンロードするとき、ブラウザが「複数のファイルのダウンロードを許可しますか」と確認することがあります。許可すると選んだ枚数ぶん保存されます。</p>
+
+      <h2>GPSトラックデータ（GPX）</h2>
+      <div class="dl-card">
+        <div class="dl-body">
+          <h3>2025年10月13日の滝ノ沢〜箱ヶ森トラック</h3>
+          <p>本日ではなく、昨年同じルートを歩いたときの記録です。カシミール3D、スーパー地形、ヤマレコなどGPXを読み込めるアプリでご覧いただけます。</p>
+        </div>
+        <a class="btn btn-primary" href="data/hakogamori-20251013.gpx" download>GPXをダウンロード（112KB）</a>
+      </div>
+
       <h2>昨年歩いたルート</h2>
       <p>2025年10月13日に同じルートを歩いたときの記録です。沢沿いに高度を上げ、箱ヶ森の山頂へ。下山は登山道を使っています。</p>
       <div class="stat-grid">
@@ -129,6 +157,14 @@
 
 </main>
 
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="写真の拡大表示">
+  <button class="lb-prev" id="lbPrev" type="button" aria-label="前の写真">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext" type="button" aria-label="次の写真">›</button>
+  <button class="lb-close" id="lbClose" type="button" aria-label="閉じる">✕</button>
+  <p class="lb-caption"><span id="lbCount"></span>　<a id="lbDl" href="" download>この写真をダウンロード</a></p>
+</div>
+
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -169,6 +205,108 @@ menuToggle.addEventListener('click', function(){
   var open = navMain.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+/* ---- 写真ギャラリー ---- */
+var PHOTO_COUNT = 16;
+var PHOTO_DIR = 'img/event/hakogamori2026/';
+var gallery = document.getElementById('gallery');
+var selCount = document.getElementById('selCount');
+var dlSel = document.getElementById('dlSel');
+
+for (var i = 1; i <= PHOTO_COUNT; i++) {
+  var name = (i < 10 ? '0' : '') + i + '.jpg';
+  var fig = document.createElement('div');
+  fig.className = 'gphoto';
+  fig.dataset.file = name;
+  fig.innerHTML =
+    '<label class="pick" title="この写真を選ぶ">' +
+      '<input type="checkbox" aria-label="写真' + i + 'を選択">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4 10-10"/></svg>' +
+    '</label>' +
+    '<img src="' + PHOTO_DIR + 'thumb/' + name + '" alt="2026年10月4日 箱ヶ森ワークショップの写真' + i + '" loading="lazy">' +
+    '<span class="num">' + i + ' / ' + PHOTO_COUNT + '</span>';
+  gallery.appendChild(fig);
+}
+
+var tiles = Array.prototype.slice.call(gallery.querySelectorAll('.gphoto'));
+
+function refreshCount(){
+  var n = gallery.querySelectorAll('.gphoto.selected').length;
+  selCount.textContent = n;
+  dlSel.disabled = n === 0;
+  dlSel.textContent = n === 0 ? '選択した写真をダウンロード' : '選択した' + n + '枚をダウンロード';
+}
+
+tiles.forEach(function(tile, idx){
+  var box = tile.querySelector('input');
+  box.addEventListener('change', function(){
+    tile.classList.toggle('selected', box.checked);
+    refreshCount();
+  });
+  tile.querySelector('img').addEventListener('click', function(){ openLightbox(idx); });
+});
+
+document.getElementById('selAll').addEventListener('click', function(){
+  tiles.forEach(function(t){ t.querySelector('input').checked = true; t.classList.add('selected'); });
+  refreshCount();
+});
+document.getElementById('selNone').addEventListener('click', function(){
+  tiles.forEach(function(t){ t.querySelector('input').checked = false; t.classList.remove('selected'); });
+  refreshCount();
+});
+
+dlSel.addEventListener('click', function(){
+  var picked = tiles.filter(function(t){ return t.classList.contains('selected'); });
+  picked.forEach(function(t, k){
+    setTimeout(function(){
+      var a = document.createElement('a');
+      a.href = PHOTO_DIR + t.dataset.file;
+      a.download = 'hakogamori-20261004-' + t.dataset.file;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }, k * 400);
+  });
+});
+
+/* ---- ライトボックス ---- */
+var lightbox = document.getElementById('lightbox');
+var lbImg = document.getElementById('lbImg');
+var lbDl = document.getElementById('lbDl');
+var lbCount = document.getElementById('lbCount');
+var current = 0;
+
+function showPhoto(idx){
+  current = (idx + PHOTO_COUNT) % PHOTO_COUNT;
+  var file = tiles[current].dataset.file;
+  lbImg.src = PHOTO_DIR + file;
+  lbImg.alt = '2026年10月4日 箱ヶ森ワークショップの写真' + (current + 1);
+  lbDl.href = PHOTO_DIR + file;
+  lbDl.download = 'hakogamori-20261004-' + file;
+  lbCount.textContent = (current + 1) + ' / ' + PHOTO_COUNT;
+}
+function openLightbox(idx){
+  showPhoto(idx);
+  lightbox.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  lightbox.hidden = true;
+  document.body.style.overflow = '';
+}
+
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', function(){ showPhoto(current - 1); });
+document.getElementById('lbNext').addEventListener('click', function(){ showPhoto(current + 1); });
+lightbox.addEventListener('click', function(e){ if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', function(e){
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showPhoto(current - 1);
+  if (e.key === 'ArrowRight') showPhoto(current + 1);
+});
+
+refreshCount();
 </script>
 </body>
 </html>
