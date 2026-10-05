@@ -540,6 +540,10 @@ tbody tr:hover{background:color-mix(in srgb, var(--paper-2) 60%, transparent);}
 }
 @media (max-width:640px){.poster-banner .pb-cta{align-self:center;}}
 
+.poster-sublink{margin:-20px 0 32px;text-align:center;font-size:.9rem;font-weight:700;}
+.poster-sublink a{color:var(--forest-500);text-decoration:underline;text-underline-offset:3px;}
+.poster-sublink a:hover{color:var(--amber-600);}
+
 /* ============ Poster modal ============ */
 .poster-modal[hidden]{display:none;}
 .poster-modal{
