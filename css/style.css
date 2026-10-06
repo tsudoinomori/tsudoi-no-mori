@@ -512,6 +512,29 @@ tbody tr:hover{background:color-mix(in srgb, var(--paper-2) 60%, transparent);}
   .detail-table td{padding-bottom:12px;border-bottom:1px solid var(--line);}
 }
 
+/* ============ Timeline ============ */
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line);display:flex;flex-direction:column;gap:22px;}
+.timeline li{position:relative;}
+.timeline li::before{
+  content:"";position:absolute;left:-29px;top:7px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--amber-500);border:2px solid var(--paper);
+}
+.timeline .when{display:block;font-weight:800;color:var(--forest-700);font-size:.92rem;}
+.timeline .what{display:block;margin-top:2px;color:var(--ink);font-size:.92rem;}
+.timeline li.now::before{background:var(--ember-600);}
+
+/* ============ Glossary ============ */
+.glossary{
+  background:var(--paper-2);border-radius:18px;padding:22px 24px;
+}
+.glossary h3{font-size:1.02rem;color:var(--forest-900);margin-bottom:12px;}
+.glossary dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:.88rem;}
+@media (max-width:560px){.glossary dl{grid-template-columns:1fr;gap:2px;}}
+.glossary dt{font-weight:800;color:var(--forest-700);white-space:nowrap;}
+.glossary dd{margin:0;color:var(--ink-soft);}
+@media (max-width:560px){.glossary dd{margin-bottom:10px;}}
+
 /* ============ Poster banner ============ */
 .poster-banner{
   display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;
