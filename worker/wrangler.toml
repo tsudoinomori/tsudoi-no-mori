@@ -1,0 +1,9 @@
+name = "tsudoinomori-counter"
+main = "counter.js"
+compatibility_date = "2026-10-09"
+
+# KV名前空間。下の id は、次のコマンドで作成したときに表示される値に差し替えてください。
+#   npx wrangler kv namespace create COUNTER
+[[kv_namespaces]]
+binding = "COUNTER"
+id = "ここに作成したKV名前空間のIDを貼り付け"

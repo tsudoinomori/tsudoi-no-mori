@@ -274,15 +274,16 @@
     </div>
     <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
     <div class="update-list">
+      <div class="update-item"><time>2026.10.9</time><span>トップページに来訪者カウンターを設置</span></div>
       <div class="update-item"><time>2026.10.8</time><span>お知らせに10月〜11月のワークショップ3件を掲載（応募フォームへのリンクつき）。トップページの四季の写真を入れ替え</span></div>
       <div class="update-item"><time>2026.10.6</time><span>コラムを「森遊びの、その先へ」に改題し、記事「つどいの森は、なぜ平らなのか」を掲載。トップページのメイン写真を変更、スマホでの表示を改善</span></div>
       <div class="update-item"><time>2026.10.5</time><span>「熱水変質帯のナメ沢登りで行く箱ヶ森」の写真集とGPSログを追加、つどいの森感謝祭の会場配置図（案）を掲載</span></div>
       <div class="update-item"><time>2026.10.3</time><span>イベント情報に「熱水変質帯のナメ沢登りで行く箱ヶ森」を掲載（ルート図・3D動画つき）</span></div>
-      <div class="update-item"><time>2026.10.2</time><span>コラム「葉っぱの金継ぎ」掲載、公式インスタグラムへのリンク追加</span></div>
     </div>
     <details class="update-archive">
       <summary>過去の更新情報</summary>
       <div class="update-list">
+        <div class="update-item"><time>2026.10.2</time><span>コラム「葉っぱの金継ぎ」掲載、公式インスタグラムへのリンク追加</span></div>
         <div class="update-item"><time>2026.9.30</time><span>つどいの森感謝祭掲示</span></div>
         <div class="update-item"><time>2026.9.29</time><span>リニューアルサイト試験運用</span></div>
       </div>
@@ -372,6 +373,9 @@
     </div>
     <div class="footer-bottom">
       <span>Copyright (C) （公財）盛岡市都南自治振興公社 All rights reserved.</span>
+      <span class="visit-counter" id="visitCounter" hidden>
+        <span class="vc-label">来訪者数</span><span class="vc-num" id="visitCount">—</span>
+      </span>
     </div>
   </div>
 </footer>
@@ -383,6 +387,34 @@ menuToggle.addEventListener('click', function(){
   var open = navMain.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+/* 来訪者カウンター
+   COUNTER_API に Cloudflare Workers のアドレスを設定すると表示されます。
+   未設定のあいだ、カウンターは出ません。
+   同じ端末からの再訪は1日1回だけ数えます。 */
+var COUNTER_API = '';
+
+(function(){
+  if (!COUNTER_API) return;
+  var box = document.getElementById('visitCounter');
+  var out = document.getElementById('visitCount');
+  var today = new Date().toISOString().slice(0, 10);
+  var seen;
+  try { seen = localStorage.getItem('tsudoi-visit-date'); } catch (e) { seen = null; }
+  var path = (seen === today) ? '/count' : '/hit';
+
+  fetch(COUNTER_API.replace(/\/$/, '') + path)
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+    .then(function(data){
+      if (typeof data.count !== 'number') return;
+      out.textContent = data.count.toLocaleString('ja-JP');
+      box.hidden = false;
+      if (path === '/hit') {
+        try { localStorage.setItem('tsudoi-visit-date', today); } catch (e) {}
+      }
+    })
+    .catch(function(){ /* 取得できないときは何も表示しない */ });
+})();
 
 /* 掲載期限を過ぎたお知らせを取り下げる */
 (function(){
