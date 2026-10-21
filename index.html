@@ -108,16 +108,22 @@
       <span class="eyebrow"><span class="dot"></span>お知らせ</span>
       <h2>つどいの森からのお知らせ</h2>
     </div>
-    <button class="poster-banner" id="posterOpen" aria-haspopup="dialog">
-      <img src="img/event/kanshasai2026_thumb.jpg" alt="つどいの森感謝祭 令和8年10月18日(日) 10:00〜15:00 小雨決行のポスター" width="520" height="735">
-      <span class="pb-body">
-        <span class="pb-meta">10月18日(日) 10:00〜15:00・小雨決行</span>
-        <h3>つどいの森感謝祭を開催します</h3>
-        <p>体験コーナー、青空木工体験、クラフト体験、特設屋台コーナー、フリーマーケット、芝生広場のデイキャンプサイト開放。秋の味覚「津志田芋の芋の子汁」も販売します。</p>
-        <span class="pb-cta">ポスターと詳細を見る →</span>
-      </span>
-    </button>
-    <p class="poster-sublink"><a href="img/event/kanshasai2026-haichi.jpg" target="_blank" rel="noopener">つどいの森感謝祭 会場配置図（案）を見る →</a></p>
+    <div class="thanks-panel">
+      <img src="img/event/kanshasai2026_thumb.jpg" alt="つどいの森感謝祭 令和8年10月18日(日)のポスター" width="520" height="735" loading="lazy">
+      <div>
+        <p class="tp-meta">2026年10月18日(日) 開催</p>
+        <h3>つどいの森感謝祭 ありがとうございました</h3>
+        <p>お天気にも恵まれ、たくさんの方にお越しいただきました。体験コーナーや青空木工体験、クラフト体験、フリーマーケット、特設屋台コーナー。園内のあちこちで、にぎやかな一日になりました。</p>
+        <p class="tp-count"><span class="t">数えられたかぎりで</span><span class="n">387</span><span class="t">名のご来場</span></p>
+        <p>足を運んでくださったみなさま、出店・ご協力いただいたみなさま、ほんとうにありがとうございました。おかげさまで盛況のうちに終えることができました。</p>
+        <p>これからもつどいの森は、森で遊び、学び、憩う場所であり続けたいと思います。どうぞ変わらぬおつきあいを、よろしくお願いいたします。</p>
+        <p class="tp-closing">ありがとうございました。</p>
+        <p class="tp-links">
+          <a href="img/event/kanshasai2026.jpg" target="_blank" rel="noopener">当日のポスターを見る →</a>
+          <a href="img/event/kanshasai2026-haichi.jpg" target="_blank" rel="noopener">会場配置図を見る →</a>
+        </p>
+      </div>
+    </div>
     <div class="news-list">
       <!-- data-until の日付を過ぎると、この項目は自動的に表示されなくなります -->
       <div class="news-item" data-until="2026-10-17">
@@ -274,15 +280,16 @@
     </div>
     <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
     <div class="update-list">
+      <div class="update-item"><time>2026.10.21</time><span>つどいの森感謝祭のお礼を掲載（来場387名）</span></div>
       <div class="update-item"><time>2026.10.9</time><span>トップページに来訪者カウンターを設置</span></div>
       <div class="update-item"><time>2026.10.8</time><span>お知らせに10月〜11月のワークショップ3件を掲載（応募フォームへのリンクつき）。トップページの四季の写真を入れ替え</span></div>
       <div class="update-item"><time>2026.10.6</time><span>コラムを「森遊びの、その先へ」に改題し、記事「つどいの森は、なぜ平らなのか」を掲載。トップページのメイン写真を変更、スマホでの表示を改善</span></div>
       <div class="update-item"><time>2026.10.5</time><span>「熱水変質帯のナメ沢登りで行く箱ヶ森」の写真集とGPSログを追加、つどいの森感謝祭の会場配置図（案）を掲載</span></div>
-      <div class="update-item"><time>2026.10.3</time><span>イベント情報に「熱水変質帯のナメ沢登りで行く箱ヶ森」を掲載（ルート図・3D動画つき）</span></div>
     </div>
     <details class="update-archive">
       <summary>過去の更新情報</summary>
       <div class="update-list">
+        <div class="update-item"><time>2026.10.3</time><span>イベント情報に「熱水変質帯のナメ沢登りで行く箱ヶ森」を掲載（ルート図・3D動画つき）</span></div>
         <div class="update-item"><time>2026.10.2</time><span>コラム「葉っぱの金継ぎ」掲載、公式インスタグラムへのリンク追加</span></div>
         <div class="update-item"><time>2026.9.30</time><span>つどいの森感謝祭掲示</span></div>
         <div class="update-item"><time>2026.9.29</time><span>リニューアルサイト試験運用</span></div>
@@ -293,56 +300,6 @@
 
 </main>
 
-<div class="poster-modal" id="posterModal" hidden role="dialog" aria-modal="true" aria-labelledby="posterModalTitle">
-  <div class="pm-panel">
-    <button class="pm-close" id="posterClose" aria-label="閉じる">✕</button>
-    <div class="pm-figure">
-      <img src="img/event/kanshasai2026.jpg" alt="つどいの森感謝祭 令和8年10月18日(日) 10:00〜15:00 小雨決行のポスター" width="1061" height="1500" loading="lazy">
-    </div>
-    <div class="pm-caption">
-      <h3 id="posterModalTitle">つどいの森感謝祭</h3>
-      <p>実りの秋本番、盛岡市内ではいろいろなイベントが開催されています。<br>
-      都南つどいの森では10月18日(日)「つどいの森感謝祭」を開催します。<br>
-      つどいの森園内のひろーい敷地を利用して、ワークショップや青空木工体験、クラフト体験のほか、特設屋台コーナーでは、秋の味覚「津志田芋の芋の子汁」を販売いたします。<br>
-      また、フリーマーケットも開催しまーす。</p>
-      <p class="pm-note">※出店料無料（お1人2区画までOK）まだ若干空きがありますので、出店者希望の方はご連絡ください✨</p>
-
-      <p class="pm-label">【日時】</p>
-      <p>10月18日(日) 10:00〜15:00（小雨決行）</p>
-
-      <p class="pm-label">【場所】</p>
-      <p>都南つどいの森園内（つどいの森こもれびの宿、レストハウス跡地）<br>
-      <a href="img/event/kanshasai2026-haichi.jpg" target="_blank" rel="noopener">会場配置図（案）を見る →</a></p>
-
-      <p class="pm-label">【内容】</p>
-      <ul>
-        <li>🔸体験コーナー
-          <ul>
-            <li>①森を愉しむワークショップ</li>
-            <li>・「薪割り」10:00〜12:00</li>
-            <li>・「ブーメランと弓矢とパチンコづくり」13:00〜15:00</li>
-            <li>②青空木工体験</li>
-            <li>・「森のちいさなりんご箱」11:00〜12:00／13:30〜14:30</li>
-            <li>③クラフト体験</li>
-            <li>・「クマ鈴を作ろう」10:00〜12:00／13:00〜15:00</li>
-            <li>・「松ぼっくりアート」10:00〜12:00／13:00〜15:00</li>
-          </ul>
-        </li>
-        <li>🔸フリーマーケット　30区画</li>
-        <li>🔸特設屋台コーナー　焼き鳥、芋の子汁、おにぎり</li>
-        <li>🔸芝生広場でのデイキャンプサイト開放<br>→区画なしのフリーサイトです（20区画）🏕️</li>
-      </ul>
-
-      <p class="pm-label">【イベントの参加申し込み】</p>
-      <p>当日、会場内のそれぞれのコーナーで受付いたします🙋‍♀️</p>
-
-      <p class="pm-label">【問い合わせ】</p>
-      <p>都南つどいの森 <a href="tel:0196370877">019-637-0877</a></p>
-
-      <p class="pm-signoff">みんなで自然を思いっきり楽しもう!!<br>つどいの森で待ってまーす(^^)/</p>
-    </div>
-  </div>
-</div>
 
 <footer>
   <div class="wrap">
@@ -427,29 +384,6 @@ var COUNTER_API = '';
   });
 })();
 
-var posterOpen = document.getElementById('posterOpen');
-var posterModal = document.getElementById('posterModal');
-var posterClose = document.getElementById('posterClose');
-
-function showPoster(){
-  posterModal.hidden = false;
-  document.body.style.overflow = 'hidden';
-  posterClose.focus();
-}
-function hidePoster(){
-  posterModal.hidden = true;
-  document.body.style.overflow = '';
-  posterOpen.focus();
-}
-
-posterOpen.addEventListener('click', showPoster);
-posterClose.addEventListener('click', hidePoster);
-posterModal.addEventListener('click', function(e){
-  if (e.target === posterModal) hidePoster();
-});
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape' && !posterModal.hidden) hidePoster();
-});
 </script>
 </body>
 </html>

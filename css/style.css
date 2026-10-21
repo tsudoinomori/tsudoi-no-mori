@@ -561,6 +561,28 @@ tbody tr:hover{background:color-mix(in srgb, var(--paper-2) 60%, transparent);}
 }
 @media (max-width:640px){.poster-banner .pb-cta{align-self:center;}}
 
+/* 感謝祭のお礼 */
+.thanks-panel{
+  display:grid;grid-template-columns:180px 1fr;gap:26px;align-items:start;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:22px;
+  padding:26px;margin-bottom:32px;box-shadow:var(--shadow);
+}
+@media (max-width:640px){.thanks-panel{grid-template-columns:1fr;justify-items:center;text-align:center;}}
+.thanks-panel img{width:100%;border-radius:12px;border:1px solid var(--line);}
+.thanks-panel .tp-meta{font-size:.84rem;font-weight:700;color:var(--ink-soft);}
+.thanks-panel h3{font-size:1.3rem;color:var(--forest-900);margin-top:6px;}
+.thanks-panel p{margin-top:12px;font-size:.92rem;color:var(--ink);}
+.thanks-panel .tp-count{
+  display:inline-flex;align-items:baseline;gap:8px;margin-top:16px;
+  background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 20px;
+}
+.thanks-panel .tp-count .n{font-size:1.5rem;font-weight:800;color:var(--ember-600);font-variant-numeric:tabular-nums;}
+.thanks-panel .tp-count .t{font-size:.84rem;font-weight:700;color:var(--ink-soft);}
+.thanks-panel .tp-closing{margin-top:16px;font-weight:800;color:var(--forest-700);}
+.thanks-panel .tp-links{margin-top:14px;display:flex;gap:16px;flex-wrap:wrap;font-size:.84rem;}
+@media (max-width:640px){.thanks-panel .tp-links{justify-content:center;}}
+.thanks-panel .tp-links a{color:var(--forest-500);font-weight:700;}
+
 .poster-sublink{margin:-20px 0 32px;text-align:center;font-size:.9rem;font-weight:700;}
 .poster-sublink a{color:var(--forest-500);text-decoration:underline;text-underline-offset:3px;}
 .poster-sublink a:hover{color:var(--amber-600);}
