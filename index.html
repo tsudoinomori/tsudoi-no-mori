@@ -56,7 +56,7 @@
 <main>
 
 <div class="hero">
-  <div class="hero-inner">
+  <div class="hero-inner hero-pano">
     <div class="hero-copy">
       <span class="eyebrow on-dark"><span class="dot"></span>MORIOKA TSUDOI NO MORI PARK</span>
       <h1>森ではじまる、<br>家族のものがたり。</h1>
@@ -67,9 +67,12 @@
       </div>
       <span class="season-badge"><svg style="width:14px;height:14px"><use href="#i-tree"/></svg>キャンプ場の営業期間は4月〜11月です</span>
     </div>
-    <div class="hero-photo">
-      <img src="img/top/kinoko-kids.jpg" alt="採ったキノコを並べて見せてくれる子どもたち" width="1400" height="1050">
-    </div>
+    <figure class="hero-figure">
+      <a class="hero-photo" href="img/top/hero-wagasankai.jpg" target="_blank" rel="noopener" aria-label="和賀山塊のパノラマ写真を原寸で開く">
+        <img src="img/top/hero-wagasankai.jpg" alt="畑台牧野から眺めた和賀山塊の雪をまとった稜線。コケ平1336m、和賀岳1440m、高下岳1322m、根菅岳1341m、大荒沢岳1313m、沢尻岳1260m、羽後朝日岳1376m、モッコ岳1277mの山名と標高が書き込まれている。" width="2000" height="786">
+      </a>
+      <figcaption>この山並みの写真は畑台牧野から眺めた和賀山塊、その核心部、羽後朝日岳を眺められる場所はなかなかありません。10/31の大人のあかばやし探検隊<a href="#ws-sugakura">「志波三山地域の最高峰須賀倉山に登る」</a>ではこの眺望箇所を通ります。<span class="zoom-hint">写真をクリック（タップ）すると原寸で開きます。</span></figcaption>
+    </figure>
   </div>
 
   <div class="wrap">
@@ -144,7 +147,7 @@
           お申し込みは <a href="tel:0196370877">019-637-0877</a> へお電話いただくか、<a href="https://forms.gle/7mSEvge1kHrjp4mb6" target="_blank" rel="noopener">応募フォーム</a>からどうぞ。</p>
         </div>
       </div>
-      <div class="news-item" data-until="2026-10-31">
+      <div class="news-item" id="ws-sugakura" data-until="2026-10-31">
         <time>2026.10</time>
         <span class="news-tag">ワークショップ</span>
         <div class="body">
@@ -321,7 +324,7 @@
     </div>
     <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
     <div class="update-list">
-      <div class="update-item"><time>2026.10.22</time><span>コラム「川が、川を奪う」を掲載（河川争奪のアニメーション・現場の断面図・平面図・鳥瞰図つき）。感謝祭のお礼にイラストを追加。トップページ施設紹介を「キャンプから様々な野外アクティビティまで」に改題して写真を6枚に入れ替え、各写真から料金表へリンク。四季の楽しみ方の4枚から「森遊びの取説」（山菜・流しそうめん・イグルー）とバウムクーヘンの動画へリンク</span></div>
+      <div class="update-item"><time>2026.10.22</time><span>コラム「川が、川を奪う」を掲載（河川争奪のアニメーション・断面図・鳥瞰図つき）。感謝祭のお礼にイラストを追加。トップページのメイン写真を和賀山塊の眺望（畑台牧野）に変更し、10月31日のワークショップを案内。施設紹介を「キャンプから様々な野外アクティビティまで」に改題して写真を6枚に入れ替え、各写真から料金表へリンク。四季の楽しみ方の4枚から「森遊びの取説」（山菜・流しそうめん・イグルー）とバウムクーヘンの動画へリンク</span></div>
       <div class="update-item"><time>2026.10.21</time><span>つどいの森感謝祭のお礼を掲載（来場387名）。10月25日のあかばやし探検隊「サバイバルクッキング」の申し込みフォームを掲載</span></div>
       <div class="update-item"><time>2026.10.9</time><span>トップページに来訪者カウンターを設置</span></div>
       <div class="update-item"><time>2026.10.8</time><span>お知らせに10月〜11月のワークショップ3件を掲載（応募フォームへのリンクつき）。トップページの四季の写真を入れ替え</span></div>
@@ -423,6 +426,12 @@ var COUNTER_API = '';
     var parts = item.getAttribute('data-until').split('-');
     var until = new Date(+parts[0], +parts[1] - 1, +parts[2]);
     if (today > until) item.remove();
+  });
+
+  /* 取り下げたお知らせを指す本文中のリンクは、イベント情報ページに向け替える */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    if (id && !document.getElementById(id)) a.setAttribute('href', 'event.html');
   });
 })();
 
