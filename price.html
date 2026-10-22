@@ -68,7 +68,7 @@
   <div class="wrap">
     <div class="price-accordion">
 
-      <details open>
+      <details id="price-stay" open>
         <summary>宿泊施設<svg class="chevron"><use href="#i-chevron"/></svg></summary>
         <div class="panel">
           <div class="photo-grid" style="margin-bottom:18px">
@@ -117,7 +117,7 @@
         </div>
       </details>
 
-      <details>
+      <details id="price-bbq">
         <summary>バーベキューハウス<svg class="chevron"><use href="#i-chevron"/></svg></summary>
         <div class="panel">
           <div class="photo-card wide" style="margin-bottom:18px;max-width:420px">
@@ -166,7 +166,7 @@
         </div>
       </details>
 
-      <details>
+      <details id="price-sports">
         <summary>釣り堀・球技施設・芝生広場<svg class="chevron"><use href="#i-chevron"/></svg></summary>
         <div class="panel">
           <div class="table-wrap">
@@ -276,6 +276,21 @@ menuToggle.addEventListener('click', function(){
   var open = navMain.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+// トップページの施設写真などから #price-xxx 付きで来たとき、
+// 該当のアコーディオンを開いてその位置まで移動する。
+(function(){
+  function openTarget(){
+    var id = location.hash.replace('#', '');
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el || el.tagName !== 'DETAILS') return;
+    el.open = true;
+    el.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', openTarget);
+  openTarget();
+})();
 </script>
 </body>
 </html>

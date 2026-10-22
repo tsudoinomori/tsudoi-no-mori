@@ -695,3 +695,23 @@ footer a:hover{color:var(--amber-500);}
 
 :focus-visible{outline:2.5px solid var(--amber-500);outline-offset:2px;}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto !important;}}
+
+/* 施設写真から料金表へのリンク（トップページ） */
+.photo-grid.facility-links .photo-card{display:block;color:inherit;text-decoration:none;}
+.photo-grid.facility-links .cap{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-weight:700;color:var(--ink);
+}
+.cap-tag{
+  flex:none;font-size:.72rem;font-weight:700;line-height:1.6;
+  padding:2px 10px;border-radius:999px;white-space:nowrap;
+  border:1px solid var(--amber-500);background:#fff;color:var(--amber-600);
+}
+.cap-tag.free,.cap-tag.paid{border-color:var(--line);background:var(--paper-2);color:var(--ink-soft);}
+a.photo-card{transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease;}
+a.photo-card:hover,a.photo-card:focus-visible{
+  transform:translateY(-3px);border-color:var(--amber-500);
+  box-shadow:0 14px 30px -12px rgba(30,54,38,.45);
+}
+a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
+.price-accordion details{scroll-margin-top:96px;}
