@@ -726,10 +726,11 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 .sheet-figure figcaption{margin-top:12px;font-size:.84rem;color:var(--ink-soft);text-align:center;}
 
 /* ============ トップのパノラマ写真つきヒーロー ============ */
-.hero-inner.hero-pano{grid-template-columns:1fr;gap:30px;align-items:start;padding-bottom:118px;}
-.hero-pano .hero-copy .lead{max-width:62ch;}
+.hero-inner.hero-pano{grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-bottom:118px;}
+@media (max-width:820px){.hero-inner.hero-pano{grid-template-columns:1fr;gap:30px;}}
 /* パノラマは本文の幅（1032px）を越えて、画面幅いっぱい近くまで広げる */
 .hero-figure{
+  grid-column:1 / -1;
   --pano-w:min(1560px, calc(100vw - 40px));
   width:var(--pano-w);
   margin:0 0 0 calc(50% - var(--pano-w) / 2);
