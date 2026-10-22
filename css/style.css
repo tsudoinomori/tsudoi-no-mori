@@ -588,10 +588,14 @@ tbody tr:hover{background:color-mix(in srgb, var(--paper-2) 60%, transparent);}
 
 /* 感謝祭のお礼 */
 .thanks-panel{
+  display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:30px;align-items:start;
   background:var(--paper-2);border:1px solid var(--line);border-radius:22px;
   padding:28px 30px;margin-bottom:32px;box-shadow:var(--shadow);
 }
-.thanks-panel > div{max-width:62ch;}
+@media (max-width:760px){.thanks-panel{grid-template-columns:1fr;gap:22px;}}
+.thanks-panel figure{margin:0;}
+.thanks-panel figure img{width:100%;border-radius:14px;border:1px solid var(--line);display:block;}
+.thanks-panel figure figcaption{margin-top:8px;font-size:.78rem;color:var(--ink-soft);text-align:center;}
 .thanks-panel .tp-meta{font-size:.84rem;font-weight:700;color:var(--ink-soft);}
 .thanks-panel h3{font-size:1.3rem;color:var(--forest-900);margin-top:6px;}
 .thanks-panel p{margin-top:12px;font-size:.92rem;color:var(--ink);}
