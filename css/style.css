@@ -699,7 +699,7 @@ footer a:hover{color:var(--amber-500);}
 /* 施設写真から料金表へのリンク（トップページ） */
 .photo-grid.facility-links .photo-card{display:block;color:inherit;text-decoration:none;}
 .photo-grid.facility-links .cap{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 10px;
   font-weight:700;color:var(--ink);
 }
 .cap-tag{
@@ -715,3 +715,12 @@ a.photo-card:hover,a.photo-card:focus-visible{
 }
 a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 .price-accordion details{scroll-margin-top:96px;}
+
+/* ============ 「森遊びの取説」シートの閲覧ページ ============ */
+.sheet-figure{margin:0 auto;max-width:1180px;}
+.sheet-figure img{
+  width:100%;height:auto;display:block;
+  border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);
+}
+.sheet-figure a{display:block;}
+.sheet-figure figcaption{margin-top:12px;font-size:.84rem;color:var(--ink-soft);text-align:center;}
