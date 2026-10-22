@@ -726,14 +726,19 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 .sheet-figure figcaption{margin-top:12px;font-size:.84rem;color:var(--ink-soft);text-align:center;}
 
 /* ============ トップのパノラマ写真つきヒーロー ============ */
-.hero-inner.hero-pano{grid-template-columns:1fr;gap:30px;align-items:start;padding-bottom:78px;}
+.hero-inner.hero-pano{grid-template-columns:1fr;gap:30px;align-items:start;padding-bottom:118px;}
 .hero-pano .hero-copy .lead{max-width:62ch;}
-.hero-figure{margin:0;}
+/* パノラマは本文の幅（1032px）を越えて、画面幅いっぱい近くまで広げる */
+.hero-figure{
+  --pano-w:min(1560px, calc(100vw - 40px));
+  width:var(--pano-w);
+  margin:0 0 0 calc(50% - var(--pano-w) / 2);
+}
 .hero-figure .hero-photo{display:block;}
 .hero-figure .hero-photo img{height:auto;}
 .hero-figure figcaption{
-  margin-top:14px;max-width:80ch;
-  font-size:.88rem;line-height:1.9;
+  margin-top:14px;
+  font-size:.9rem;line-height:1.9;
   color:color-mix(in srgb, var(--paper) 80%, transparent);
 }
 .hero-figure figcaption a{color:var(--amber-500);font-weight:700;}
