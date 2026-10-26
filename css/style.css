@@ -749,3 +749,34 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
   color:color-mix(in srgb, var(--paper) 58%, transparent);
 }
 .news-item{scroll-margin-top:96px;}
+
+/* ============ 葉の形のカタログ（コラム） ============ */
+.leaf-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  max-width:1100px;margin:0 auto;
+}
+@media (max-width:900px){.leaf-grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:620px){.leaf-grid{grid-template-columns:repeat(2,1fr);gap:12px;}}
+.leaf{
+  margin:0;background:var(--paper);border:1px solid var(--line);
+  border-radius:16px;padding:12px 10px 14px;text-align:center;box-shadow:var(--shadow);
+}
+.leaf svg{width:100%;height:200px;display:block;}
+@media (max-width:620px){.leaf svg{height:150px;}}
+.leaf .bl{fill:#E8F1DF;stroke:var(--forest-500);stroke-width:1.6;stroke-linejoin:round;}
+.leaf .vn{fill:none;stroke:var(--leaf-400);stroke-width:0.9;}
+.leaf .mr{fill:none;stroke:var(--forest-500);stroke-width:1.3;stroke-linecap:round;}
+.leaf figcaption b{display:block;font-size:.92rem;color:var(--forest-900);}
+.leaf figcaption span{
+  display:block;margin-top:4px;font-size:.74rem;line-height:1.65;color:var(--ink-soft);
+}
+
+/* 59種の一覧 */
+.article .sp-list{
+  columns:3;column-gap:24px;padding-left:1.6em;font-size:.9rem;
+  display:block;
+}
+@media (max-width:620px){.article .sp-list{columns:2;column-gap:16px;font-size:.86rem;}}
+.article .sp-list li{break-inside:avoid;margin-top:0;padding-left:2px;}
+.article .sp-list li b{color:var(--forest-700);}
+.article .steps em{font-style:normal;font-weight:700;color:var(--forest-700);}
