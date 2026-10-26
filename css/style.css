@@ -788,3 +788,7 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 .tag-card-more:hover{background:var(--paper-3);}
 .tag-card-more h3{margin-top:4px;}
 .column-card .meta{flex-wrap:wrap;gap:4px 10px;}
+.tag-card .card-subtitle{
+  margin-top:-6px;font-size:.78rem;font-weight:700;
+  color:var(--amber-600);letter-spacing:.01em;
+}
