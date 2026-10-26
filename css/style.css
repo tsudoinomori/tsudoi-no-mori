@@ -21,6 +21,8 @@
   --font-jp:"Hiragino Maru Gothic ProN","BIZ UDGothic","M PLUS Rounded 1c","Yu Gothic Medium","Yu Gothic","Meiryo",sans-serif;
 }
 *{box-sizing:border-box;}
+/* hidden 属性は、display を指定した要素でも必ず効かせる */
+[hidden]{display:none !important;}
 html{scroll-behavior:smooth;}
 body{
   margin:0;
@@ -780,3 +782,9 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 .article .sp-list li{break-inside:avoid;margin-top:0;padding-left:2px;}
 .article .sp-list li b{color:var(--forest-700);}
 .article .steps em{font-style:normal;font-weight:700;color:var(--forest-700);}
+
+/* ============ コラム一覧への誘導タイル ============ */
+.tag-card-more{background:var(--paper-2);justify-content:center;}
+.tag-card-more:hover{background:var(--paper-3);}
+.tag-card-more h3{margin-top:4px;}
+.column-card .meta{flex-wrap:wrap;gap:4px 10px;}
