@@ -78,18 +78,18 @@
         <div class="body">
           <div class="tagrow"><span class="chip">樹木と森</span></div>
           <h4>ブナは、標高350メートルで現れる</h4>
-          <p>南昌山を250mから848mまで。歩きながら書きとめた広葉樹59種の並び順には、森が4回入れ替わる順序がそのまま刻まれていました。</p>
-          <div class="meta"><span>南昌山59種 その1</span><span>記事を読む →</span></div>
+          <p>南昌山を250mから848mまで。歩きながら書きとめた広葉樹60種の並び順には、森が4回入れ替わる順序がそのまま刻まれていました。</p>
+          <div class="meta"><span>南昌山60種 その1</span><span>記事を読む →</span></div>
         </div>
       </a>
 
-      <a class="column-card" data-cat="tree" href="column-nansho-2.html" style="text-decoration:none">
+      <a class="column-card" data-cat="tree" data-from="2026-10-27" href="column-nansho-2.html" style="text-decoration:none">
         <div class="thumb"><img src="img/column/nansho2-thumb.jpg" alt="つる性の枝に並んで咲くマタタビの白い花" loading="lazy"></div>
         <div class="body">
           <div class="tagrow"><span class="chip">樹木と森</span></div>
           <h4>葉っぱ4つの質問で、森を読む</h4>
           <p>単葉か複葉か、対生か互生か、全縁か鋸歯か、葉脈はどう走るか。4つ聞くだけで、はじめての葉でも置き場所が決まります。12種の葉の形つき。</p>
-          <div class="meta"><span>南昌山59種 その2</span><span>記事を読む →</span></div>
+          <div class="meta"><span>南昌山60種 その2</span><span>記事を読む →</span></div>
         </div>
       </a>
 
@@ -330,6 +330,23 @@ chips.forEach(function(chip){
     });
   });
 });
-</script>
+
+/* 掲載期間の管理
+   data-until="YYYY-MM-DD" … その日を過ぎたら取り下げる
+   data-from ="YYYY-MM-DD" … その日が来るまで出さない */
+(function(){
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+  function toDate(s){
+    var p = s.split('-');
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+  document.querySelectorAll('[data-until]').forEach(function(el){
+    if (today > toDate(el.getAttribute('data-until'))) el.remove();
+  });
+  document.querySelectorAll('[data-from]').forEach(function(el){
+    if (today < toDate(el.getAttribute('data-from'))) el.remove();
+  });
+})();</script>
 </body>
 </html>
