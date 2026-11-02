@@ -775,3 +775,5 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
   margin-top:-6px;font-size:.78rem;font-weight:700;
   color:var(--amber-600);letter-spacing:.01em;
 }
+
+.article .compare td:first-child{white-space:nowrap;color:var(--forest-700);}
