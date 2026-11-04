@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<script>if (window.self !== window.top) document.documentElement.classList.add('embed');</script>
+<title>安久登沢の河川争奪 | 動く模式図</title>
+<style>
+/* 平面図（計算で描く段彩陰影図）と縦断図・横断図2本を左に、段階の説明と再生操作を右に置く。狭い画面では操作を先頭にする。 */
+:root{
+  --bg:#FBF6EA; --panel:#ffffff; --ink:#2A2418; --muted:#5B4E3C; --line:#DFCFA0; --hover:#F2E9D3;
+  --accent:#2C4B34; --accent-soft:#E4EEDD;
+  --water:#2F72B8; --sed:#8A5A1E; --fan:#E8C682; --granite:#D98C8C; --erode:#C1552B;
+  --aku:#E7A83A; --koa:#3E8E52; --min:#C2557A;
+  --font:"Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --mono:ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 var(--font);padding:16px}
+.wrap{max-width:1240px;margin:0 auto}
+header{margin-bottom:12px}
+h1{font-size:clamp(20px,3vw,26px);line-height:1.3;margin:0 0 2px}
+.sub{margin:0;color:var(--muted);font-size:13.5px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.main,.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+@media (min-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr) 310px;align-items:start}
+  .side{position:sticky;top:16px}
+}
+/* 狭い画面では、操作 → 平面図 → 説明 → 断面図 → 凡例 の順に並べかえる */
+@media (max-width:979px){
+  .main,.side{display:contents}
+  .bar{order:1} .plan-panel{order:2} .desc-panel{order:3} .secs{order:4} .legend-panel{order:5}
+  .bar{position:sticky;top:0;z-index:2;padding:8px 10px}
+  .bar #stageTitle{font-size:14.5px;margin:0}
+  .bar .row{display:flex;align-items:center;justify-content:space-between;gap:6px 12px;flex-wrap:wrap}
+}
+.embed body{padding:8px}
+.embed header{display:none}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.panel h2{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--muted);margin:0 0 8px;display:flex;justify-content:space-between;gap:2px 10px;flex-wrap:wrap}
+.panel h2 span{font-weight:400;letter-spacing:0}
+.secs{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+@media (min-width:1280px){.secs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.secs .wide{grid-column:1/-1}}
+svg{display:block;width:100%;height:auto}
+
+.plan-box{position:relative;aspect-ratio:1000/780;border-radius:8px;overflow:hidden;background:#E6DDBE}
+.plan-box canvas,.plan-box svg{position:absolute;inset:0;width:100%;height:100%}
+.badge{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.92);border-radius:8px;padding:3px 10px;font-size:13px;font-weight:700;color:var(--accent);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.loading{position:absolute;inset:0;display:grid;place-items:center;font-size:14px;color:var(--muted);background:#E6DDBE}
+
+.stages{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+@media (max-width:979px){.stages{display:grid;grid-template-columns:1fr 1fr}}
+.stages button{all:unset;box-sizing:border-box;width:100%;display:flex;gap:10px;align-items:center;padding:7px 10px;border-radius:8px;cursor:pointer;color:var(--muted);font-size:14px;line-height:1.4}
+.stages button:hover{background:var(--hover)}
+.stages button[aria-current="step"]{color:var(--ink);background:var(--accent-soft);font-weight:700}
+.stages button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stages .n{font:500 12px/1 var(--mono);flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor}
+#stageTitle{font-size:16px;font-weight:700;margin:0 0 10px;line-height:1.5}
+#desc{margin:0 0 12px;font-size:14px;min-height:11em}
+@media (max-width:979px){#desc{min-height:0}}
+.ctrl{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{font:500 14px var(--font);color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.btn:hover{background:var(--hover)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700;min-width:6.5em}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0;padding:0;list-style:none;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:20px;height:0;border-top:4px solid var(--water);vertical-align:middle;margin-right:5px;border-radius:2px}
+.legend i.old{border-top:3px dashed var(--water)}
+.legend i.sd{border-top:4px dotted var(--sed)}
+.legend i.bx{height:11px;border:none;vertical-align:-1px}
+.legend i.fn{background:var(--fan)}
+.legend i.gr{background:#F0D2D2;outline:1px solid #C27C7C}
+.legend i.bs{height:11px;border:2px dashed #8B6A3A;background:transparent;vertical-align:-1px}
+.legend i.sc{border-top:2px dashed #3a3a3a}
+.note{margin:12px 0 0;font-size:12px;color:var(--muted);line-height:1.7}
+
+/* 段階ごとに出し入れする書き込み */
+[data-st]{opacity:0;transition:opacity .7s}
+[data-st].on{opacity:1}
+
+.flow{fill:none;stroke:#fff;stroke-width:1.8;stroke-dasharray:1.5 11;stroke-linecap:round;animation:flow 1.1s linear infinite}
+.flow.sm{stroke-width:.9;stroke-dasharray:1 16;animation-duration:3.2s}
+.sed{fill:none;stroke:var(--sed);stroke-width:5;stroke-dasharray:.1 15;stroke-linecap:round;animation:flow2 1.5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-12.5}}
+@keyframes flow2{to{stroke-dashoffset:-15.1}}
+@keyframes ring{0%{r:10;opacity:.95}100%{r:34;opacity:0}}
+.ring{animation:ring 1.3s ease-out infinite}
+@keyframes bob{0%,100%{transform:translateY(6px)}50%{transform:translateY(-6px)}}
+.bob{animation:bob 1.8s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.flow,.sed,.ring,.bob{animation:none}}
+
+.lbl{font:700 23px var(--font);fill:#1b1410;paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+.lbl.sm{font-size:19px;font-weight:500}
+.lbl.pt{fill:var(--erode)}
+.co{font:700 19px var(--font);fill:#1b1410;paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+.co.r{fill:var(--erode)}
+.co.b{fill:#1f4f86}
+.t{font:500 11.5px var(--mono);fill:var(--muted)}
+.tl{font:700 12.5px var(--font);fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.tl.sm{font-size:11.5px;font-weight:500}
+.tl.pt{fill:var(--erode)}
+.tl.r{fill:var(--erode)}
+.tl.b{fill:#1f4f86}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>安久登沢の河川争奪</h1>
+    <p class="sub">小荒沢の谷を削っていた安久登沢が、東へ押された南本内川に奪われ、首を切られた谷が残るまでを6つの段階で追う模式アニメーション</p>
+  </header>
+
+  <div class="layout">
+    <div class="main">
+      <section class="panel plan-panel" aria-label="平面図">
+        <h2>平面図 <span>段彩陰影で描いた模式の地形（北が上）。1・2は横断図①②の位置</span></h2>
+        <div class="plan-box">
+          <canvas id="relief" width="500" height="390" aria-hidden="true"></canvas>
+          <svg id="plan" viewBox="0 20 1000 780" role="img" aria-label="安久登沢、小荒沢、南本内川、水無沢の流路と地形が、段階ごとに変わる平面図">
+            <defs>
+              <pattern id="pGr" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect width="20" height="20" fill="#D98C8C" fill-opacity=".30"/>
+                <path d="M10 5v10M5 10h10" stroke="#9E4848" stroke-width="2"/>
+              </pattern>
+              <marker id="mR" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C1552B"/></marker>
+              <marker id="mK" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2A2418"/></marker>
+              <marker id="mG" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9E4848"/></marker>
+            </defs>
+
+            <!-- 流域 -->
+            <g data-st="1">
+              <path id="basinOld" fill="#E7A83A" fill-opacity=".16" stroke="#9C6512" stroke-width="3" stroke-dasharray="11 7" stroke-linejoin="round"/>
+              <text class="co" x="588" y="606" text-anchor="middle" fill="#7a4d0c">古安久登沢の</text><text class="co" x="588" y="630" text-anchor="middle" fill="#7a4d0c">流域</text>
+              <text class="lbl sm" x="588" y="654" text-anchor="middle" font-size="16">（さらに南へ続く）</text>
+            </g>
+            <g data-st="5">
+              <path id="basinCap" fill="#C2557A" fill-opacity=".16" stroke="#8E2F52" stroke-width="3" stroke-dasharray="11 7" stroke-linejoin="round"/>
+              <path id="basinKoa" fill="#3E8E52" fill-opacity=".22" stroke="#24603A" stroke-width="3" stroke-dasharray="11 7" stroke-linejoin="round"/>
+              <text class="co" x="588" y="606" text-anchor="middle" fill="#8E2F52">南本内川に</text><text class="co" x="588" y="630" text-anchor="middle" fill="#8E2F52">奪われた流域</text>
+              <text class="lbl sm" x="588" y="654" text-anchor="middle" font-size="16">（さらに南へ続く）</text>
+              <text class="co" x="655" y="182" text-anchor="middle" fill="#24603A" transform="rotate(-21 655 182)">小荒沢に残された流域</text>
+            </g>
+
+            <!-- 花崗岩 -->
+            <g id="granite" stroke="#B26464" stroke-width="2" fill="url(#pGr)" stroke-linejoin="round">
+              <path d="M38 382 92 360 150 370 175 408 152 448 100 458 56 442Z"/>
+              <path d="M96 548 150 530 205 544 218 586 178 612 122 604Z"/>
+              <path d="M192 372 236 362 262 392 250 424 206 430Z"/>
+            </g>
+
+            <!-- 横断線 -->
+            <g stroke="#2A2418" stroke-width="2" stroke-dasharray="12 7" fill="none" opacity=".5">
+              <path d="M60 432H760"/>
+              <path d="M476 179 620 371"/>
+            </g>
+            <g font-family="var(--font)" font-size="17" font-weight="700" text-anchor="middle">
+              <circle cx="60" cy="432" r="13" fill="#2A2418"/><text x="60" y="438" fill="#fff">1</text>
+              <circle cx="760" cy="432" r="13" fill="#2A2418"/><text x="760" y="438" fill="#fff">1</text>
+              <circle cx="476" cy="179" r="13" fill="#2A2418"/><text x="476" y="185" fill="#fff">2</text>
+              <circle cx="620" cy="371" r="13" fill="#2A2418"/><text x="620" y="377" fill="#fff">2</text>
+            </g>
+
+            <!-- 高速道路 -->
+            <g data-st="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M150 167 302 224" stroke="#2E6B3A" stroke-width="9"/>
+              <path d="M150 167 302 224" stroke="#B9E3C0" stroke-width="3"/>
+              <path d="M302 224 512 302" stroke="#2E6B3A" stroke-width="5" stroke-dasharray="10 9"/>
+              <path id="road" d="M512 302C540 284 570 262 600 248S660 222 712 201 790 170 822 156" stroke="#2E6B3A" stroke-width="9"/>
+              <path d="M512 302C540 284 570 262 600 248S660 222 712 201 790 170 822 156" stroke="#B9E3C0" stroke-width="3"/>
+              <path d="M822 156 905 124" stroke="#2E6B3A" stroke-width="5" stroke-dasharray="10 9"/>
+              <text class="lbl sm" x="590" y="226" text-anchor="middle" transform="rotate(-25 590 226)">秋田自動車道</text>
+              <text class="lbl sm" x="412" y="252" text-anchor="middle" transform="rotate(20 412 252)" font-size="16">峠山トンネル</text>
+            </g>
+
+            <!-- 川 -->
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <g id="tribs" stroke="var(--water)" stroke-width="2.2" opacity=".85"></g>
+              <path id="waga" stroke="var(--water)" stroke-width="11"/>
+              <path id="minami" stroke="var(--water)" stroke-width="7.5"/>
+              <path id="mizu" stroke="var(--water)" stroke-width="4"/>
+              <path id="aku" stroke="var(--water)" stroke-width="6"/>
+              <path id="koaBig" stroke="var(--water)" stroke-width="6"/>
+              <path id="koaOld" stroke="var(--water)" stroke-width="3.5" stroke-dasharray="9 8"/>
+              <path id="koaSmall" stroke="var(--water)" stroke-width="3"/>
+              <path class="flow" id="fWaga"/>
+              <path class="flow" id="fMinami"/>
+              <path class="flow" id="fMizu"/>
+              <path class="flow" id="fAku"/>
+              <path class="flow" id="fKoaBig"/>
+              <path class="flow sm" id="fKoaSmall"/>
+              <path class="sed" id="sedMizu" data-st="2 3"/>
+            </g>
+
+            <!-- 段階ごとの印 -->
+            <g data-st="2 3">
+              <g class="bob" fill="none" stroke="#9E4848" stroke-width="6" marker-end="url(#mG)">
+                <path d="M100 440V398"/><path d="M160 590V548"/><path d="M226 416V376"/>
+              </g>
+            </g>
+            <g data-st="3" id="pushG">
+              <path id="pushArrow" fill="none" stroke="var(--erode)" stroke-width="6" stroke-linecap="round" marker-end="url(#mR)"/>
+              <path id="erodeTicks" stroke="var(--erode)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+            <g data-st="4">
+              <circle class="ring" cx="440" cy="432" r="10" fill="none" stroke="#fff" stroke-width="5"/>
+              <circle cx="440" cy="432" r="17" fill="none" stroke="#1f4f86" stroke-width="3"/>
+            </g>
+            <g id="knickG">
+              <path d="M-14 0H14" stroke="var(--erode)" stroke-width="7" stroke-linecap="round" transform="rotate(-20)"/>
+            </g>
+
+            <!-- 川と地点の名前 -->
+            <text class="lbl" x="300" y="700" text-anchor="middle" transform="rotate(-68 300 700)">南本内川</text>
+            <text class="lbl sm" x="48" y="566" transform="rotate(-16 48 566)">水無沢</text>
+            <g data-st="1 2 3"><text class="lbl" x="556" y="760" text-anchor="middle" transform="rotate(-76 556 760)">古安久登沢</text></g>
+            <g data-st="4 5 6"><text class="lbl" x="556" y="760" text-anchor="middle" transform="rotate(-76 556 760)">安久登沢</text></g>
+            <g data-st="1 2 3"><text class="lbl sm" x="728" y="238" text-anchor="middle" transform="rotate(-21 728 238)">（いまの小荒沢の谷）</text></g>
+            <g data-st="4 5 6"><text class="lbl" x="738" y="236" text-anchor="middle" transform="rotate(-21 738 236)">小荒沢</text></g>
+            <g data-st="1 2 3 4 5"><text class="lbl sm" x="420" y="74" text-anchor="middle">和賀川</text></g>
+            <g data-st="6"><text class="lbl sm" x="430" y="76" text-anchor="middle">錦秋湖（湯田ダムのダム湖）</text></g>
+
+            <g id="pts"></g>
+
+            <!-- 吹き出し -->
+            <g data-st="1">
+              <text class="co" x="636" y="318">上流の水をすべて集めて、</text>
+              <text class="co" x="636" y="342">谷を広く、深く削る</text>
+              <path d="M650 298 604 258" stroke="#2A2418" stroke-width="2" fill="none" marker-end="url(#mK)"/>
+            </g>
+            <g data-st="2">
+              <text class="co" x="22" y="318" fill="#8a3434">新第三紀の花崗岩の山が</text>
+              <text class="co" x="22" y="342" fill="#8a3434">盛り上がり、崩れて土砂を出す</text>
+              <text class="co" x="250" y="560">水無沢の扇状地</text>
+            </g>
+            <g data-st="3">
+              <text class="co r" id="pushText" x="0" y="0" text-anchor="end">扇状地に押されて、東へ</text>
+              <text class="co r" id="ridgeText" x="0" y="0" text-anchor="end">尾根のすそを削る</text>
+              <path id="ridgeLead" stroke="var(--erode)" stroke-width="2" fill="none" marker-end="url(#mR)"/>
+            </g>
+            <g data-st="4">
+              <text class="co b" x="476" y="500">滝になって落ちる</text>
+              <text class="co b" x="476" y="524">（落差 約70m）</text>
+              <text class="co" x="250" y="388">争奪の肘</text>
+              <path d="M338 394 418 424" stroke="#2A2418" stroke-width="2" fill="none" marker-end="url(#mK)"/>
+            </g>
+            <g data-st="5 6">
+              <path id="scarp" fill="none" stroke="#5a3a1a" stroke-width="3" stroke-linecap="round"/>
+              <text class="co" x="490" y="404">風隙（ふうげき）</text>
+            </g>
+            <g data-st="5">
+              <text class="lbl sm" x="490" y="428">広い谷の頭が、約70mの崖で</text>
+              <text class="lbl sm" x="490" y="450">ぷつりと断ち切られる</text>
+              <text class="co" x="700" y="300" text-anchor="middle">広い谷を、やせた沢が流れる</text>
+            </g>
+
+            <!-- 方位と縮尺 -->
+            <g transform="translate(958 712)">
+              <path d="M0 -34 12 6 0 -2 -12 6Z" fill="#2A2418"/>
+              <text x="0" y="30" text-anchor="middle" class="lbl sm">北</text>
+            </g>
+            <g transform="translate(780 776)">
+              <path d="M0 0H85" stroke="#2A2418" stroke-width="5"/>
+              <path d="M0 -8V8M85 -8V8" stroke="#2A2418" stroke-width="3"/>
+              <text x="42" y="-12" text-anchor="middle" class="lbl sm" font-size="16">500 m</text>
+            </g>
+          </svg>
+          <div class="badge" id="badge"></div>
+          <div class="loading" id="loading">地形を計算しています…</div>
+        </div>
+      </section>
+
+      <div class="secs">
+        <section class="panel wide" aria-label="縦断図">
+          <h2>縦断図 <span>流れにそった距離と標高（元図からの読み取り値）</span></h2>
+          <svg id="prof" viewBox="0 0 640 300" role="img" aria-label="安久登沢、古安久登沢、小荒沢、南本内川の縦断図">
+            <defs>
+              <marker id="pK" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2A2418"/></marker>
+              <marker id="pR" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C1552B"/></marker>
+            </defs>
+            <g id="pGrid" stroke="#EADFC2" stroke-width="1"></g>
+            <g id="pAxes"></g>
+            <path id="pMinFill" fill="#C2557A" opacity=".16"/>
+            <path id="pKoaFill" fill="#3E8E52" opacity=".18"/>
+            <path id="pAkuFill" fill="#E7A83A" opacity=".24"/>
+            <path id="pMin" fill="none" stroke="#8DB4DC" stroke-width="2.5"/>
+            <path id="pGhost" fill="none" stroke="var(--water)" stroke-width="2" stroke-dasharray="6 5"/>
+            <path id="pToMin" fill="none" stroke="var(--water)" stroke-width="3.5"/>
+            <path id="pLink" fill="none" stroke="var(--water)" stroke-width="3.5"/>
+            <path id="pKoa" fill="none" stroke="var(--water)" stroke-width="3.5"/>
+            <path id="pAku" fill="none" stroke="var(--water)" stroke-width="3.5" stroke-linejoin="round"/>
+            <g data-st="1" stroke="var(--erode)" stroke-width="2.5" fill="none" marker-end="url(#pR)">
+              <path d="M330 90V118"/><path d="M400 105V133"/><path d="M470 120V150"/>
+            </g>
+            <g data-st="1"><text class="tl r" x="338" y="84">大きな流れが、谷底を削り下げる</text></g>
+            <g data-st="5">
+              <path id="pNormal" fill="none" stroke="#7D7466" stroke-width="2" stroke-dasharray="2 4"/>
+              <text class="tl sm" x="368" y="56" fill="#5B4E3C">ふつうの沢なら、源頭部ほど急になる</text>
+              <text class="tl" x="322" y="206">小荒沢は、ゆるい谷底のまま</text>
+              <text class="tl" x="322" y="222">D点で断ち切られる</text>
+            </g>
+            <g data-st="4 5 6" id="dimG">
+              <path id="dim70" fill="none" stroke="#2A2418" stroke-width="1.5" marker-start="url(#pK)" marker-end="url(#pK)"/>
+              <text id="dim70t" class="tl" text-anchor="end">約70m</text>
+            </g>
+            <g id="pKnickG">
+              <circle id="pKnick" r="6.5" fill="none" stroke="var(--erode)" stroke-width="2.5"/>
+              <text id="pKnickT" class="tl sm r" text-anchor="end">遷急点</text>
+            </g>
+            <g id="pPts"></g>
+            <text class="tl sm b" x="70" y="246">南本内川</text>
+            <text class="tl" x="500" y="208">小荒沢</text>
+            <g data-st="1 2 3"><text class="tl" x="96" y="160">古安久登沢</text></g>
+            <g data-st="4 5 6"><text class="tl" x="96" y="160">安久登沢</text></g>
+            <g data-st="4 5 6"><text class="tl sm" x="200" y="148" fill="#2F72B8">古安久登沢（争奪の前）</text></g>
+          </svg>
+        </section>
+
+        <section class="panel" aria-label="横断図①">
+          <h2>横断図① <span>C点を東西に切る（高さ約3倍に強調）</span></h2>
+          <svg id="sec1" viewBox="0 0 560 230" role="img" aria-label="C点を通る東西の横断図。花崗岩の隆起、水無沢の扇状地、南本内川の東への移動、尾根の切断を示す">
+            <defs>
+              <pattern id="sGr" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#E9B9B9"/><path d="M6 3v6M3 6h6" stroke="#9E4848" stroke-width="1.3"/></pattern>
+              <pattern id="sFan" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#E8C682"/><circle cx="1.5" cy="1.5" r=".9" fill="#9A7232"/><circle cx="4.5" cy="4.3" r=".7" fill="#9A7232"/></pattern>
+              <pattern id="sHat" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#C1552B" fill-opacity=".14"/><path d="M0 0V6" stroke="#C1552B" stroke-width="1.6"/></pattern>
+              <clipPath id="c1"><path id="s1Clip"/></clipPath>
+              <marker id="sR" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C1552B"/></marker>
+              <marker id="sG" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9E4848"/></marker>
+            </defs>
+            <path id="s1Ground" fill="#D9C9A3"/>
+            <g clip-path="url(#c1)"><path id="s1Gr" fill="url(#sGr)"/></g>
+            <path id="s1Fan" fill="url(#sFan)" stroke="#9A7232" stroke-width=".8"/>
+            <g data-st="3 4"><path id="s1Ero" fill="url(#sHat)" stroke="#C1552B" stroke-width="1" stroke-dasharray="3 2"/></g>
+            <path id="s1Line" fill="none" stroke="#6E5B3A" stroke-width="1.8" stroke-linejoin="round"/>
+            <path id="s1WaterM" fill="var(--water)"/>
+            <path id="s1WaterA" fill="var(--water)"/>
+            <g data-st="2 3" class="bob" fill="none" stroke="#9E4848" stroke-width="2.6" marker-end="url(#sG)">
+              <path d="M60 150V118"/><path d="M110 140V108"/><path d="M160 150V118"/>
+            </g>
+            <g data-st="2 3"><path id="s1Push" fill="none" stroke="var(--erode)" stroke-width="2.6" marker-end="url(#sR)"/><text id="s1PushT" class="tl sm r" text-anchor="middle">東へ</text></g>
+            <g data-st="4"><path id="s1Fall" fill="none" stroke="var(--water)" stroke-width="3" stroke-dasharray="4 3"/><text id="s1FallT" class="tl sm b">滝</text></g>
+            <g id="s1Lbl"></g>
+            <text class="t" x="8" y="226">西</text><text class="t" x="540" y="226">東</text>
+          </svg>
+        </section>
+
+        <section class="panel" aria-label="横断図②">
+          <h2>横断図② <span>小荒沢の谷を北西から南東へ切る（高さ約1.2倍に強調）</span></h2>
+          <svg id="sec2" viewBox="0 0 560 230" role="img" aria-label="小荒沢の谷の横断図。古安久登沢が広い谷を削り、争奪のあとは細い沢だけが残る">
+            <defs>
+              <pattern id="sHatA" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E7A83A" fill-opacity=".18"/><path d="M0 0V6" stroke="#C98A1E" stroke-width="1.6"/></pattern>
+              <marker id="s2K" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2A2418"/></marker>
+            </defs>
+            <path id="s2Ground" fill="#D9C9A3"/>
+            <g data-st="1 5 6"><path id="s2Cut" fill="url(#sHatA)" stroke="#C98A1E" stroke-width="1" stroke-dasharray="3 2"/></g>
+            <path id="s2Line" fill="none" stroke="#6E5B3A" stroke-width="1.8" stroke-linejoin="round"/>
+            <path id="s2Water" fill="var(--water)"/>
+            <g data-st="6"><rect id="s2Road" width="14" height="5" rx="1.5" fill="#2E6B3A"/><text id="s2RoadT" class="tl sm" text-anchor="middle">高速道路</text></g>
+            <g data-st="5 6"><path id="s2Dim" fill="none" stroke="#2A2418" stroke-width="1.3" marker-start="url(#s2K)" marker-end="url(#s2K)"/><text id="s2DimT" class="tl sm" text-anchor="middle">谷底の幅 約300m</text></g>
+            <g id="s2Lbl"></g>
+            <text class="t" x="8" y="226">北西</text><text class="t" x="522" y="226">南東</text>
+          </svg>
+        </section>
+      </div>
+    </div>
+
+    <aside class="side">
+      <section class="panel bar" aria-label="再生の操作">
+        <div class="row">
+          <p id="stageTitle"></p>
+          <div class="ctrl">
+            <button class="btn" id="prev" aria-label="前の段階">◀</button>
+            <button class="btn primary" id="play">▶ 再生</button>
+            <button class="btn" id="next" aria-label="次の段階">▶</button>
+          </div>
+        </div>
+      </section>
+      <section class="panel desc-panel" aria-label="段階の説明">
+        <p id="desc"></p>
+        <ol class="stages" id="stages"></ol>
+      </section>
+      <section class="panel legend-panel" aria-label="凡例">
+        <ul class="legend">
+          <li><i></i>いまの流れ</li>
+          <li><i class="old"></i>かつての流れ</li>
+          <li><i class="sd"></i>水無沢の土砂</li>
+          <li><i class="bx fn"></i>水無沢の扇状地</li>
+          <li><i class="bx gr"></i>新第三紀の花崗岩</li>
+          <li><i class="bs"></i>流域のさかい</li>
+          <li><i class="sc"></i>横断図の位置</li>
+        </ul>
+        <p class="note">地形の起伏と流路の移り変わりは、地形図から推定した模式です（計算でつくった仮想の地形で、実際の地形そのものではありません）。縦断図の高さは元図からの読み取り値。南本内川の段丘の発達など、細かな段階は省いています。</p>
+      </section>
+    </aside>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(id){ return document.getElementById(id); };
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent, text){
+    var e = document.createElementNS(NS, tag);
+    for (var a in attrs) e.setAttribute(a, attrs[a]);
+    if (text != null) e.textContent = text;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function clamp(v, a, b){ return v < a ? a : v > b ? b : v; }
+  function sstep(a, b, x){ var t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); }
+  function lerp(a, b, t){ return a + (b - a) * t; }
+  function f1(v){ return (Math.round(v * 10) / 10).toString(); }
+  // 折れ線の表 [[x,y],…]（xは昇順）を線形補間。端は外挿する
+  function interp(P, x){
+    var n = P.length, i;
+    if (x <= P[0][0]) return P[0][1] + (x - P[0][0]) * (P[1][1] - P[0][1]) / (P[1][0] - P[0][0]);
+    for (i = 1; i < n; i++) if (x <= P[i][0]) return P[i-1][1] + (P[i][1] - P[i-1][1]) * (x - P[i-1][0]) / (P[i][0] - P[i-1][0]);
+    return P[n-1][1] + (x - P[n-1][0]) * (P[n-1][1] - P[n-2][1]) / (P[n-1][0] - P[n-2][0]);
+  }
+  function gauss(x, y, cx, cy, sx, sy){ var dx = (x - cx) / sx, dy = (y - cy) / sy; return Math.exp(-.5 * (dx * dx + dy * dy)); }
+  function smooth(pts){
+    var d = 'M' + f1(pts[0][0]) + ' ' + f1(pts[0][1]);
+    for (var i = 0; i < pts.length - 1; i++){
+      var p0 = pts[i-1] || pts[i], p1 = pts[i], p2 = pts[i+1], p3 = pts[i+2] || p2;
+      d += 'C' + f1(p1[0] + (p2[0]-p0[0])/6) + ' ' + f1(p1[1] + (p2[1]-p0[1])/6) + ' ' +
+           f1(p2[0] - (p3[0]-p1[0])/6) + ' ' + f1(p2[1] - (p3[1]-p1[1])/6) + ' ' + f1(p2[0]) + ' ' + f1(p2[1]);
+    }
+    return d;
+  }
+
+  /* ---------- ノイズ（山肌の凹凸） ---------- */
+  var perm = new Uint8Array(512);
+  (function(){
+    var a = 20261104, p = [], i, j, t;
+    function rnd(){ a |= 0; a = a + 0x6D2B79F5 | 0; var u = Math.imul(a ^ a >>> 15, 1 | a); u = u + Math.imul(u ^ u >>> 7, 61 | u) ^ u; return ((u ^ u >>> 14) >>> 0) / 4294967296; }
+    for (i = 0; i < 256; i++) p[i] = i;
+    for (i = 255; i > 0; i--){ j = Math.floor(rnd() * (i + 1)); t = p[i]; p[i] = p[j]; p[j] = t; }
+    for (i = 0; i < 512; i++) perm[i] = p[i & 255];
+  })();
+  var GX = [1,-1,0,0,.7071,-.7071,.7071,-.7071], GY = [0,0,1,-1,.7071,.7071,-.7071,-.7071];
+  function noise(x, y){
+    var xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi;
+    xi &= 255; yi &= 255;
+    var aa = perm[perm[xi] + yi] & 7, ab = perm[perm[xi] + yi + 1] & 7, ba = perm[perm[xi+1] + yi] & 7, bb = perm[perm[xi+1] + yi + 1] & 7;
+    var u = xf*xf*xf*(xf*(xf*6-15)+10), v = yf*yf*yf*(yf*(yf*6-15)+10);
+    var x1 = lerp(GX[aa]*xf + GY[aa]*yf, GX[ba]*(xf-1) + GY[ba]*yf, u);
+    var x2 = lerp(GX[ab]*xf + GY[ab]*(yf-1), GX[bb]*(xf-1) + GY[bb]*(yf-1), u);
+    return lerp(x1, x2, v);
+  }
+  function fbm(x, y){ var s = 0, a = 1, f = 1, n = 0; for (var o = 0; o < 4; o++){ s += a * noise(x*f, y*f); n += a; a *= .5; f *= 2.03; } return s / n; }
+  function ridged(x, y){ var s = 0, a = 1, f = 1, n = 0; for (var o = 0; o < 4; o++){ s += a * (1 - Math.abs(noise(x*f, y*f)) * 1.6); n += a; a *= .5; f *= 2.1; } return s / n; }
+
+  /* ---------- 地形の骨組み（1km = 170単位、北が上） ---------- */
+  var KM = 170, MPU = 1000 / KM;
+  var C = [440, 432], D = [452, 398];
+  var WAGA = [[-30,66],[150,62],[300,80],[450,95],[600,92],[750,102],[880,110],[1030,96]];
+  // 南本内川のいまの流路（上流＝南から）。昔はC点の緯度を中心に、西へずれていた
+  var MIN_NOW = [[285,830],[300,760],[318,710],[338,660],[362,610],[388,560],[408,515],[424,478],[436,450],[440,432],[425,415],[400,397],[372,372],[348,340],[325,300],[300,255],[272,205],[240,155],[205,110],[178,72],[168,58]];
+  var AKU = [[540,835],[528,790],[515,740],[500,665],[488,612],[478,562],[470,525],[462,495],[452,465],[444,445],[440,432]];
+  var KOA = [[440,432],[452,398],[468,365],[492,328],[525,292],[565,262],[612,236],[665,214],[720,193],[775,170],[830,146],[870,124],[895,108],[915,96]];
+  var MIZ = [[-30,552],[60,526],[130,505],[195,486],[245,472]];
+  var FAN = [245, 472];
+  var TRIB = [
+    {p:[[650,725],[595,702],[545,690],[507,684]], z0:540, z1:404},
+    {p:[[640,612],[580,600],[525,598],[490,602]], z0:520, z1:383},
+    {p:[[625,515],[570,512],[515,510],[467,512]], z0:490, z1:364},
+    {p:[[430,705],[465,692],[500,678]], z0:470, z1:402},
+    {p:[[615,812],[575,780],[527,768]], z0:540, z1:428},
+    {p:[[440,812],[485,790],[522,774]], z0:520, z1:428},
+    {p:[[650,335],[605,300],[566,264]], z0:480, z1:312},
+    {p:[[520,195],[545,232],[564,260]], z0:450, z1:312},
+    {p:[[770,262],[742,222],[722,195]], z0:480, z1:292},
+    {p:[[140,650],[215,636],[292,628]], z0:480, z1:278, min:true},
+    {p:[[120,300],[185,316],[255,326]], z0:440, z1:256, min:true}
+  ];
+
+  // 縦断の高さ（m）。横軸は安久登沢の流路にそった距離（km）。A=0.8, B=1.4, C=2.15, D=2.36
+  var CUR = [[0,428],[0.2,424],[0.32,414],[0.45,413],[0.62,402],[0.8,392],[0.97,375],[1.07,370],[1.32,356],[1.4,346],[1.43,341],[1.5,320],[1.65,303],[1.85,292],[2.15,265]];
+  var KOA_S = [[2.36,337],[2.65,330.5],[3.05,317.5],[3.22,306],[4.0,288],[4.2,276.5],[4.47,253],[4.55,243.5],[4.8,238],[5.0,236],[5.3,234]];
+  var MIN_S = [[0,280],[0.35,279],[0.62,274],[0.7,271],[1.2,267],[1.45,264],[1.6,253],[2.4,248],[2.65,246],[2.85,241],[3.0,240],[4.0,237],[5.0,236]];
+  var ZMIN_Y = [[40,236],[72,238],[120,241],[200,245],[300,249],[380,253],[440,257],[520,264],[600,269],[700,275],[840,284]];
+  var LAKE = 244;
+  function zOld(k){ return k <= 0.8 ? interp(CUR, k) : 392 - (k - 0.8) * 55 / 1.55; }   // 古安久登沢（A点→D点）
+  function zCur(k){ return k >= 2.15 ? 265 : interp(CUR, k); }
+
+  function prep(pl){
+    var cum = [0];
+    for (var i = 1; i < pl.length; i++) cum.push(cum[i-1] + Math.hypot(pl[i][0]-pl[i-1][0], pl[i][1]-pl[i-1][1]));
+    var xs = pl.map(function(p){ return p[0]; }), ys = pl.map(function(p){ return p[1]; });
+    return {p:pl, cum:cum, L:cum[cum.length-1], x0:Math.min.apply(0, xs), x1:Math.max.apply(0, xs), y0:Math.min.apply(0, ys), y1:Math.max.apply(0, ys)};
+  }
+  var iW = prep(WAGA), iA = prep(AKU), iK = prep(KOA), iM = prep(MIZ);
+  TRIB.forEach(function(t){ t.i = prep(t.p); });
+  var sD = iK.cum[1], sJ = iK.cum[12];
+  var ND = 0, NSS = 0;
+  function near(info, x, y){
+    var p = info.p, best = 1e18, bs = 0;
+    for (var i = 1; i < p.length; i++){
+      var ax = p[i-1][0], ay = p[i-1][1], dx = p[i][0] - ax, dy = p[i][1] - ay;
+      var t = ((x - ax) * dx + (y - ay) * dy) / (dx * dx + dy * dy); t = t < 0 ? 0 : t > 1 ? 1 : t;
+      var qx = ax + dx * t - x, qy = ay + dy * t - y, d = qx * qx + qy * qy;
+      if (d < best){ best = d; bs = info.cum[i-1] + t * (info.cum[i] - info.cum[i-1]); }
+    }
+    ND = Math.sqrt(best); NSS = bs;
+  }
+  function kmA(s){ return 2.15 - (iA.L - s) / KM; }
+  function kmK(s){ return s <= sD ? 2.15 + 0.21 * s / sD : 2.36 + 2.64 * (s - sD) / (sJ - sD); }
+  // 折れ線上で、始点から距離sの点
+  function pointAt(info, s){
+    var p = info.p, c = info.cum;
+    s = clamp(s, 0, info.L);
+    for (var i = 1; i < p.length; i++) if (s <= c[i]){ var f = (s - c[i-1]) / (c[i] - c[i-1] || 1); return [lerp(p[i-1][0], p[i][0], f), lerp(p[i-1][1], p[i][1], f)]; }
+    return p[p.length-1];
+  }
+  function akuAtKm(k){ return pointAt(iA, iA.L - (2.15 - k) * KM); }
+
+  // 南本内川：いまの流路のx（yの関数）と、昔の位置へのずれ
+  var MINX = new Float32Array(900), MINS = new Float32Array(900);
+  (function(){
+    for (var y = 0; y < 900; y++){
+      var yy = clamp(y, 58, 830), i, x = MIN_NOW[0][0], sl = 0;
+      for (i = 1; i < MIN_NOW.length; i++){
+        var a = MIN_NOW[i-1], b = MIN_NOW[i];
+        if (yy <= a[1] && yy >= b[1]){ sl = (b[0] - a[0]) / (b[1] - a[1]); x = a[0] + (yy - a[1]) * sl; break; }
+      }
+      MINX[y] = x; MINS[y] = sl;
+    }
+    // 折れ線の角で傾きが急に変わると谷の斜面に筋が出るので、前後をならす
+    var tmp = Float32Array.from(MINS);
+    for (var y2 = 0; y2 < 900; y2++){ var s2 = 0, c2 = 0; for (var k2 = -16; k2 <= 16; k2++){ var yy2 = y2 + k2; if (yy2 >= 0 && yy2 < 900){ s2 += tmp[yy2]; c2++; } } MINS[y2] = s2 / c2; }
+  })();
+  function xNow(y){ var i = clamp(Math.round(y), 0, 899); return MINX[i]; }
+  function offW(y){ var u = (y - 450) / 115; return 130 * Math.exp(-u * u); }
+  function minX(y, s){ return xNow(y) - offW(y) * (1 - s); }
+  function rowInfo(y, S, R){
+    R.ok = y >= 58;
+    var xn = xNow(y), ow = offW(y), sl = MINS[clamp(Math.round(y), 0, 899)];
+    R.xc = xn - ow * (1 - S.s); R.xe = R.xc + 6; R.xw = xn - ow - 40;
+    var dow = -2 * (y - 450) / (115 * 115) * ow;   // ずれの傾き
+    var sw = sl - dow, se = sl - dow * (1 - S.s);
+    R.fw = 1 / Math.sqrt(1 + sw * sw); R.fe = 1 / Math.sqrt(1 + se * se); R.zf = interp(ZMIN_Y, y);
+    return R;
+  }
+
+  /* ---------- 地形の高さ ---------- */
+  function baseAt(x, y){
+    var b = 452 + 0.16 * y;
+    b += 60 * sstep(470, 720, x);           // 東の山は高い
+    b += 32 * gauss(x, y, 425, 318, 55, 55); // 509mの峰（C・Dの北）
+    b += 26 * gauss(x, y, 578, 425, 70, 45); // C・Dの東の山塊
+    b -= 45 * gauss(x, y, 600, 50, 420, 60); // 和賀川ぞいは低い
+    b += 95 * (ridged(x / 120 + 3.1, y / 120 + 1.7) - 0.62) + 30 * fbm(x / 34 + 9.3, y / 34 + 2.2);
+    return b;
+  }
+  // 谷の両側の斜面にも、細かな尾根と谷のでこぼこをのせる（谷底の近くはなめらか）
+  function sideNoise(x, y){ return 58 * (ridged(x / 62 + 1.3, y / 62 + 5.1) - 0.62) + 26 * fbm(x / 22 + 4.4, y / 22 + 7.7); }
+  // 谷幅のゆらぎ（谷の中心線は動かさない）
+  function widthNoise(x, y){ return clamp(1 + 0.5 * fbm(x / 55 + 2.1, y / 55 + 8.3), 0.72, 1.3); }
+  var NZ = 0, DM = 1;
+  function carve(z, d, hw, k){
+    var u = d * DM - hw;
+    if (u <= 0) return z;
+    var t = u < 6 ? 0 : u > 45 ? 1 : (u - 6) / 39;
+    return z + k * u * u / (u + 12) + NZ * t * t * (3 - 2 * t);
+  }
+
+  var FIELDS = ['b0','nz','dm','g','dA','kA','zAo','zAc','wA','dK','kK','zK0','uK','tK','hF'];
+  function makeStatic(n, xy){
+    var A = {n:n, x:new Float32Array(n), y:new Float32Array(n)};
+    FIELDS.forEach(function(f){ A[f] = new Float32Array(n); });
+    var q = [0, 0];
+    for (var i = 0; i < n; i++){
+      xy(i, q); var x = q[0], y = q[1];
+      A.x[i] = x; A.y[i] = y;
+      A.b0[i] = baseAt(x, y);
+      A.nz[i] = sideNoise(x, y);
+      A.dm[i] = widthNoise(x, y);
+      A.g[i] = gauss(x, y, 110, 470, 150, 120);
+      near(iA, x, y); A.dA[i] = ND; var ka = kmA(NSS); A.kA[i] = ka; A.zAo[i] = zOld(ka); A.zAc[i] = zCur(ka); A.wA[i] = clamp((ka - 0.3) / 0.5, 0, 1);
+      near(iK, x, y); A.dK[i] = ND; var kk = kmK(NSS); A.kK[i] = kk; A.zK0[i] = kk >= 2.36 ? interp(KOA_S, kk) : 337; A.uK[i] = clamp((kk - 2.15) / 0.21, 0, 1); A.tK[i] = clamp((5.0 - kk) / 1.2, 0, 1);
+      // 段階で変わらない谷（和賀川・水無沢の峡谷・小さな支流）は、ここでまとめておく
+      NZ = A.nz[i]; DM = A.dm[i];
+      near(iM, x, y);
+      var hF = carve(440 - 140 * NSS / iM.L, ND, 4, 4.2);
+      near(iW, x, y);
+      var v = carve(228, ND, 38, 3); if (v < hF) hF = v;
+      for (var t = 0; t < TRIB.length; t++){
+        var tr = TRIB[t], b = tr.i;
+        if (x < b.x0 - 70 || x > b.x1 + 70 || y < b.y0 - 70 || y > b.y1 + 70) continue;
+        near(b, x, y);
+        v = carve(tr.z0 + (tr.z1 - tr.z0) * NSS / b.L, ND, 1.5, 3.6);
+        if (v < hF) hF = v;
+      }
+      A.hF[i] = hF;
+    }
+    return A;
+  }
+  // 粗い格子（アニメーション中に使う）。細かい格子から1つおきに拾う
+  function subsample(A, nx, ny){
+    var mx = nx >> 1, my = ny >> 1, B = {n:mx * my};
+    ['x','y'].concat(FIELDS).forEach(function(f){
+      var src = A[f], dst = new Float32Array(mx * my);
+      for (var j = 0; j < my; j++) for (var i = 0; i < mx; i++) dst[j * mx + i] = src[(2 * j) * nx + 2 * i];
+      B[f] = dst;
+    });
+    return B;
+  }
+
+  var DEP = 0;
+  function fanZ(x, y, S, R){
+    if (S.fan < 0.02) return -1e9;
+    var dx = x - FAN[0], dy = y - FAN[1], r = Math.sqrt(dx * dx + dy * dy), Rr = 50 + 160 * S.fan;
+    if (r >= Rr || dx < -0.2 * r || x > R.xc - 5) return -1e9;
+    var zt = R.zf + 1.5, za = 302 + 22 * S.fan;
+    return zt + (za - zt) * Math.pow(1 - r / Rr, 1.5);
+  }
+  function zKoa(A, n, S){
+    var dk = (1 - S.carve) * 20, kk = A.kK[n];
+    if (kk >= 2.36) return A.zK0[n] + dk * A.tK[n];
+    var zD = 337 + dk, zCo = zOld(2.15) + dk, u = A.uK[n];
+    var pre = zCo + (zD - zCo) * u;
+    if (S.cap <= 0) return pre;
+    var zCn = zCo + (265 - zCo) * S.cap;
+    var post = zCn + (zD - zCn) * (1 - Math.pow(1 - u, 3));
+    return pre + (post - pre) * S.cap;
+  }
+  function zAkuNow(zo, zc, k, S){
+    if (S.cap <= 0) return zo;
+    var kx = 2.15 - 0.75 * S.kp, w = sstep(kx - 0.03, kx + 0.01, k);
+    return zo + (zc - zo) * S.cap * (S.kp + (1 - S.kp) * w);
+  }
+  function hAt(A, n, S, R){
+    var x = A.x[n], y = A.y[n], v;
+    NZ = A.nz[n]; DM = A.dm[n];
+    var h = A.b0[n] + S.upl * 110 * A.g[n];
+    if (A.hF[n] < h) h = A.hF[n];
+    // 安久登沢：昔の広い谷底と、争奪のあとに刻まれた峡谷
+    var ka = A.kA[n], zo = A.zAo[n] + (1 - S.carve) * 20 * A.wA[n];
+    v = carve(zo, A.dA[n], ka < 0.8 ? 6 : 6 + 6 * S.carve, 3.8); if (v < h) h = v;
+    var zn = zAkuNow(zo, A.zAc[n], ka, S);
+    if (zn < zo - 0.5){ v = carve(zn, A.dA[n], 3, 4.6); if (v < h) h = v; }
+    // 古安久登沢から小荒沢の谷へ
+    v = carve(zKoa(A, n, S), A.dK[n], 6 + 20 * S.carve, 3.4); if (v < h) h = v;
+    // 南本内川と水無沢の扇状地
+    DEP = 0;
+    if (R.ok){
+      var dm = x < R.xw ? (R.xw - x) * R.fw : x > R.xe ? (x - R.xe) * R.fe : 0;
+      v = carve(R.zf, dm, 0, 3.8); if (v < h) h = v;
+      var zf = fanZ(x, y, S, R);
+      if (zf > h){ DEP = zf - h; h = zf; }
+    }
+    return h;
+  }
+
+  /* ---------- 平面図を描く ---------- */
+  var NX = 500, NY = 390, CELL = 2, OY = 20, NN = NX * NY;
+  var cvs = $('relief'), ctx = cvs.getContext('2d');
+  var low = document.createElement('canvas'); low.width = NX >> 1; low.height = NY >> 1;
+  var lctx = low.getContext('2d');
+  var GRID = {
+    hi: {nx:NX, ny:NY, cell:CELL, A:null, img:ctx.createImageData(NX, NY), H:new Float32Array(NN), D:new Float32Array(NN)},
+    lo: {nx:NX >> 1, ny:NY >> 1, cell:CELL * 2, A:null, img:lctx.createImageData(NX >> 1, NY >> 1), H:new Float32Array(NN >> 2), D:new Float32Array(NN >> 2)}
+  };
+  ctx.imageSmoothingEnabled = true;
+  var LUT = new Uint8ClampedArray(600 * 3);
+  (function(){
+    var st = [[200,226,220,178],[240,236,228,172],[270,234,221,150],[310,216,212,140],[360,188,198,124],[420,158,182,112],[480,134,166,104],[540,130,158,112],[600,150,166,132],[680,186,192,168],[800,222,224,212]];
+    for (var m = 0; m < 600; m++){
+      var z = 200 + m, i = 1;
+      while (i < st.length - 1 && z > st[i][0]) i++;
+      var a = st[i-1], b = st[i], t = clamp((z - a[0]) / (b[0] - a[0]), 0, 1);
+      LUT[m*3] = lerp(a[1], b[1], t); LUT[m*3+1] = lerp(a[2], b[2], t); LUT[m*3+2] = lerp(a[3], b[3], t);
+    }
+  })();
+  var LX = -0.5417, LY = -0.5417, LZ = 0.6428;   // 北西からの光
+  function renderPlan(S, rough){
+    var P = rough ? GRID.lo : GRID.hi, A = P.A, NX = P.nx, NY = P.ny, HG = P.H, DG = P.D, img = P.img;
+    var R = {}, j, i, n;
+    for (j = 0; j < NY; j++){
+      rowInfo(A.y[j * NX], S, R);
+      for (i = 0; i < NX; i++){ n = j * NX + i; HG[n] = hAt(A, n, S, R); DG[n] = DEP; }
+    }
+    var d = img.data, sc = 1.7 / (2 * P.cell * MPU);
+    for (j = 0; j < NY; j++){
+      var y = A.y[j * NX];
+      for (i = 0; i < NX; i++){
+        n = j * NX + i;
+        var h = HG[n], o = n * 4;
+        if (S.lake > 0 && h < LAKE && y < 300){
+          var wr = 132, wg = 176, wb = 218, base = (S.lake < 1) ? 1 - S.lake : 0;
+          var li0 = clamp(Math.round(h) - 200, 0, 599) * 3;
+          d[o] = lerp(wr, LUT[li0], base); d[o+1] = lerp(wg, LUT[li0+1], base); d[o+2] = lerp(wb, LUT[li0+2], base); d[o+3] = 255;
+          continue;
+        }
+        var hl = HG[i > 0 ? n - 1 : n], hr = HG[i < NX - 1 ? n + 1 : n];
+        var hu = HG[j > 0 ? n - NX : n], hd = HG[j < NY - 1 ? n + NX : n];
+        var gx = (hr - hl) * sc, gy = (hd - hu) * sc;
+        var nl = (-gx * LX - gy * LY + LZ) / Math.sqrt(gx * gx + gy * gy + 1);
+        var shade = 0.40 + 0.80 * (nl > 0 ? nl : 0);
+        var li = clamp(Math.round(h) - 200, 0, 599) * 3;
+        var r = LUT[li], g = LUT[li+1], b = LUT[li+2];
+        if (DG[n] > 0.3){ var t = Math.min(.72, .3 + DG[n] / 10); r = lerp(r, 236, t); g = lerp(g, 198, t); b = lerp(b, 126, t); }
+        r *= shade; g *= shade; b *= shade;
+        // 等高線（20mごと、100mごとに太く）
+        var q = Math.floor(h / 25), qr = Math.floor(hr / 25), qd = Math.floor(hd / 25);
+        if (q !== qr || q !== qd){
+          var lv = q !== qr ? Math.max(q, qr) : Math.max(q, qd);
+          var k = lv % 4 === 0 ? .74 : .89;
+          r *= k; g *= k; b *= k;
+        }
+        d[o] = r; d[o+1] = g; d[o+2] = b; d[o+3] = 255;
+      }
+    }
+    if (rough){ lctx.putImageData(img, 0, 0); ctx.drawImage(low, 0, 0, cvs.width, cvs.height); }
+    else ctx.putImageData(img, 0, 0);
+  }
+
+  /* ---------- 平面図の書き込み ---------- */
+  function poly(pts){ return 'M' + pts.map(function(p){ return p[0] + ' ' + p[1]; }).join('L') + 'Z'; }
+  $('basinOld').setAttribute('d', poly([[430,315],[418,360],[410,400],[414,432],[428,460],[436,490],[436,530],[432,590],[435,650],[445,720],[450,812],[645,812],[645,640],[650,540],[660,450],[670,370],[700,300],[740,240],[800,190],[860,140],[905,108],[860,100],[780,118],[700,138],[630,160],[560,190],[500,225],[455,270]]));
+  $('basinCap').setAttribute('d', poly([[440,432],[443,455],[440,490],[436,530],[432,590],[435,650],[445,720],[450,812],[645,812],[645,640],[650,540],[660,450],[670,370],[630,390],[580,405],[530,412],[480,408],[452,398]]));
+  $('basinKoa').setAttribute('d', poly([[452,398],[440,355],[430,315],[455,270],[500,225],[560,190],[630,160],[700,138],[780,118],[860,100],[905,108],[860,140],[800,190],[740,240],[700,300],[670,370],[630,390],[580,405],[530,412],[480,408]]));
+
+  var tribEls = TRIB.map(function(t){ return el('path', {}, $('tribs')); });
+  // C点とD点のあいだの崖（崖記号の短い線は、低いC点の側へ向ける）
+  (function(){
+    var ux = (D[0] - C[0]) / Math.hypot(D[0] - C[0], D[1] - C[1]), uy = (D[1] - C[1]) / Math.hypot(D[0] - C[0], D[1] - C[1]);
+    var px = -uy, py = ux, mx = C[0] + (D[0] - C[0]) * .42, my = C[1] + (D[1] - C[1]) * .42, d = '', k;
+    var pts = [];
+    for (k = -16; k <= 16; k += 4){ var bend = 4 * (1 - (k / 16) * (k / 16)); pts.push([mx + px * k + ux * bend, my + py * k + uy * bend]); }
+    d = 'M' + pts.map(function(p){ return f1(p[0]) + ' ' + f1(p[1]); }).join('L');
+    for (k = 0; k < pts.length; k++) d += 'M' + f1(pts[k][0]) + ' ' + f1(pts[k][1]) + 'l' + f1(-ux * 8) + ' ' + f1(-uy * 8);
+    $('scarp').setAttribute('d', d);
+  })();
+  $('waga').setAttribute('d', smooth(WAGA)); $('fWaga').setAttribute('d', smooth(WAGA));
+  var dAku = smooth(AKU);
+  $('aku').setAttribute('d', dAku); $('fAku').setAttribute('d', dAku);
+  var dKoaBig = smooth(KOA.slice(0, 13));
+  $('koaBig').setAttribute('d', dKoaBig); $('fKoaBig').setAttribute('d', dKoaBig);
+  $('koaOld').setAttribute('d', smooth(KOA.slice(0, 4)));
+  var dKoaSmall = smooth(KOA.slice(3, 13));
+  $('koaSmall').setAttribute('d', dKoaSmall); $('fKoaSmall').setAttribute('d', dKoaSmall);
+
+  // 地点
+  var PA = akuAtKm(0.8), PB = akuAtKm(1.4);
+  var ptG = $('pts'), ptEls = {};
+  [['A', PA, 18, 8], ['B', PB, 18, 8], ['C', C, 20, 12], ['D', D, 16, -4]].forEach(function(p){
+    var g = el('g', {}, ptG);
+    el('circle', {cx:p[1][0], cy:p[1][1], r:8, fill:'var(--erode)', stroke:'#fff', 'stroke-width':2.5}, g);
+    el('text', {x:p[1][0] + p[2], y:p[1][1] + p[3], class:'lbl pt'}, g, p[0]);
+    ptEls[p[0]] = g;
+  });
+
+  function drawOverlay(S){
+    var s = S.s, cap = S.cap;
+    // 南本内川
+    var mp = MIN_NOW.map(function(p){ return [p[0] - offW(p[1]) * (1 - s), p[1]]; });
+    var dm = smooth(mp);
+    $('minami').setAttribute('d', dm); $('fMinami').setAttribute('d', dm);
+    // 水無沢：谷の出口から扇状地をこえて南本内川へ
+    var ye = 462, xe = minX(ye, s) - 3;
+    var mz = MIZ.concat([[lerp(FAN[0], xe, .5), lerp(FAN[1], ye, .5) + 2], [xe, ye]]);
+    var dmz = smooth(mz);
+    $('mizu').setAttribute('d', dmz); $('fMizu').setAttribute('d', dmz); $('sedMizu').setAttribute('d', smooth(mz.slice(1)));
+    TRIB.forEach(function(t, i){
+      var pts = t.p;
+      if (t.min){ var y = pts[pts.length-1][1]; pts = pts.concat([[minX(y, s) - 3, y]]); }
+      tribEls[i].setAttribute('d', smooth(pts));
+    });
+    // 安久登沢と小荒沢：争奪で流れが切りかわる
+    $('koaBig').setAttribute('opacity', f1(1 - cap)); $('fKoaBig').setAttribute('opacity', f1(1 - cap));
+    $('koaOld').setAttribute('opacity', f1(cap));
+    $('koaSmall').setAttribute('opacity', f1(cap)); $('fKoaSmall').setAttribute('opacity', f1(cap));
+    $('waga').setAttribute('opacity', f1(1 - S.lake)); $('fWaga').setAttribute('opacity', f1(1 - S.lake));
+    // 遷急点
+    var kx = 2.15 - 0.75 * S.kp, kp = akuAtKm(kx);
+    var kvis = cap * sstep(0, 0.04, S.kp);
+    $('knickG').setAttribute('transform', 'translate(' + f1(kp[0]) + ' ' + f1(kp[1]) + ')');
+    $('knickG').setAttribute('opacity', f1(kvis));
+    if (!$('knickT')){ el('text', {id:'knickT', class:'lbl sm pt', 'text-anchor':'end'}, $('plan'), '遷急点'); }
+    $('knickT').setAttribute('x', f1(kp[0] - 22)); $('knickT').setAttribute('y', f1(kp[1] + 8));
+    $('knickT').setAttribute('opacity', f1(kvis));
+    ptEls.B.setAttribute('opacity', f1(sstep(0.7, 1, S.kp)));
+    // 東へ押される矢印と、削られる尾根のすそ
+    var xa = minX(456, s);
+    $('pushArrow').setAttribute('d', 'M' + f1(xa - 70) + ' 456H' + f1(xa - 18));
+    $('pushText').setAttribute('x', f1(xa - 24)); $('pushText').setAttribute('y', '500');
+    $('ridgeText').setAttribute('x', f1(minX(392, s) - 8)); $('ridgeText').setAttribute('y', '372');
+    $('ridgeLead').setAttribute('d', 'M' + f1(minX(392, s) - 4) + ' 378L' + f1(minX(412, s) + 14) + ' 408');
+    var tk = '';
+    for (var y = 396; y <= 500; y += 18){ var xt = minX(y, s) + 13; tk += 'M' + f1(xt + 9) + ' ' + (y - 7) + 'L' + f1(xt) + ' ' + y + 'L' + f1(xt + 9) + ' ' + (y + 7); }
+    $('erodeTicks').setAttribute('d', tk);
+  }
+
+  /* ---------- 縦断図 ---------- */
+  function PX(k){ return 52 + 112 * k; }
+  function PY(m){ return 270 - (m - 230); }
+  (function(){
+    var grid = $('pGrid'), axes = $('pAxes');
+    [250,300,350,400,450].forEach(function(m){
+      el('path', {d:'M52 ' + PY(m) + 'H612'}, grid);
+      el('text', {x:46, y:PY(m) + 4, 'text-anchor':'end', class:'t'}, axes, m === 450 ? '450m' : String(m));
+    });
+    el('path', {d:'M52 ' + PY(230) + 'H612', stroke:'#8B7B5E', 'stroke-width':1}, axes);
+    [0,1,2,3,4,5].forEach(function(k){ el('text', {x:PX(k), y:290, 'text-anchor':'middle', class:'t'}, axes, k === 5 ? '5km' : String(k)); });
+  })();
+  function pline(pts){ return pts.map(function(p, i){ return (i ? 'L' : 'M') + f1(PX(p[0])) + ' ' + f1(PY(p[1])); }).join(''); }
+  function pfill(pts){ return pline(pts) + 'L' + f1(PX(pts[pts.length-1][0])) + ' ' + PY(230) + 'L' + f1(PX(pts[0][0])) + ' ' + PY(230) + 'Z'; }
+  var KXS = []; for (var kk0 = 0; kk0 <= 2.1501; kk0 += 0.0125) KXS.push(Math.min(kk0, 2.15));
+  $('pMin').setAttribute('d', pline(MIN_S)); $('pMinFill').setAttribute('d', pfill(MIN_S));
+  $('pGhost').setAttribute('d', 'M' + PX(0.8) + ' ' + PY(392) + 'L' + PX(2.36) + ' ' + PY(337));
+  (function(){
+    var pts = [];
+    for (var x = 2.70; x >= 2.395; x -= 0.01){ pts.push([x, 329 + 95 * Math.pow((2.70 - x) / 0.30, 2.2)]); }
+    $('pNormal').setAttribute('d', pline(pts));
+  })();
+  var pPtEls = {};
+  [['A',-8,-10],['B',10,-6],['C',10,16],['D',8,-10]].forEach(function(p){
+    var g = el('g', {}, $('pPts'));
+    el('circle', {r:5, fill:'var(--erode)'}, g);
+    el('text', {class:'tl pt', 'text-anchor': p[1] < 0 ? 'end' : 'start', dx:p[1], dy:p[2]}, g, p[0]);
+    pPtEls[p[0]] = g;
+  });
+  function placePt(g, k, m){ g.firstChild.setAttribute('cx', f1(PX(k))); g.firstChild.setAttribute('cy', f1(PY(m))); g.lastChild.setAttribute('x', f1(PX(k))); g.lastChild.setAttribute('y', f1(PY(m))); }
+
+  function drawProfile(S){
+    var cap = S.cap, dk = (1 - S.carve) * 20;
+    var aku = KXS.map(function(k){
+      var zo = zOld(k) + (1 - S.carve) * 20 * clamp((k - 0.3) / 0.5, 0, 1);
+      return [k, zAkuNow(zo, zCur(k), k, S)];
+    });
+    var zC = aku[aku.length-1][1], zD = 337 + dk;
+    var koa = KOA_S.slice(0, 10).map(function(p){ return [p[0], p[1] + dk * clamp((5.0 - p[0]) / 1.2, 0, 1)]; });
+    $('pAku').setAttribute('d', pline(aku));
+    $('pKoa').setAttribute('d', pline(koa));
+    $('pKoa').setAttribute('stroke-width', f1(3.5 - 1.9 * cap));
+    $('pKoaFill').setAttribute('d', pfill(koa));
+    $('pLink').setAttribute('d', 'M' + f1(PX(2.15)) + ' ' + f1(PY(zC)) + 'L' + f1(PX(2.36)) + ' ' + f1(PY(zD)));
+    $('pLink').setAttribute('opacity', f1(1 - cap));
+    $('pToMin').setAttribute('d', 'M' + f1(PX(2.15)) + ' ' + f1(PY(zC)) + 'L' + f1(PX(2.4)) + ' ' + f1(PY(248)));
+    $('pToMin').setAttribute('opacity', f1(cap));
+    $('pGhost').setAttribute('opacity', f1(cap));
+    // 争奪の前は、C点からD点までも同じ谷なので塗りをつなげる
+    var ex = 2.15 + 0.21 * (1 - cap), ez = lerp(zC, zD, 1 - cap);
+    var fillPts = aku.concat([[ex, ez]]);
+    $('pAkuFill').setAttribute('d', pfill(fillPts));
+    // 70mの差
+    $('dim70').setAttribute('d', 'M' + f1(PX(2.26)) + ' ' + f1(PY(265) - 4) + 'V' + f1(PY(337) + 4));
+    $('dim70t').setAttribute('x', f1(PX(2.26) - 6)); $('dim70t').setAttribute('y', f1(PY(300)));
+    // 遷急点
+    var kx = 2.15 - 0.75 * S.kp, kv = cap * sstep(0, 0.04, S.kp);
+    $('pKnick').setAttribute('cx', f1(PX(kx))); $('pKnick').setAttribute('cy', f1(PY(zCur(kx))));
+    $('pKnickT').setAttribute('x', f1(PX(kx) - 10)); $('pKnickT').setAttribute('y', f1(PY(zCur(kx)) + 18));
+    $('pKnickG').setAttribute('opacity', f1(kv));
+    placePt(pPtEls.A, 0.8, 392);
+    placePt(pPtEls.B, 1.4, aku[Math.round(1.4 / 0.0125)][1]); pPtEls.B.setAttribute('opacity', f1(sstep(0.7, 1, S.kp)));
+    placePt(pPtEls.C, 2.15, zC);
+    placePt(pPtEls.D, 2.36, zD);
+  }
+
+  /* ---------- 横断図 ---------- */
+  var N1 = 281, S1A = null, N2 = 161, S2A = null;
+  var P2a = [476,179], P2b = [620,371];
+  function X1(i){ return 30 + i / (N1 - 1) * 500; }
+  function Y1(z){ return 214 - (z - 220) * 0.38; }
+  function X2(i){ return 30 + i / (N2 - 1) * 500; }
+  function Y2(z){ return 214 - (z - 220) * 0.42; }
+  function heights(A, S){
+    var out = new Float32Array(A.n), dep = new Float32Array(A.n), R = {};
+    for (var i = 0; i < A.n; i++){ rowInfo(A.y[i], S, R); out[i] = hAt(A, i, S, R); dep[i] = DEP; }
+    return {h:out, dep:dep};
+  }
+  function surf(h, X, Y){ var d = ''; for (var i = 0; i < h.length; i++) d += (i ? 'L' : 'M') + f1(X(i)) + ' ' + f1(Y(h[i])); return d; }
+  function band(top, bot, X, Y, ok){
+    // top > bot の区間ごとに、上下の線で囲んだ形をつくる
+    var d = '', i = 0, n = top.length;
+    while (i < n){
+      while (i < n && !ok(i)) i++;
+      if (i >= n) break;
+      var s = i; while (i < n && ok(i)) i++;
+      var e = i - 1; if (e - s < 1) continue;
+      var k; d += 'M' + f1(X(s)) + ' ' + f1(Y(top[s]));
+      for (k = s + 1; k <= e; k++) d += 'L' + f1(X(k)) + ' ' + f1(Y(top[k]));
+      for (k = e; k >= s; k--) d += 'L' + f1(X(k)) + ' ' + f1(Y(bot[k]));
+      d += 'Z';
+    }
+    return d;
+  }
+  function lens(x, z, w, X0, Yf, depth){ var y = Yf(z); return 'M' + f1(x - w) + ' ' + f1(y) + 'Q' + f1(x) + ' ' + f1(y + depth * 2) + ' ' + f1(x + w) + ' ' + f1(y) + 'Z'; }
+  function label(g, x, y, txt, cls){ el('text', {x:f1(x), y:f1(y), class:'tl ' + (cls || ''), 'text-anchor':'middle'}, g, txt); }
+
+  function drawSec1(S){
+    var cur = heights(S1A, S);
+    var noFan = heights(S1A, Object.assign({}, S, {fan:0}));
+    var ref = heights(S1A, Object.assign({}, S, {s:0, fan:0, cap:0}));
+    var h = cur.h, i;
+    var d = surf(h, X1, Y1), close = 'L' + X1(N1 - 1) + ' 230L' + X1(0) + ' 230Z';
+    $('s1Line').setAttribute('d', d);
+    $('s1Ground').setAttribute('d', d + close);
+    $('s1Clip').setAttribute('d', d + close);
+    // 花崗岩の岩体（西の山の下）。隆起とともに持ち上がる
+    var up = S.upl * 110 * 0.4;
+    var ix = function(x){ return (x - 60) / 700 * (N1 - 1); };
+    $('s1Gr').setAttribute('d', 'M' + f1(X1(0)) + ' 0L' + f1(X1(ix(262))) + ' 0L' + f1(X1(ix(250))) + ' ' + f1(Y1(380 + up)) + 'C' + f1(X1(ix(262))) + ' ' + f1(Y1(300 + up)) + ' ' + f1(X1(ix(300))) + ' ' + f1(Y1(260)) + ' ' + f1(X1(ix(310))) + ' 230L' + f1(X1(0)) + ' 230Z');
+    $('s1Fan').setAttribute('d', band(h, noFan.h, X1, Y1, function(k){ return h[k] - noFan.h[k] > 0.4; }));
+    var R = rowInfo(432, S, {});
+    var xcI = ix(R.xc);
+    var xc0 = ix(rowInfo(432, {s:0}, {}).xc + 8);   // もとの流路より東で、削られて低くなった部分
+    $('s1Ero').setAttribute('d', band(ref.h, h, X1, Y1, function(k){ return k > xc0 && ref.h[k] - h[k] > 0.8; }));
+    // 水
+    var xm = X1(xcI);
+    $('s1WaterM').setAttribute('d', lens(xm, R.zf, 4, 0, Y1, 2.2));
+    var aI = ix(440), zA = h[Math.round(aI)];
+    $('s1WaterA').setAttribute('d', lens(X1(aI), zA, 3.5, 0, Y1, 2));
+    $('s1WaterA').setAttribute('opacity', f1(1 - S.cap));
+    $('s1Push').setAttribute('d', 'M' + f1(xm - 26) + ' ' + f1(Y1(R.zf) - 22) + 'H' + f1(xm + 8));
+    $('s1PushT').setAttribute('x', f1(xm - 10)); $('s1PushT').setAttribute('y', f1(Y1(R.zf) - 30));
+    $('s1Fall').setAttribute('d', 'M' + f1(X1(aI) + 3) + ' ' + f1(Y1(344)) + 'V' + f1(Y1(R.zf) - 2));
+    $('s1FallT').setAttribute('x', f1(X1(aI) + 9)); $('s1FallT').setAttribute('y', f1(Y1(320)));
+    // 名前
+    var g = $('s1Lbl'); g.textContent = '';
+    label(g, X1(ix(120)), Y1(h[Math.round(ix(120))]) + 34, '花崗岩', 'sm');
+    label(g, xm, Y1(R.zf) + 18, '南本内川', 'sm b');
+    if (S.fan > 0.3){ var fx = ix(R.xc - 95); label(g, X1(fx), Y1(h[Math.round(fx)]) - 10, '扇状地', 'sm'); }
+    if (S.cap < 0.5){
+      var best = -1, bi = 0;
+      for (i = Math.ceil(xcI); i < aI; i++) if (h[i] > best){ best = h[i]; bi = i; }
+      label(g, X1(bi), Y1(best) - 8, '尾根', 'sm');
+      label(g, X1(aI) + 10, Y1(zA) + 16, '古安久登沢', 'sm b');
+    } else {
+      label(g, X1(aI) + 6, Y1(h[Math.round(aI)]) - 26, 'C点', 'r');
+    }
+  }
+
+  function drawSec2(S){
+    var cur = heights(S2A, S);
+    var pre = heights(S2A, Object.assign({}, S, {carve:0, cap:0}));
+    var h = cur.h, i;
+    var d = surf(h, X2, Y2);
+    $('s2Line').setAttribute('d', d);
+    $('s2Ground').setAttribute('d', d + 'L' + X2(N2 - 1) + ' 230L' + X2(0) + ' 230Z');
+    $('s2Cut').setAttribute('d', band(pre.h, h, X2, Y2, function(k){ return pre.h[k] - h[k] > 0.6; }));
+    // 谷の底
+    var mi = 0; for (i = 1; i < N2; i++) if (h[i] < h[mi]) mi = i;
+    var zb = h[mi], a = mi, b = mi;
+    while (a > 0 && h[a-1] < zb + 3) a--;
+    while (b < N2 - 1 && h[b+1] < zb + 3) b++;
+    var axis = 0, bd = 1e9; for (i = 0; i < N2; i++) if (S2A.dK[i] < bd){ bd = S2A.dK[i]; axis = i; }
+    var w = lerp(14, 3, S.cap), dep = lerp(4, 1.4, S.cap);
+    $('s2Water').setAttribute('d', lens(X2(axis), h[axis], w, 0, Y2, dep));
+    $('s2Dim').setAttribute('d', 'M' + f1(X2(a)) + ' ' + f1(Y2(zb) + 20) + 'H' + f1(X2(b)));
+    $('s2DimT').setAttribute('x', f1((X2(a) + X2(b)) / 2)); $('s2DimT').setAttribute('y', f1(Y2(zb) + 36));
+    $('s2DimT').textContent = '谷底の幅 約' + Math.round((b - a) / (N2 - 1) * 240 * MPU / 50) * 50 + 'm';
+    $('s2Road').setAttribute('x', f1(X2(axis) - 34)); $('s2Road').setAttribute('y', f1(Y2(h[axis]) - 6));
+    $('s2RoadT').setAttribute('x', f1(X2(axis) - 27)); $('s2RoadT').setAttribute('y', f1(Y2(h[axis]) - 12));
+    var g = $('s2Lbl'); g.textContent = '';
+    label(g, X2(axis), Y2(zb) - 70, '小荒沢の谷', '');
+    if (S.cap < 0.5) label(g, X2(axis), Y2(zb) - 12, '大きな流れ', 'sm b');
+    else label(g, X2(axis) + 46, Y2(zb) - 10, '細い沢', 'sm b');
+    if (S.stage === 0) label(g, X2(axis), Y2(zb) - 50, '削り広げた分', 'sm');
+  }
+
+  /* ---------- 段階 ---------- */
+  var STAGES = [
+    {t:'争奪の前：安久登沢が、広い谷を削る', b:'1 争奪の前',
+     d:'昔の安久登沢（古安久登沢）は、C点で止まらずに北へ進み、D点を抜けて、いまの小荒沢の谷を流れていました。南の山々から集めた水をすべて運ぶ大きな流れが、谷を広く、深く削っていきます。小荒沢の広い谷は、このときの安久登沢がつくったものです。',
+     s:{carve:1, upl:0, fan:.12, s:0, kp:0, lake:0}, from:{carve:0, upl:0, fan:.12, s:0, kp:0, lake:0}, dur:3600},
+    {t:'花崗岩が盛り上がり、水無沢が土砂を吐く', b:'2 土砂が増える',
+     d:'西の山には、新第三紀の花崗岩がところどころに分布しています。この山は第四紀のはじめ頃まで盛り上がり続け、急になった斜面は崩れて大量の土砂を出しました。それを運び出すのが水無沢です。水が砂利の下にもぐってしまうほど土砂の多い沢で、出口には扇状地が広がっていきます。',
+     s:{carve:1, upl:1, fan:.7, s:.12, kp:0, lake:0}, dur:2600},
+    {t:'南本内川が、東へ押しやられる', b:'3 東へ押される',
+     d:'張り出してくる扇状地に押されて、南本内川の流れは谷の東側へ寄っていきます。東へ寄った川は、古安久登沢とのあいだを仕切っていた尾根のすそを削り、尾根はやせ細っていきます（横断図①の赤い斜線が、削られた部分）。',
+     s:{carve:1, upl:1, fan:1, s:.42, kp:0, lake:0}, dur:2600},
+    {t:'尾根が切れて、争奪', b:'4 争奪',
+     d:'ついに尾根が切れ、南本内川がC点で古安久登沢の流れに届きます。南本内川の谷底は約70mも低いところにあったので、安久登沢の水は滝になってなだれ込み、そのまま南本内川へ流れるようになりました。C点で流れが折れ曲がる「争奪の肘」の誕生です。',
+     s:{carve:1, upl:1, fan:1, s:1, kp:0, lake:0}, dur:2600},
+    {t:'首を切られた小荒沢', b:'5 斬首された谷',
+     d:'上流の水をすべて失ったD点から先が、いまの小荒沢です。上流を切り取られた川を「斬首河川」といいます。ふつうの沢は、源頭部へ向かって谷が細く、急になって終わります。ところが小荒沢の谷は、広くゆるい谷底のままD点でぷつりと断ち切られ、その先は約70mの崖です。この不自然な谷の頭（風隙）が、いまも現地に残っています。',
+     s:{carve:1, upl:1, fan:1, s:1, kp:.4, lake:0}, dur:2400},
+    {t:'いまの姿：奪われた谷に、道が通る', b:'6 いま',
+     d:'約70mの落差を得た安久登沢は谷底を激しく削り、急な区間（遷急点）はC点から上流へさかのぼって、いまB点に達しています。一方、削る力を失った小荒沢の谷は、広くおだやかなまま残りました。その谷に、秋田自動車道が通っています。和賀川は湯田ダムでせき止められ、錦秋湖になりました。',
+     s:{carve:1, upl:1, fan:1, s:1, kp:1, lake:1}, dur:2600}
+  ];
+  var KEYS = ['carve','upl','fan','s','kp','lake'];
+  var state = Object.assign({stage:0, cap:0}, STAGES[0].from);
+  var cur = 0, anim = null, timer = null, playing = false, ready = false;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function drawAll(rough){
+    state.cap = sstep(0.58, 0.72, state.s);
+    renderPlan(state, rough);
+    drawOverlay(state);
+    drawProfile(state);
+    drawSec1(state);
+    drawSec2(state);
+  }
+  function setMarks(){
+    document.querySelectorAll('[data-st]').forEach(function(e){
+      var on = e.getAttribute('data-st').split(' ').indexOf(String(cur + 1)) >= 0;
+      e.classList.toggle('on', on);
+    });
+  }
+  function go(n, done){
+    cur = (n + STAGES.length) % STAGES.length;
+    var st = STAGES[cur];
+    if (st.from) KEYS.forEach(function(k){ state[k] = st.from[k]; });
+    var from = Object.assign({}, state), to = st.s;
+    var t0 = performance.now(), dur = reduce ? 0 : st.dur;
+    state.stage = cur;
+    if (anim) cancelAnimationFrame(anim);
+    $('stageTitle').textContent = (cur + 1) + '. ' + st.t;
+    $('desc').textContent = st.d;
+    $('badge').textContent = st.b;
+    document.querySelectorAll('#stages button').forEach(function(b, i){
+      if (i === cur) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+    });
+    setMarks();
+    (function step(now){
+      var f = dur ? Math.min(1, (now - t0) / dur) : 1;
+      var e = f < .5 ? 2 * f * f : 1 - Math.pow(-2 * f + 2, 2) / 2;
+      KEYS.forEach(function(k){ state[k] = from[k] + (to[k] - from[k]) * e; });
+      drawAll(f < 1);
+      if (f < 1) anim = requestAnimationFrame(step);
+      else { anim = null; if (done) done(); }
+    })(t0);
+  }
+  function setPlaying(on){
+    playing = on;
+    $('play').textContent = on ? '❚❚ 一時停止' : '▶ 再生';
+    clearTimeout(timer);
+  }
+  function playFrom(n){
+    go(n, function(){
+      if (!playing) return;
+      if (cur === STAGES.length - 1){ setPlaying(false); return; }
+      timer = setTimeout(function(){ if (playing) playFrom(cur + 1); }, 4800);
+    });
+  }
+
+  var list = $('stages');
+  STAGES.forEach(function(s, i){
+    var li = document.createElement('li'), b = document.createElement('button');
+    b.innerHTML = '<span class="n">' + (i + 1) + '</span>' + s.t;
+    b.addEventListener('click', function(){ if (!ready) return; setPlaying(false); go(i); });
+    li.appendChild(b); list.appendChild(li);
+  });
+  $('prev').addEventListener('click', function(){ if (!ready) return; setPlaying(false); go(cur - 1); });
+  $('next').addEventListener('click', function(){ if (!ready) return; setPlaying(false); go(cur + 1); });
+  $('play').addEventListener('click', function(){
+    if (!ready) return;
+    if (playing){ setPlaying(false); return; }
+    setPlaying(true);
+    playFrom(cur === STAGES.length - 1 || cur === 0 ? 0 : cur + 1);
+  });
+
+  // 地形の下ごしらえ（少し時間がかかるので、画面を出してから）
+  $('stageTitle').textContent = '1. ' + STAGES[0].t;
+  $('desc').textContent = STAGES[0].d;
+  setTimeout(function(){
+    GRID.hi.A = makeStatic(NN, function(i, q){ q[0] = (i % NX + .5) * CELL; q[1] = OY + (Math.floor(i / NX) + .5) * CELL; });
+    GRID.lo.A = subsample(GRID.hi.A, NX, NY);
+    S1A = makeStatic(N1, function(i, q){ q[0] = 60 + i / (N1 - 1) * 700; q[1] = 432; });
+    S2A = makeStatic(N2, function(i, q){ var t = i / (N2 - 1); q[0] = lerp(P2a[0], P2b[0], t); q[1] = lerp(P2a[1], P2b[1], t); });
+    $('loading').remove();
+    ready = true;
+    go(0);
+  }, 30);
+})();
+</script>
+</body>
+</html>
