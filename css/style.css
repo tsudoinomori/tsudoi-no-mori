@@ -765,3 +765,11 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 }
 
 .article .compare td:first-child{white-space:nowrap;color:var(--forest-700);}
+
+/* コラム「空に、波が立つ」：4コマ図と写真の2列並び */
+.article .kh-steps,.article .fluctus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;}
+@media (max-width:560px){.article .kh-steps,.article .fluctus-grid{grid-template-columns:minmax(0,1fr);}}
+.article .kh-steps svg{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);}
+.article .kh-steps text{font-family:inherit;}
+.article .kh-steps figcaption{font-size:.92rem;color:var(--ink);}
+.article .fig-note{font-size:.82rem;color:var(--ink-soft);}
