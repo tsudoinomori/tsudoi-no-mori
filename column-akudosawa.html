@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="description" content="西和賀町の安久登沢は、かつて小荒沢へ流れていました。南本内川に水を奪われた「河川争奪」のあとを、地形図と縦断図だけで読み解きます。奪われた広い谷には、いま高速道路が通っています。">
+<meta name="description" content="川が、となりの川の水を横取りする「河川争奪」。西和賀町の安久登沢で起きたこの事件を、色分けした地形図で順番に解いていきます。水を奪われた広い谷には、いま高速道路が通っています。">
 <title>奪われた谷に、道が通る | 森遊びの、その先へ | 盛岡市都南つどいの森</title>
-<link rel="stylesheet" href="css/style.css?v=20261102">
+<link rel="stylesheet" href="css/style.css?v=20261107">
 </head>
 <body>
 
@@ -17,6 +17,36 @@
 <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
 <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="var(--amber-500)"/><path d="M20 8 13 21h5l-6 9h8v6h4v-6h8l-6-9h5z" fill="var(--forest-900)"/></symbol>
+
+<!-- 地図に重ねる線。座標はすべて img/column/akudo-relief.jpg（1125×1112）の画素。どの図もここを参照するので、線を直すときはここだけ直せばよい -->
+<path id="r-aku-ab" vector-effect="non-scaling-stroke" d="M607,1101C605,1098 602,1091 596,1085C590,1079 575,1072 569,1063C564,1054 566,1039 563,1031C560,1023 554,1022 549,1015C544,1008 538,996 532,988C526,980 516,974 512,967C508,960 507,950 509,945C511,940 517,940 523,935C529,930 543,923 546,916C549,909 542,899 542,892C542,885 546,882 547,876C548,870 549,863 547,854C545,845 539,829 537,822C535,815 537,814 537,812"/>
+<path id="r-aku-bc" vector-effect="non-scaling-stroke" d="M537,812C537,808 538,796 538,790C538,784 539,784 537,775C535,766 532,746 525,735C518,725 503,719 495,712C487,705 482,698 477,692C472,686 469,683 466,678C463,674 462,669 460,665C458,661 458,657 456,655C455,653 452,652 451,651"/>
+<!-- いまの安久登沢：南から C 点を通って南本内川へ -->
+<path id="r-aku-now" vector-effect="non-scaling-stroke" d="M607,1101C605,1098 602,1091 596,1085C590,1079 575,1072 569,1063C564,1054 566,1039 563,1031C560,1023 554,1022 549,1015C544,1008 538,996 532,988C526,980 516,974 512,967C508,960 507,950 509,945C511,940 517,940 523,935C529,930 543,923 546,916C549,909 542,899 542,892C542,885 546,882 547,876C548,870 549,863 547,854C545,845 539,829 537,822C535,815 537,814 537,812C537,808 538,796 538,790C538,784 539,784 537,775C535,766 532,746 525,735C518,725 503,719 495,712C487,705 482,698 477,692C472,686 469,683 466,678C463,674 462,669 460,665C458,661 458,657 456,655C455,653 452,652 451,651C450,651 445,651 442,650C439,650 437,649 435,648C433,647 432,645 430,645C428,645 427,649 425,650C423,651 421,652 418,652C416,652 413,651 410,650C407,649 403,648 402,648"/>
+<!-- 昔の安久登沢：南から C 点、D 点を通って小荒沢の谷を錦秋湖の方へ -->
+<path id="r-aku-old" vector-effect="non-scaling-stroke" d="M607,1101C605,1098 602,1091 596,1085C590,1079 575,1072 569,1063C564,1054 566,1039 563,1031C560,1023 554,1022 549,1015C544,1008 538,996 532,988C526,980 516,974 512,967C508,960 507,950 509,945C511,940 517,940 523,935C529,930 543,923 546,916C549,909 542,899 542,892C542,885 546,882 547,876C548,870 549,863 547,854C545,845 539,829 537,822C535,815 537,814 537,812C537,808 538,796 538,790C538,784 539,784 537,775C535,766 532,746 525,735C518,725 503,719 495,712C487,705 482,698 477,692C472,686 469,683 466,678C463,674 462,669 460,665C458,661 458,657 456,655C455,653 452,652 451,651C449,646 439,630 441,620C443,610 454,602 462,590C470,579 479,565 487,551C495,537 502,521 510,505C518,490 527,470 535,458C543,446 553,436 556,431C559,427 565,411 572,405C579,400 587,401 600,398C613,395 633,390 650,385C667,380 683,374 700,368C717,363 733,357 750,352C767,347 786,342 800,336C814,330 826,324 835,318C844,312 852,303 855,300"/>
+<path id="r-head" vector-effect="non-scaling-stroke" d="M441,620C443,610 454,602 462,590C470,579 479,565 487,551C495,537 502,521 510,505C518,490 527,470 535,458C543,446 553,436 556,431"/>
+<path id="r-koa" vector-effect="non-scaling-stroke" d="M556,431C559,427 565,411 572,405C579,400 587,401 600,398C613,395 633,390 650,385C667,380 683,374 700,368C717,363 733,357 750,352C767,347 786,342 800,336C814,330 826,324 835,318C844,312 852,303 855,300"/>
+<path id="r-min" vector-effect="non-scaling-stroke" d="M185,1109C187,1103 196,1085 199,1073C202,1062 202,1049 204,1040C206,1031 207,1024 210,1018C213,1013 219,1007 224,1007C229,1007 234,1018 238,1018C242,1019 244,1016 246,1010C248,1005 249,994 249,985C249,976 244,963 246,957C248,951 252,953 260,949C268,945 289,938 296,932C303,927 301,923 301,916C301,910 295,898 296,893C297,888 300,887 307,885C314,883 332,883 337,880C343,877 341,875 340,869C339,863 333,853 332,846C331,839 331,833 334,827C337,821 345,814 351,808C358,803 367,799 373,794C380,789 388,783 390,780C392,777 387,780 387,775C387,770 386,759 390,752C394,745 409,740 412,732C415,724 409,714 410,705C412,696 423,683 421,677C419,671 404,670 400,667C396,664 395,660 395,657C395,654 405,650 402,647C400,644 384,641 380,637C376,633 382,632 378,625C374,618 361,604 358,596C355,588 363,585 362,576C361,568 358,553 352,545C346,538 335,535 327,531C320,527 310,529 307,523C304,517 308,503 310,494C312,486 321,479 321,472C322,465 318,455 313,452C308,449 301,461 293,455C285,449 274,429 267,418C260,407 256,399 250,390C244,381 241,371 233,364C226,357 214,352 205,347C196,342 186,339 177,333C169,327 158,316 154,313"/>
+<path id="r-oar" vector-effect="non-scaling-stroke" d="M876,879C869,871 844,846 831,830C818,814 799,793 796,781C793,769 810,774 813,760C816,746 820,722 813,697C806,673 781,632 771,613C761,594 758,596 754,585C750,575 750,571 749,550C748,529 746,476 747,459C748,442 753,452 757,448C761,444 767,438 773,435C779,432 788,434 794,430C800,427 804,421 810,414C816,407 819,395 831,390C844,385 872,387 885,384C898,381 905,379 911,374C917,369 919,363 919,355C919,347 913,336 911,326C909,316 909,300 908,295"/>
+<path id="r-nash" vector-effect="non-scaling-stroke" d="M155,740C169,733 218,710 240,700C263,690 277,690 290,682C303,675 311,665 317,655C323,645 323,628 327,620C331,612 335,610 340,607C345,604 353,601 355,600"/>
+<path id="r-road" vector-effect="non-scaling-stroke" d="M575,392L842,316"/>
+<path id="r-road-w" vector-effect="non-scaling-stroke" d="M120,327L168,350L205,381L290,411"/>
+<path id="r-tunnel" vector-effect="non-scaling-stroke" d="M290,411L575,399"/>
+<!-- 流域（陰影図と等高線からのおおよその読み取り） -->
+<path id="c-koa" vector-effect="non-scaling-stroke" d="M441,620C435,615 432,600 432,580C432,560 436,520 440,500C444,480 448,475 455,460C462,445 473,432 480,410C487,388 484,345 497,330C510,315 535,325 560,322C586,319 626,313 650,310C674,307 685,304 703,302C721,300 741,299 757,296C773,293 787,288 800,286C813,284 826,283 835,285C844,287 851,294 855,300C859,306 859,315 858,322C857,330 855,337 850,345C845,353 835,361 826,368C818,376 812,381 799,390C786,399 763,410 746,422C729,434 713,452 698,464C683,476 662,479 655,495C648,511 654,541 655,560C656,579 669,601 660,610C651,619 622,614 600,615C578,616 552,616 530,615C508,615 485,611 470,612C455,613 447,625 441,620Z"/>
+<path id="c-aku" vector-effect="non-scaling-stroke" d="M441,620C444,614 455,613 470,612C485,611 508,615 530,615C552,616 578,616 600,615C622,614 648,602 660,610C672,618 675,638 673,663C671,688 651,732 650,760C649,788 660,810 665,830C670,850 683,858 682,880C681,902 662,932 660,960C659,988 673,1025 673,1050C673,1075 691,1102 660,1112L490,1112C463,1102 503,1069 500,1050C497,1031 473,1015 470,1000C467,985 476,977 480,960C484,943 492,927 495,900C498,873 500,835 497,800C494,765 483,715 475,690C467,665 457,663 451,651C445,639 438,627 441,620Z"/>
+<path id="c-oar" vector-effect="non-scaling-stroke" d="M855,300C847,306 859,315 858,322C857,330 855,337 850,345C845,353 835,361 826,368C818,376 812,381 799,390C786,399 763,410 746,422C729,434 713,452 698,464C683,476 662,479 655,495C648,511 654,541 655,560C656,579 657,593 660,610C663,627 675,638 673,663C671,688 651,732 650,760C649,788 660,810 665,830C670,850 676,868 682,880C688,892 680,892 700,900C720,908 768,925 800,930C832,935 865,942 890,930C915,918 940,898 950,860C960,822 953,750 950,700C948,650 938,605 935,560C932,515 936,465 930,430C924,395 904,374 900,350C896,326 913,293 905,285C898,277 863,294 855,300Z"/>
+<clipPath id="clip-koa"><use href="#c-koa"/></clipPath>
+<clipPath id="clip-both"><use href="#c-koa"/><use href="#c-aku"/></clipPath>
+<clipPath id="clip-cd"><circle cx="438" cy="640" r="92"/></clipPath>
+<clipPath id="clip-band"><path d="M405,612L500,612C540,680 590,720 600,790C610,850 610,920 600,960L490,960C485,900 480,850 480,810C470,760 440,730 405,690Z"/></clipPath>
+<clipPath id="clip-slope"><path d="M506,712C520,716 532,722 536,736C540,755 542,780 538,806L510,812C514,790 514,750 506,712Z"/></clipPath>
+<!-- 地点の印。どの図でも同じ形で使う -->
+<g id="pin-a"><circle r="10" fill="#C1552B" stroke="#fff" stroke-width="2"/><text y="4.7" text-anchor="middle" font-size="13.5" font-weight="800" fill="#fff">A</text></g>
+<g id="pin-b"><circle r="10" fill="#C1552B" stroke="#fff" stroke-width="2"/><text y="4.7" text-anchor="middle" font-size="13.5" font-weight="800" fill="#fff">B</text></g>
+<g id="pin-c"><circle r="10" fill="#C1552B" stroke="#fff" stroke-width="2"/><text y="4.7" text-anchor="middle" font-size="13.5" font-weight="800" fill="#fff">C</text></g>
+<g id="pin-d"><circle r="10" fill="#C1552B" stroke="#fff" stroke-width="2"/><text y="4.7" text-anchor="middle" font-size="13.5" font-weight="800" fill="#fff">D</text></g>
 </defs>
 </svg>
 
@@ -47,92 +77,403 @@
   <div class="wrap">
     <span class="eyebrow on-dark"><span class="dot"></span>FOREST PLAY COLUMN</span>
     <h1>奪われた谷に、道が通る</h1>
-    <p class="page-subtitle">— 西和賀・安久登沢の河川争奪を、地形図だけで読み解く</p>
+    <p class="page-subtitle">— 川が川の水を横取りした、西和賀の事件を地形図で解く</p>
   </div>
 </div>
 
 <section>
   <div class="wrap">
-    <article class="article">
+    <article class="article akudo">
 
       <p class="byline"><span class="chip">地形と地質</span><span>文・作図：川村晃寛</span></p>
 
-      <p class="lead"><a href="column-kasen-sodatsu.html">前回のコラム</a>では、紫波町の山中で<strong>これから起こりうる</strong>河川争奪を追いかけました。今回は、<strong>もう起きてしまった</strong>争奪の現場です。舞台は西和賀町。手がかりは、一枚の地形図と、沢につけられた名前だけです。</p>
+      <p class="lead">川が、となりの川の水を<strong>横取りする</strong>。そんな事件が、岩手の山の中で本当に起きていました。現場は西和賀町、錦秋湖の南。水を取られてしまった谷には、いま秋田自動車道が通っています。</p>
+      <p>この事件の面白いところは、<strong>現地に行かなくても解ける</strong>ことです。証拠は、一枚の地形図と沢の名前に残っています。地図が苦手でも大丈夫。色をつけながら、順番に見ていきましょう。</p>
 
-      <h2 style="margin-top:44px">地形図の、どこがおかしいか</h2>
-      <p>錦秋湖の南、秋田自動車道の峠山トンネルのあたりです。まずは下の図を見てください。</p>
-      <p>南から北へ流れてくる<strong>安久登沢（あくとさわ）</strong>は、図の中ほどのC点で、蛇行する<strong>南本内川</strong>に注いでいます。そのすぐ北、尾根をひとつ越えたD点からは、<strong>小荒沢</strong>が北東の錦秋湖へ向かって流れ出しています。</p>
-      <p>おかしいのは小荒沢です。流域はとても小さいのに、<strong>谷の幅だけがやけに広い</strong>。この程度の水量の沢が、自分の力でこれほど大きな谷を削れるはずがありません。</p>
+      <h2 style="margin-top:44px">河川争奪って、なに？</h2>
+      <p>今回の主役は<strong>河川争奪（かせんそうだつ）</strong>。川が、となりの川の水を奪ってしまう現象です。3コマにすると、こうなります。</p>
 
-      <figure>
-        <a href="img/column/akudo-map.jpg" target="_blank" rel="noopener">
-          <img src="img/column/akudo-map.jpg" alt="西和賀町、錦秋湖の南の地形図。安久登沢、南本内川、小荒沢、水無沢とA点からD点、安久登沢の元の流路が書き込まれている" width="534" height="590">
-        </a>
-        <figcaption>現場の地形図。安久登沢は南から北へ流れ、C点（争奪ポイント）で南本内川に注いでいます。その北のD点から先が小荒沢で、青い破線の矢印が安久登沢の元の流路です。</figcaption>
+      <div class="cap-steps">
+        <figure>
+          <svg viewBox="0 0 240 200" role="img" aria-label="尾根をはさんで2本の川が別々に流れている図">
+            <rect width="240" height="200" fill="#F4ECD6"/>
+            <path d="M162,200C162,150 170,90 198,0" fill="none" stroke="#DDE4B4" stroke-width="66"/>
+            <path d="M46,200C46,130 46,70 46,0" fill="none" stroke="#E7DCC8" stroke-width="30"/>
+            <path d="M100,200C102,130 104,70 112,0" fill="none" stroke="#7A4E1A" stroke-width="5" stroke-dasharray="1 10" stroke-linecap="round"/>
+            <path d="M46,200C46,130 46,70 46,0" fill="none" stroke="#A0408C" stroke-width="8"/>
+            <path d="M162,200C162,160 164,125 170,96" fill="none" stroke="#E08A1E" stroke-width="7"/>
+            <path d="M170,96C176,66 186,30 198,0" fill="none" stroke="#2B8A57" stroke-width="7"/>
+          </svg>
+          <figcaption><b>① はじめは別々の川</b>尾根をはさんで、2本の川が流れています。右の川はたくさんの水を集めて、広い谷を削っています。</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 240 200" role="img" aria-label="左の川が尾根を削り、右の川に届いた図">
+            <rect width="240" height="200" fill="#F4ECD6"/>
+            <path d="M162,200C162,150 170,90 198,0" fill="none" stroke="#DDE4B4" stroke-width="66"/>
+            <path d="M46,200C46,160 56,142 96,128C132,116 132,92 96,82C56,70 46,40 46,0" fill="none" stroke="#E7DCC8" stroke-width="30"/>
+            <path d="M104,200C104,186 104,176 106,166" fill="none" stroke="#7A4E1A" stroke-width="5" stroke-dasharray="1 10" stroke-linecap="round"/>
+            <path d="M106,44C108,30 110,14 112,0" fill="none" stroke="#7A4E1A" stroke-width="5" stroke-dasharray="1 10" stroke-linecap="round"/>
+            <path d="M46,200C46,160 56,142 100,128C168,108 168,92 100,80C56,70 46,40 46,0" fill="none" stroke="#A0408C" stroke-width="8"/>
+            <path d="M162,200C162,160 164,125 170,96" fill="none" stroke="#E08A1E" stroke-width="7"/>
+            <path d="M170,96C176,66 186,30 198,0" fill="none" stroke="#2B8A57" stroke-width="7"/>
+            <circle cx="165" cy="104" r="13" fill="none" stroke="#C1552B" stroke-width="3.5"/>
+          </svg>
+          <figcaption><b>② 仕切りが破れる</b>もっと低いところを流れる左の川が、尾根を削って、とうとう右の川に届きます。</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 240 200" role="img" aria-label="右の川の水が左の川へ流れ込み、下流には広い谷と細い流れだけが残った図">
+            <rect width="240" height="200" fill="#F4ECD6"/>
+            <path d="M162,200C162,150 170,90 198,0" fill="none" stroke="#DDE4B4" stroke-width="66"/>
+            <path d="M46,200C46,160 56,142 96,128C132,116 132,92 96,82C56,70 46,40 46,0" fill="none" stroke="#E7DCC8" stroke-width="30"/>
+            <path d="M104,200C104,186 104,176 106,166" fill="none" stroke="#7A4E1A" stroke-width="5" stroke-dasharray="1 10" stroke-linecap="round"/>
+            <path d="M106,44C108,30 110,14 112,0" fill="none" stroke="#7A4E1A" stroke-width="5" stroke-dasharray="1 10" stroke-linecap="round"/>
+            <path d="M46,200C46,160 56,142 100,128C150,114 158,106 150,98" fill="none" stroke="#A0408C" stroke-width="7"/>
+            <path d="M150,98C140,88 120,84 100,80C56,70 46,40 46,0" fill="none" stroke="#A0408C" stroke-width="11"/>
+            <path d="M162,200C162,160 164,130 166,112C166,104 160,100 150,98" fill="none" stroke="#E08A1E" stroke-width="7"/>
+            <path d="M175,84C180,58 188,28 198,0" fill="none" stroke="#2B8A57" stroke-width="2.5"/>
+          </svg>
+          <figcaption><b>③ 水が乗り換える</b>水は低いほうへ流れます。右の川の水は左の川へ。下流には<strong>広い谷だけ</strong>が残りました。</figcaption>
+        </figure>
+      </div>
+
+      <h2>先に、結論を言います</h2>
+      <div class="callout-box">
+        <p>西和賀町の<strong>安久登沢（あくとさわ）</strong>は、昔は北へ流れて、いまの<strong>小荒沢</strong>の谷を通っていました。ところが<strong>南本内川</strong>に水を奪われ、小荒沢の谷は広さだけを残して静かになりました。その広くおだやかな谷に、いま高速道路が通っています。</p>
+      </div>
+      <p>犯人を先に明かしてしまいましたが、面白いのはここからです。<strong>なぜ、地形図だけでそう言えるのか。</strong>証拠は3つあります。読み終わるころには、色のついていない地形図を見て「あ、ここで奪ったな」と言えるようになっているはずです。</p>
+
+      <h2>現場はここ。登場する川は3本です</h2>
+      <p>錦秋湖の南、秋田自動車道の峠山トンネルのあたりです。関係のない場所は色を抜いて、3本の川にだけ色をつけました。</p>
+
+      <figure class="map-fig">
+        <svg viewBox="120 170 840 850" role="img" aria-label="現場の全体図。南から北へ流れる安久登沢がC点で南本内川に注ぎ、D点の先から小荒沢が北東の錦秋湖へ向かう。小荒沢の谷に秋田自動車道が通っている。">
+          <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+          <use href="#r-tunnel" class="road-tunnel"/>
+          <use href="#r-road-w" class="road-case"/><use href="#r-road-w" class="road"/>
+          <use href="#r-road" class="road-case"/><use href="#r-road" class="road"/>
+          <use href="#r-min" class="rv rv-case"/><use href="#r-min" class="rv rv-min"/>
+          <use href="#r-head" class="rv rv-koa-dot"/>
+          <use href="#r-koa" class="rv rv-case"/><use href="#r-koa" class="rv rv-koa"/>
+          <use href="#r-aku-now" class="rv rv-case"/><use href="#r-aku-now" class="rv rv-aku"/>
+          <g font-size="34">
+            <text x="600" y="222" text-anchor="middle">錦秋湖</text>
+            <text x="150" y="290">秋田自動車道</text>
+            <text x="676" y="432">小荒沢</text>
+            <text x="572" y="822">安久登沢</text>
+            <text x="150" y="842">南本内川</text>
+          </g>
+          <path class="leader" d="M441,620L420,588M451,651L480,680"/>
+          <use href="#pin-d" transform="translate(418 585) scale(2.35)"/>
+          <use href="#pin-c" transform="translate(483 684) scale(2.35)"/>
+          <use href="#pin-b" transform="translate(537 812) scale(2.35)"/>
+          <use href="#pin-a" transform="translate(545 916) scale(2.35)"/>
+          <g transform="translate(925 960)"><path d="M0,-34L13,10L0,2L-13,10Z" fill="#2B2117" stroke="#fff" stroke-width="3"/><text y="44" text-anchor="middle" font-size="26">北</text></g>
+        </svg>
+        <figcaption>現場の全体図。赤い丸のA〜Dは、このあと話に出てくる地点です。<a href="img/column/akudo-relief.jpg" target="_blank" rel="noopener">色を抜く前の段彩陰影図を開く</a></figcaption>
       </figure>
 
-      <h2>答え：小荒沢は、もとは安久登沢だった</h2>
-      <p>種明かしをします。昔の安久登沢（ここでは<strong>古安久登沢</strong>と呼びます）は、C点で止まらずにそのまま北へ進み、D点を抜けて、いまの小荒沢の谷を流れていました。あの広い谷は、上流の水を全部集めていた頃の安久登沢が削ったものです。</p>
-      <p>ところが、西側を流れる南本内川が蛇行しながら東へ谷を広げ、ついにC点で古安久登沢の流れに届いてしまいました。南本内川のほうがずっと低い位置を流れていたので、水は一気にそちらへ向きを変えます。<strong>河川争奪</strong>です。</p>
+      <ul class="river-key">
+        <li><i style="background:var(--c-aku)"></i><span><b>安久登沢（だいだい色）</b>南から北へ流れてくる沢。水を奪われて、行き先が変わりました。</span></li>
+        <li><i style="background:var(--c-koa)"></i><span><b>小荒沢（緑）</b>高速道路が通る谷の沢。水を失った側です。</span></li>
+        <li><i style="background:var(--c-min)"></i><span><b>南本内川（赤紫）</b>水を奪った側の川です。</span></li>
+      </ul>
+      <p>川の色も、A〜Dの印も、このあとの図ではすべて同じです。</p>
+
+      <h2>ふつう、谷の大きさは水の量で決まる</h2>
+      <p>謎解きの前に、大事なルールをひとつだけ。</p>
+      <p>谷を削るのは、流れる水です。水が多い川ほど削る力が強く、大きな谷をつくります。そして川に集まる水の量は、おおまかには<strong>流域</strong>の広さで決まります。流域とは、降った雨がその川に集まってくる範囲のこと。雨を受けるお皿のようなものです。</p>
+
+      <div class="rule-grid" role="img" aria-label="流域が小さければ谷は小さく、流域が大きければ谷は大きいのがふつう。ところが小荒沢は流域が小さいのに谷が大きい。">
+        <div>
+          <b>ふつうの沢</b>
+          <svg viewBox="0 0 160 100" aria-hidden="true"><path d="M0,34L58,34L80,74L102,34L160,34L160,100L0,100Z" fill="#CDBE94"/><path d="M75,65L85,65L80,74Z" fill="#3E7CB8"/></svg>
+          <span>流域が小さい<br>水が少ない</span>
+          <strong>谷は小さい</strong>
+        </div>
+        <div>
+          <b>ふつうの大きな川</b>
+          <svg viewBox="0 0 160 100" aria-hidden="true"><path d="M0,10L22,10L68,86L92,86L138,10L160,10L160,100L0,100Z" fill="#CDBE94"/><path d="M60,73L100,73L92,86L68,86Z" fill="#3E7CB8"/></svg>
+          <span>流域が大きい<br>水が多い</span>
+          <strong>谷は大きい</strong>
+        </div>
+        <div class="odd">
+          <b>小荒沢</b>
+          <svg viewBox="0 0 160 100" aria-hidden="true"><path d="M0,10L22,10L68,86L92,86L138,10L160,10L160,100L0,100Z" fill="#CDBE94"/><path d="M76,82L84,82L82,86L78,86Z" fill="#3E7CB8"/><text x="80" y="54" text-anchor="middle" font-size="36" font-weight="800" fill="#C1552B">?!</text></svg>
+          <span>流域が小さい<br>水が少ない</span>
+          <strong>なのに谷は大きい</strong>
+        </div>
+      </div>
+
+      <h2><span class="ev">証拠①</span>小荒沢の谷は、水の量に合っていない</h2>
+      <p>緑に塗った範囲が、小荒沢の流域です。点線で囲んだとなりの大荒沢と比べると、ひとまわり小さい。名前のとおりの「小」です。</p>
+
+      <figure class="map-fig">
+        <svg viewBox="420 265 530 665" role="img" aria-label="小荒沢の流域を緑で塗った地図。となりの大荒沢の流域のほうが大きいが、谷の幅は小荒沢のほうが広く開いている。">
+          <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+          <image href="img/column/akudo-relief.jpg" width="1125" height="1112" clip-path="url(#clip-koa)"/>
+          <use href="#c-koa" class="fill-koa"/>
+          <use href="#c-oar" class="fill-oar"/>
+          <use href="#c-oar" class="ol-oar"/>
+          <use href="#c-koa" class="ol-koa"/>
+          <use href="#r-oar" class="rv rv-case-thin"/><use href="#r-oar" class="rv rv-oar"/>
+          <use href="#r-road" class="road-case"/><use href="#r-road" class="road"/>
+          <use href="#r-koa" class="rv rv-case-thin"/><use href="#r-koa" class="rv rv-koa-thin"/>
+          <path class="arrow-line" d="M690,304L728,430" stroke-dasharray="none"/>
+          <path d="M690,304L698,323L682,328Z" fill="#1E3626"/><path d="M728,430L720,411L736,406Z" fill="#1E3626"/>
+          <g font-size="23">
+            <text x="738" y="402">谷の幅</text>
+            <text x="500" y="545">小荒沢の流域</text>
+            <text x="792" y="700" text-anchor="middle">大荒沢の流域</text>
+            <text x="792" y="730" text-anchor="middle" class="sm">（こちらのほうが大きい）</text>
+            <text x="600" y="372" class="sm">高速道路</text>
+            <text x="945" y="432" text-anchor="end" class="sm">下流の谷は細い</text>
+          </g>
+          <use href="#pin-d" transform="translate(441 620) scale(1.5)"/>
+        </svg>
+        <figcaption>同じ縮尺の一枚の図に、両方が入っています。流域の線は等高線からのおおよその読み取りです。</figcaption>
+      </figure>
+
+      <p>ところが谷はどうでしょう。流域の大きい大荒沢の下流は、影が細く続く切れ込みのような谷。いっぽう小荒沢の谷は、高速道路がゆうゆうと収まるほど大きく開いています。</p>
+      <p class="pull">流域は小さいのに、谷だけ大きい。</p>
+      <p>この程度の水量の沢が、自分の力でこれほど大きな谷を削れるはずがありません。では、誰が削ったのでしょうか。</p>
+
+      <h2>種明かし：昔は、上流とつながっていた</h2>
+      <p>下の図のボタンで、「昔」と「いま」を切り替えられます。白い点が、水の流れる向きです。</p>
+
+      <div class="era-fig">
+        <input type="radio" name="akudo-era" id="era-old" checked aria-label="昔の流れを表示する">
+        <input type="radio" name="akudo-era" id="era-now" aria-label="いまの流れを表示する">
+        <div class="era-tabs" aria-hidden="true">
+          <label for="era-old">昔（奪われる前）</label>
+          <label for="era-now">いま（奪われたあと）</label>
+        </div>
+        <figure class="map-fig">
+          <svg viewBox="340 270 540 770" role="img" aria-label="昔は安久登沢がC点とD点を通って小荒沢の谷へ流れていた。いまはC点で南本内川へ折れ、小荒沢にはD点から先の水しか流れない。">
+            <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+            <image href="img/column/akudo-relief.jpg" width="1125" height="1112" clip-path="url(#clip-both)"/>
+            <use href="#c-aku" class="fill-aku"/>
+            <use href="#c-koa" class="fill-koa"/>
+            <use href="#c-aku" class="ol-aku"/>
+            <use href="#c-koa" class="ol-koa"/>
+            <use href="#r-min" class="rv rv-case"/><use href="#r-min" class="rv rv-min"/>
+            <g class="when-old">
+              <path class="ridge-old" d="M432,596C420,622 416,650 430,672C444,692 462,704 482,706"/>
+              <use href="#r-aku-old" class="rv rv-case"/><use href="#r-aku-old" class="rv rv-aku"/>
+              <g font-size="24">
+                <text x="590" y="510" text-anchor="middle">雨はぜんぶ、</text>
+                <text x="590" y="542" text-anchor="middle">この谷へ</text>
+                <text x="560" y="850">古安久登沢</text>
+                <text x="350" y="740">仕切りの尾根</text>
+              </g>
+            </g>
+            <g class="when-now">
+              <use href="#r-road" class="road-case"/><use href="#r-road" class="road"/>
+              <use href="#r-head" class="rv rv-koa-dot"/>
+              <use href="#r-koa" class="rv rv-case-thin"/><use href="#r-koa" class="rv rv-koa-thin"/>
+              <use href="#r-aku-now" class="rv rv-case"/><use href="#r-aku-now" class="rv rv-aku"/>
+              <g font-size="24">
+                <text x="590" y="510" text-anchor="middle">小荒沢に残ったのは</text>
+                <text x="590" y="542" text-anchor="middle">ここに降る雨だけ</text>
+                <text x="560" y="850">安久登沢</text>
+                <text x="350" y="725">ここで</text>
+                <text x="350" y="755">南本内川へ</text>
+              </g>
+            </g>
+            <path class="leader" d="M441,620L424,590M451,651L476,676"/>
+            <use href="#pin-d" transform="translate(421 585) scale(1.5)"/>
+            <use href="#pin-c" transform="translate(481 681) scale(1.5)"/>
+            <use href="#pin-b" transform="translate(537 812) scale(1.5)"/>
+            <use href="#pin-a" transform="translate(545 916) scale(1.5)"/>
+          </svg>
+          <!-- 水の流れを示す白い点。動く部分だけ別の層にして、地図の画像を毎回描き直さずに済むようにする -->
+          <svg class="flow-layer" viewBox="340 270 540 770" aria-hidden="true">
+            <use href="#r-aku-old" class="rv flow when-old"/>
+            <use href="#r-aku-now" class="rv flow when-now"/>
+            <use href="#pin-b" transform="translate(537 812) scale(1.5)"/>
+            <use href="#pin-a" transform="translate(545 916) scale(1.5)"/>
+          </svg>
+        </figure>
+      </div>
+
+      <p>昔の安久登沢（ここでは<strong>古安久登沢</strong>と呼びます）は、C点で止まらずにそのまま北へ進み、D点を抜けて、いまの小荒沢の谷を流れていました。だいだい色と緑を合わせた広い範囲の雨が、ぜんぶこの谷に集まっていたわけです。あの広い谷は、その頃の安久登沢が削ったものでした。</p>
+      <p>ところが、西側を流れる南本内川が蛇行しながら東へ谷を広げ、ついにC点で古安久登沢の流れに届いてしまいました。南本内川のほうがずっと低い位置を流れていたので、水は一気にそちらへ向きを変えます。これが<strong>河川争奪</strong>です。</p>
       <p>水を奪われた下流側は、D点から先の小さな沢として取り残されました。それがいまの小荒沢です。</p>
 
-      <p>上から見ると、谷の大きさの違いはいっそうはっきりします。</p>
+      <h2><span class="ev">証拠②</span>現場に、切り口が残っている</h2>
+      <p>C点とD点のあたりを拡大しました。安久登沢は南から流れてきて、C点でひじを曲げたように西へ折れます。この折れ曲がりを<strong>争奪の肘（ひじ）</strong>といいます。そしてすぐ北のD点から、小荒沢の谷がはじまります。</p>
 
-      <figure>
-        <a href="img/column/akudo-relief.jpg" target="_blank" rel="noopener">
-          <img src="img/column/akudo-relief.jpg" alt="錦秋湖の南の段彩陰影図。小荒沢の広い谷と、南本内川、安久登沢の谷が立体的に見える" width="1125" height="1112" loading="lazy">
-        </a>
-        <figcaption>段彩陰影図で見た現場。中央から右上の錦秋湖へ向かって、高速道路（緑の線）が通る小荒沢の谷が大きく開いています。いまの小荒沢の水量では、とてもこれだけの谷は削れません。</figcaption>
+      <figure class="map-fig">
+        <svg viewBox="318 545 262 225" role="img" aria-label="C点とD点の拡大図。安久登沢はC点で西へ折れて南本内川に合流する。そのすぐ北のD点から小荒沢の谷がはじまる。西側に写真の撮影地点がある。">
+          <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+          <image href="img/column/akudo-relief.jpg" width="1125" height="1112" clip-path="url(#clip-cd)"/>
+          <path d="M345,711L424,624L470,690Z" fill="#fff" fill-opacity=".28" stroke="#fff" stroke-width="1"/>
+          <use href="#r-min" class="rv rv-case"/><use href="#r-min" class="rv rv-min"/>
+          <use href="#r-head" class="rv rv-case-thin"/><use href="#r-head" class="rv rv-koa-dot"/>
+          <use href="#r-aku-now" class="rv rv-case"/><use href="#r-aku-now" class="rv rv-aku"/>
+          <g font-size="11.5">
+            <text x="505" y="600">小荒沢の谷へ</text>
+            <text x="490" y="735">安久登沢</text>
+            <text x="324" y="590">南本内川</text>
+            <text x="324" y="750">写真の撮影地点</text>
+            <text x="462" y="630" class="alert">この間に急な崖</text>
+          </g>
+          <circle cx="345" cy="711" r="6" fill="#1E3626" stroke="#fff" stroke-width="1.6"/>
+          <use href="#pin-d" transform="translate(441 620) scale(.72)"/>
+          <use href="#pin-c" transform="translate(451 651) scale(.72)"/>
+        </svg>
+        <figcaption>D点からC点までは、ほんのひと息。その間の暗い部分は、南本内川の側へ切れ落ちた急な崖です。</figcaption>
       </figure>
 
-      <figure>
-        <a href="img/column/akudo-photo.jpg" target="_blank" rel="noopener">
-          <img src="img/column/akudo-photo.jpg" alt="南本内川の対岸から争奪ポイントを望む写真。左に小荒沢、右に安久登沢の谷があり、古安久登沢が流れていたときの尾根線が破線で示されている" width="2000" height="859" loading="lazy">
-        </a>
-        <figcaption>南本内川の西側から、争奪ポイントを見たところ。左が小荒沢、右が安久登沢の谷です。破線は、古安久登沢が流れていたときの尾根線。この尾根が削られて、いまの姿になりました。</figcaption>
+      <p>現地で見ると、こんな姿です。上の図の撮影地点から、東を向いて撮りました。</p>
+
+      <figure class="map-fig wide">
+        <svg viewBox="300 165 1450 490" role="img" aria-label="南本内川の西側から現場を見た写真。左の切れ目の奥が小荒沢、右の谷が安久登沢、中央の山のふもとが争奪ポイント。山の高さに、古安久登沢が流れていたころの尾根線が破線で示されている。">
+          <image href="img/column/akudo-photo.jpg" width="2000" height="859"/>
+          <!-- 元画像の小さな文字に重ねて、スマホでも読める大きさの文字に置き換える -->
+          <rect x="300" y="165" width="440" height="134" fill="#fff"/>
+          <rect x="985" y="165" width="45" height="73" fill="#fff"/>
+          <path d="M300,300L1750,300" fill="none" stroke="#C1552B" stroke-width="7" stroke-dasharray="46 26"/>
+          <rect x="520" y="250" width="280" height="62" rx="12" fill="#fff"/>
+          <rect x="440" y="346" width="250" height="110" rx="12" fill="#fff"/>
+          <rect x="1405" y="326" width="285" height="74" rx="12" fill="#fff"/>
+          <rect x="752" y="522" width="500" height="60" rx="12" fill="#fff"/>
+          <path d="M1012,226V368" fill="none" stroke="#2B2117" stroke-width="4"/>
+          <g font-size="52">
+            <text x="1012" y="214" text-anchor="middle">争奪ポイント</text>
+            <text x="530" y="298" style="stroke:none">昔の尾根線</text>
+            <text x="452" y="396" style="stroke:none">←小荒沢</text>
+            <text x="452" y="442" style="stroke:none;font-size:38px">（D点の先）</text>
+            <text x="1417" y="382" style="stroke:none">←安久登沢</text>
+            <text x="1002" y="570" text-anchor="middle" style="stroke:none;letter-spacing:.3em">←南本内川</text>
+          </g>
+          <use href="#pin-c" transform="translate(1012 395) scale(3.2)"/>
+        </svg>
+        <figcaption>南本内川の西側から見た現場。左の切れ目の奥が小荒沢（D点の先）、右が安久登沢の谷です。破線は古安久登沢が流れていたときの尾根線。この尾根が削られて、いまの姿になりました。<a href="img/column/akudo-photo.jpg" target="_blank" rel="noopener">元の写真を開く</a></figcaption>
       </figure>
 
-      <h2>縦断図で見る、70mの落差</h2>
-      <p>川の高さを横から見た縦断図にすると、何が起きたのかがよく分かります。</p>
+      <h2><span class="ev">証拠③</span>横から見ると、70mの段差</h2>
+      <p>川の高さを横から見た<strong>縦断図</strong>にすると、何が起きたのかがよく分かります。横が距離、縦が標高。色もA〜Dの印も、地図と同じです。</p>
 
-      <figure>
-        <a href="img/column/akudo-section.jpg" target="_blank" rel="noopener">
-          <img src="img/column/akudo-section.jpg" alt="安久登沢、古安久登沢、小荒沢、南本内川の縦断図。A点からD点へ続く破線が古安久登沢、C点が争奪ポイント" width="2000" height="922" loading="lazy">
-        </a>
-        <figcaption>縦断図。横軸は流路にそった距離、縦軸は標高です。破線の「古安久登沢」は、争奪の前にA点からD点へ続いていた流れです。D点（約337m）に対してC点（約263m）は70mほど低い位置にあります。</figcaption>
+      <figure class="map-fig chart">
+        <svg viewBox="0 0 640 400" role="img" aria-label="縦断図。安久登沢は南から下り、C点付近で南本内川に合流する。点線の古安久登沢はA点からD点へゆるやかに続いていた。D点に対してC点は約70メートル低い。B点からC点は急な区間になっている。">
+          <g stroke="#E6DDC6" stroke-width="1">
+            <line x1="52" x2="628" y1="340" y2="340"/><line x1="52" x2="628" y1="250" y2="250"/><line x1="52" x2="628" y1="160" y2="160"/><line x1="52" x2="628" y1="70" y2="70"/>
+          </g>
+          <polygon points="52,25.1 55.4,25.1 77.1,30.9 88.2,50.2 103.9,51.2 122.4,70 142.5,91.9 154.2,105 162.6,123.2 172.6,129.5 202.8,155.6 213.5,171.2 223.6,218.7 241.3,249.5 262.4,269.3 297.6,313.1 323.4,333.5 328.4,343.4 328.4,376 52,376" fill="#E08A1E" fill-opacity=".22"/>
+          <polygon points="297.6,313.1 303.3,305.8 315.7,210.3 321.7,197.8 328.4,201.5 345.2,207.7 357.9,209.8 378.7,218.7 402.2,230.2 421.6,250.5 445.7,261.5 479.2,271.9 508.7,279.2 539.6,311 565.4,340.8 574.7,355.9 590.5,361.7 609.9,365.3 609.9,376 328.4,376 328.4,343.4 323.4,333.5" fill="#2B8A57" fill-opacity=".2"/>
+          <polygon points="52,286 92.2,288.6 121.4,297 130.7,302.7 189.4,308.4 217.2,314.7 233.6,335.6 328.4,343.4 355.3,347.6 378.7,357.5 402.2,357 553,365.3 606.6,365.3 606.6,376 52,376" fill="#A0408C" fill-opacity=".24"/>
+          <polyline points="297.6,313.1 303.3,305.8 315.7,210.3 321.7,197.8" fill="none" stroke="#5B4E3C" stroke-width="2"/>
+          <polyline points="52,286 92.2,288.6 121.4,297 130.7,302.7 189.4,308.4 217.2,314.7 233.6,335.6 328.4,343.4 355.3,347.6 378.7,357.5 402.2,357 553,365.3 606.6,365.3" fill="none" stroke="#A0408C" stroke-width="3.5" stroke-linejoin="round"/>
+          <polyline points="321.7,197.8 328.4,201.5 345.2,207.7 357.9,209.8 378.7,218.7 402.2,230.2 421.6,250.5 445.7,261.5 479.2,271.9 508.7,279.2 539.6,311 565.4,340.8 574.7,355.9 590.5,361.7 609.9,365.3" fill="none" stroke="#2B8A57" stroke-width="3.5" stroke-linejoin="round"/>
+          <polyline points="52,25.1 55.4,25.1 77.1,30.9 88.2,50.2 103.9,51.2 122.4,70 142.5,91.9 154.2,105 162.6,123.2 172.6,129.5 202.8,155.6 213.5,171.2 223.6,218.7 241.3,249.5 262.4,269.3 297.6,313.1 323.4,333.5 328.4,343.4" fill="none" stroke="#E08A1E" stroke-width="3.5" stroke-linejoin="round"/>
+          <polyline points="213.5,171.2 223.6,218.7 241.3,249.5 262.4,269.3 297.6,313.1" fill="none" stroke="#E08A1E" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline points="142.5,91.9 171,118 234.6,155.6 321.7,197.8 357.9,209.8" fill="none" stroke="#E08A1E" stroke-width="3" stroke-dasharray="9 7"/>
+          <!-- D点とC点の高さの差 -->
+          <path d="M332,197.8H392M306,313.1H392" fill="none" stroke="#2B2117" stroke-width="1.2" stroke-dasharray="3 4"/>
+          <path d="M382,204V307" fill="none" stroke="#2B2117" stroke-width="2.2"/>
+          <path d="M382,198l-6,11h12zM382,313l-6,-11h12z" fill="#2B2117"/>
+          <g font-size="25">
+            <text x="392" y="264">約70mの差</text>
+            <text transform="translate(186 108) rotate(27)">古安久登沢</text>
+            <text x="424" y="208">小荒沢</text>
+            <text x="64" y="274">南本内川</text>
+            <text x="66" y="150">安久登沢</text>
+            <text x="248" y="232">急流</text>
+          </g>
+          <g font-size="19" style="font-weight:600">
+            <text x="44" y="345" text-anchor="end" style="stroke:none">250</text><text x="44" y="255" text-anchor="end" style="stroke:none">300</text><text x="44" y="165" text-anchor="end" style="stroke:none">350</text><text x="44" y="75" text-anchor="end" style="stroke:none">400m</text>
+            <text x="52" y="394" text-anchor="middle" style="stroke:none">0</text><text x="166.6" y="394" text-anchor="middle" style="stroke:none">1</text><text x="281.2" y="394" text-anchor="middle" style="stroke:none">2</text><text x="395.8" y="394" text-anchor="middle" style="stroke:none">3</text><text x="510.4" y="394" text-anchor="middle" style="stroke:none">4</text><text x="625" y="394" text-anchor="end" style="stroke:none">5km</text>
+          </g>
+          <line x1="52" x2="628" y1="376" y2="376" stroke="#5B4E3C" stroke-width="1.4"/>
+          <use href="#pin-a" transform="translate(142.5 91.9) scale(1.35)"><title>A点</title></use>
+          <use href="#pin-b" transform="translate(213.5 171.2) scale(1.35)"><title>B点</title></use>
+          <use href="#pin-c" transform="translate(297.6 313.1) scale(1.35)"><title>C点 約263m</title></use>
+          <use href="#pin-d" transform="translate(321.7 197.8) scale(1.35)"><title>D点 約337m</title></use>
+        </svg>
+        <figcaption>縦断図。段差が見やすいように、高さを距離の約16倍に強調しています。D点（約337m）に対して、C点（約263m）は70mほど低い位置にあります。</figcaption>
       </figure>
 
       <p>見てほしいのは三つです。</p>
       <ul>
         <li><strong>点線（古安久登沢）</strong>｜A点からD点まで、約1.5kmで55mほどしか下がらない、ゆるやかな流れでした。</li>
         <li><strong>C点とD点の高さの差</strong>｜すぐ隣どうしなのに、<strong>C点のほうが約70mも低い</strong>。南本内川の谷の底が、それだけ深いところにあったということです。水から見れば、すぐ横に「ずっと低い道」が開いたことになります。</li>
-        <li><strong>B点から下の急な区間</strong>｜争奪のあと、70mの落差を得た流れは谷底を激しく削りはじめました。その急な区間がC点から上流へさかのぼり、いまB点まで達しています。B点より上は、まだ昔のゆるい勾配のままです。</li>
+        <li><strong>B点から下の太い区間</strong>｜争奪のあと、70mの落差を得た流れは谷底を激しく削りはじめました。その急な区間がC点から上流へさかのぼり、いまB点まで達しています。B点より上は、まだ昔のゆるい勾配のままです。</li>
       </ul>
 
-      <h2>「悪党」になった沢と、おだやかになった沢</h2>
-      <p>争奪のあと、ふたつの沢はまったく違う道を歩みました。</p>
+      <figure class="map-fig">
+        <svg viewBox="405 625 240 325" role="img" aria-label="安久登沢の拡大図。C点からB点までが急流の区間で、B点からA点はゆるい勾配のまま残っている。">
+          <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+          <image href="img/column/akudo-relief.jpg" width="1125" height="1112" clip-path="url(#clip-band)"/>
+          <use href="#r-aku-ab" class="rv rv-case"/><use href="#r-aku-ab" class="rv rv-aku"/>
+          <use href="#r-aku-bc" class="rv rv-case"/><use href="#r-aku-bc" class="rv rv-steep"/>
+          <g font-size="11">
+            <text x="555" y="735">急流の区間</text>
+            <text x="555" y="751" class="sm">約0.75kmで80m下る</text>
+            <text x="560" y="870">昔のままの</text>
+            <text x="560" y="885">ゆるい勾配</text>
+          </g>
+          <use href="#pin-c" transform="translate(451 651) scale(.66)"/>
+          <use href="#pin-b" transform="translate(537 812) scale(.66)"/>
+          <use href="#pin-a" transform="translate(545 916) scale(.66)"/>
+        </svg>
+        <figcaption>地図で見ると、急流の区間はここです。急な区間の先頭（B点）は、いまも少しずつ上流へ進んでいます。</figcaption>
+      </figure>
 
-      <div class="table-wrap">
-        <table class="compare">
-          <thead>
-            <tr><th></th><th>安久登沢（奪われて南本内川へ）</th><th>小荒沢（水を失った側）</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><b>水の量</b></td><td>上流の水をすべて受け取る</td><td>D点から先の、わずかな水だけ</td></tr>
-            <tr><td><b>勾配</b></td><td>C点〜B点が急流になった（約0.75kmで80m下る）</td><td>昔のままのゆるい勾配</td></tr>
-            <tr><td><b>削る力</b></td><td>強い。谷を深く刻みつづける</td><td>極端に弱まった</td></tr>
-            <tr><td><b>谷の姿</b></td><td>狭く、急で、荒々しい</td><td>広く、おだやか。植物がよく茂る</td></tr>
-            <tr><td><b>人との関わり</b></td><td>名前が「悪党（あくとう）」に通じる</td><td>谷ぞいに高速道路が通された</td></tr>
-          </tbody>
-        </table>
+      <h2>奪われたあと、ふたつの沢は別の道を歩いた</h2>
+
+      <div class="versus">
+        <div>
+          <h3>安久登沢<small>奪われて南本内川へ</small></h3>
+          <dl>
+            <dt>水の量</dt><dd>上流の水をすべて受け取る</dd>
+            <dt>勾配</dt><dd>C点〜B点が急流になった</dd>
+            <dt>削る力</dt><dd>強い。谷を深く刻みつづける</dd>
+            <dt>谷の姿</dt><dd>狭く、急で、荒々しい</dd>
+            <dt>人との関わり</dt><dd>名前が「悪党（あくとう）」に通じる</dd>
+          </dl>
+        </div>
+        <div class="koa">
+          <h3>小荒沢<small>水を失った側</small></h3>
+          <dl>
+            <dt>水の量</dt><dd>D点から先の、わずかな水だけ</dd>
+            <dt>勾配</dt><dd>昔のままのゆるい勾配</dd>
+            <dt>削る力</dt><dd>極端に弱まった</dd>
+            <dt>谷の姿</dt><dd>広く、おだやか。植物がよく茂る</dd>
+            <dt>人との関わり</dt><dd>谷ぞいに高速道路が通された</dd>
+          </dl>
+        </div>
       </div>
 
-      <p>安久登（あくと）沢という名前は、「悪党」に通じます。急流になって荒れるこの沢の性質を、昔の人はよく見ていたのかもしれません。</p>
+      <p>安久登（あくと）沢という名前は、「悪党」に通じます。急流になって荒れるこの沢の性質を、昔の人はよく見ていたのかもしれません。奪ったのは南本内川なのに、悪党呼ばわりされるのは奪われた側。少し気の毒です。</p>
       <p>一方の小荒沢は、削る力がほとんどなくなったので、広くおだやかな谷のまま残りました。そして、<strong>そういう谷だったからこそ、高速道路がこの谷にそって通されました</strong>。広くてなだらかな谷は、道をつくるのにうってつけだからです。遠い昔の川の奪い合いが、いまの道路の位置を決めていることになります。</p>
       <p>高速道路ができるずっと前、筆者が学生だった頃に歩いたこの谷には、植物が厚く茂っていました。このあたりの山の谷とは思えない、ふしぎな渓相（けいそう）でした。いま思えば、水を奪われて静かになった谷の姿だったのです。</p>
 
-      <h2>なぜ奪われたのか。鍵は「水無沢」という地名</h2>
+      <div class="deep-sign">
+        <p><b>ここまでで、事件のあらましは解けました</b>ここから先は、もう一歩深い話です。なぜ奪えたのか、土地はどう動いてきたのか。お時間のあるときに、どうぞ迷い込んでください。</p>
+      </div>
+
+      <h2>なぜ奪えたのか。共犯は「水無沢」</h2>
       <p>では、なぜ南本内川は東へ寄って、安久登沢の流れに届いてしまったのでしょうか。手がかりは、南本内川の西側（左岸）から流れ込む<strong>水無沢</strong>という名前にあります。</p>
+
+      <figure class="map-fig">
+        <svg viewBox="150 480 340 300" role="img" aria-label="水無沢が西から南本内川へ流れ込む地図。水無沢の運ぶ土砂に押されて、南本内川はC点のある東側へ寄った。">
+          <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+          <use href="#r-min" class="rv rv-case"/><use href="#r-min" class="rv rv-min"/>
+          <use href="#r-aku-now" class="rv rv-case"/><use href="#r-aku-now" class="rv rv-aku"/>
+          <use href="#r-nash" class="rv rv-case"/><use href="#r-nash" class="rv rv-sed"/>
+          <path d="M340,640L392,624" fill="none" stroke="#7A4E1A" stroke-width="5" vector-effect="non-scaling-stroke"/>
+          <path d="M408,619L386,614L392,636Z" fill="#7A4E1A" stroke="#fff" stroke-width=".8"/>
+          <g font-size="15">
+            <text x="165" y="690">水無沢</text>
+            <text x="222" y="600">土砂で東へ</text>
+            <text x="222" y="620">押される</text>
+            <text x="368" y="560">南本内川</text>
+            <text x="425" y="720">安久登沢</text>
+          </g>
+          <use href="#pin-c" transform="translate(451 651) scale(.95)"/>
+        </svg>
+      </figure>
+
       <p>「水が無い沢」とは、運んでくる土砂が多く、水が砂利の下にもぐって流れてしまう（<strong>伏流</strong>する）沢のことです。水無沢が流れる山には<strong>第三紀の花こう岩</strong>がところどころに分布しています。この花こう岩の山は、第四紀のはじめ頃まで盛り上がり続けていたと考えられ、そのため崩れやすく、土砂をたくさん出してきました。</p>
       <p>こうして見ると、争奪までの流れは次のように推定できます。</p>
 
@@ -146,13 +487,41 @@
 
       <h2>地形は、休んでいた時期も覚えている</h2>
       <p>もう一つ、地形図から読めることがあります。安久登沢の西にある<strong>460mのピークの東斜面</strong>には、ところどころ階段のようにゆるくなった場所があります。</p>
+
+      <figure class="map-fig">
+        <svg viewBox="405 680 245 170" role="img" aria-label="安久登沢の西にある460メートルのピークと、その東斜面を色で示した拡大図。">
+          <image href="img/column/akudo-relief-gray.jpg" width="1125" height="1112"/>
+          <image href="img/column/akudo-relief.jpg" width="1125" height="1112" clip-path="url(#clip-slope)"/>
+          <path d="M506,712C520,716 532,722 536,736C540,755 542,780 538,806L510,812C514,790 514,750 506,712Z" fill="none" stroke="#C1552B" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+          <use href="#r-aku-bc" class="rv rv-case-thin"/><use href="#r-aku-bc" class="rv rv-aku"/>
+          <circle cx="498" cy="757" r="3.6" fill="#2B2117" stroke="#fff" stroke-width="1"/>
+          <g font-size="11">
+            <text x="492" y="762" text-anchor="end">460mのピーク</text>
+            <text x="548" y="770">この東斜面</text>
+            <text x="470" y="700">安久登沢</text>
+          </g>
+          <use href="#pin-b" transform="translate(537 812) scale(.66)"/>
+        </svg>
+      </figure>
+
       <p>この緩い斜面は、南本内川に広い段丘ができた時期（上の3番目の段階）と同じ頃にできたと推定できます。土地の盛り上がりが休んでいたあいだ、争奪のあとで暴れていた安久登沢にも、<strong>おだやかな時期があった</strong>ということです。地形は、川が暴れた時代だけでなく、休んでいた時代のことも記録しているのです。</p>
 
       <h2>動かして見る</h2>
-      <p>争奪の流れを、6つの段階の模式アニメーションにしました。安久登沢が小荒沢の谷を広く削っていた頃から、花こう岩の隆起と水無沢の土砂に押された南本内川が尾根を切って水を奪い、首を切られた小荒沢の谷の頭が取り残されるまでを追います。上が平面図、その下が縦断図と2本の横断図です。再生ボタンで段階が進み、段階を選ぶとその場面だけを見ることもできます。</p>
+      <p>ここまでの流れを、6つの段階の模式アニメーションにしました。上が平面図、その下が縦断図と2本の横断図です。再生ボタンで段階が進み、段階を選ぶとその場面だけを見ることもできます。</p>
 
       <iframe class="anim-frame" src="akudosawa-anim.html" title="安久登沢の河川争奪アニメーション" loading="lazy"></iframe>
       <p class="anim-open"><a href="akudosawa-anim.html" target="_blank" rel="noopener">アニメーションを別のタブで大きく開く →</a></p>
+
+      <h2>色を全部とると、こうなります</h2>
+      <p>最後に、色をつける前の地形図を見てください。ここまでの話は、もとをたどれば、この一枚から読み取ったものです。</p>
+
+      <figure class="map-fig">
+        <a href="img/column/akudo-map.jpg" target="_blank" rel="noopener">
+          <img src="img/column/akudo-map.jpg" alt="西和賀町、錦秋湖の南の地形図。安久登沢、南本内川、小荒沢、水無沢とA点からD点、安久登沢の元の流路が書き込まれている" width="534" height="590" loading="lazy">
+        </a>
+      </figure>
+
+      <p>最初に見せられたら、ただの線のかたまりだったはずです。でも、いまなら見えるのではないでしょうか。広すぎる小荒沢の谷。C点で折れ曲がる安久登沢。すぐ隣なのに高さの違うD点。</p>
 
       <div class="callout-box">
         <h3>地形図で、争奪のあとを探してみよう</h3>
@@ -163,21 +532,22 @@
         <strong>⑤ 沢の名前</strong>｜「悪党」「水無」など、地名が地形の性質を伝えていることがあります。</p>
       </div>
 
+      <p>地形図は、場所を確かめるためだけのものではありません。等高線の込み具合、谷の幅、川の曲がり方、そして沢の名前。それらをつなぎ合わせると、その土地がどう成り立ってきたのか、植物の移り変わりまで推しはかることができます。</p>
+      <p>「地質屋の特殊能力」と思われがちですが、地形を読むことは誰にでもできます。必要なのは、地図を読む力と、それを頭の中で立体に組み立てる少しの練習だけです。ぼんやり地形図を眺めていて「あれ、ここは変だぞ」と感じたら、それが入口です。</p>
+      <p>現場は<a href="https://maps.gsi.go.jp/#15/39.289420/140.853280/" target="_blank" rel="noopener">地理院地図</a>でも見ることができます。峠山トンネルのすぐ南、ぜひ自分の目で、広すぎる小荒沢の谷を確かめてみてください。</p>
+
       <div class="callout-box">
         <h3>ことばのメモ</h3>
         <p><strong>河川争奪</strong>｜川が、となりの川の上流部の水を奪いとること。<br>
+        <strong>流域</strong>｜降った雨がその川に集まってくる範囲。<br>
         <strong>争奪の肘</strong>｜流れの向きが急に変わる、争奪が起きた地点。<br>
+        <strong>縦断図</strong>｜川にそって切って、川底の高さの変化を横から見た図。<br>
         <strong>遷急点（せんきゅうてん）</strong>｜川の勾配が急に変わるところ。時間とともに上流へさかのぼっていく。<br>
         <strong>河岸段丘</strong>｜川ぞいに階段状に並ぶ平らな土地。川が横に広がった時期と、深く削り込んだ時期のくり返しでできる。<br>
         <strong>伏流</strong>｜川の水が、砂や砂利の下にもぐって流れること。</p>
       </div>
 
-      <h2>地形図は、情報の宝庫</h2>
-      <p>地形図は、場所を確かめるためだけのものではありません。等高線の込み具合、谷の幅、川の曲がり方、そして沢の名前。それらをつなぎ合わせると、その土地がどう成り立ってきたのか、植物の移り変わりまで推しはかることができます。</p>
-      <p>「地質屋の特殊能力」と思われがちですが、地形を読むことは誰にでもできます。必要なのは、地図を読む力と、それを頭の中で立体に組み立てる少しの練習だけです。ぼんやり地形図を眺めていて「あれ、ここは変だぞ」と感じたら、それが入口です。</p>
-      <p>現場は<a href="https://maps.gsi.go.jp/#15/39.289420/140.853280/" target="_blank" rel="noopener">地理院地図</a>でも見ることができます。峠山トンネルのすぐ南、ぜひ自分の目で、広すぎる小荒沢の谷を確かめてみてください。</p>
-
-      <p class="pm-note" style="font-size:.84rem;color:var(--ink-soft);margin-top:24px">※ 筆者がFacebookに出題した「河川の争奪」クイズとその解答をもとに、あらためて書き起こしました。縦断図の数値はおおよその読み取り値です。争奪の過程と、アニメーションの地形・流路は、地形から推定した模式です。</p>
+      <p class="pm-note" style="font-size:.84rem;color:var(--ink-soft);margin-top:24px">※ 筆者がFacebookに出題した「河川の争奪」クイズとその解答をもとに、あらためて書き起こしました。縦断図の数値と流域の範囲は、おおよその読み取りです。争奪の過程と、アニメーションの地形・流路は、地形から推定した模式です。</p>
 
       <div class="article-back">
         <a class="btn btn-ghost" href="column.html">←「森遊びの、その先へ」一覧へ</a>

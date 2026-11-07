@@ -773,3 +773,111 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 .article .kh-steps text{font-family:inherit;}
 .article .kh-steps figcaption{font-size:.92rem;color:var(--ink);}
 .article .fig-note{font-size:.82rem;color:var(--ink-soft);}
+
+/* コラム「奪われた谷に、道が通る」：色分けした地図と図解
+   地図の文字や印は画像と一緒に拡大縮小するので、スマホ幅（約360px）で読める大きさを基準に各図で決めている。 */
+.akudo{--c-aku:#E08A1E;--c-koa:#2B8A57;--c-min:#A0408C;--c-oar:#4A6FA5;--c-sed:#7A4E1A;--c-pin:#C1552B;}
+.akudo .map-fig{max-width:600px;margin-left:auto;margin-right:auto;}
+.akudo .map-fig.wide{max-width:none;}
+.akudo .map-fig svg{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--paper-2);}
+.akudo .map-fig.chart svg{background:#fff;}
+.akudo .map-fig text{font-family:inherit;font-weight:800;fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:.26em;stroke-linejoin:round;}
+.akudo .map-fig text.sm{font-size:.84em;}
+.akudo .map-fig text.alert{fill:#8E2F12;}
+.akudo .rv{fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.akudo .rv-case{stroke:#fff;stroke-width:8px;}
+.akudo .rv-case-thin{stroke:#fff;stroke-width:6px;}
+.akudo .rv-aku{stroke:var(--c-aku);stroke-width:5px;}
+.akudo .rv-koa{stroke:var(--c-koa);stroke-width:5px;}
+.akudo .rv-koa-thin{stroke:var(--c-koa);stroke-width:3px;}
+.akudo .rv-koa-dot{stroke:var(--c-koa);stroke-width:3px;stroke-dasharray:1 7;}
+.akudo .rv-min{stroke:var(--c-min);stroke-width:6px;}
+.akudo .rv-oar{stroke:var(--c-oar);stroke-width:3.5px;}
+.akudo .rv-sed{stroke:var(--c-sed);stroke-width:5px;}
+.akudo .rv-steep{stroke:var(--c-pin);stroke-width:7px;}
+.akudo .flow{stroke:#fff;stroke-width:2.4px;stroke-dasharray:1 15;animation:akudo-flow 1.2s linear infinite;}
+@keyframes akudo-flow{to{stroke-dashoffset:-16;}}
+@media (prefers-reduced-motion:reduce){.akudo .flow{animation:none;}}
+.akudo .road{fill:none;stroke:var(--forest-900);stroke-width:4px;stroke-linecap:round;}
+.akudo .road-case{fill:none;stroke:#fff;stroke-width:7px;stroke-linecap:round;}
+.akudo .road-tunnel{fill:none;stroke:var(--forest-900);stroke-width:2.5px;stroke-dasharray:6 6;}
+.akudo .fill-aku{fill:var(--c-aku);fill-opacity:.2;}
+.akudo .fill-koa{fill:var(--c-koa);fill-opacity:.24;}
+.akudo .fill-oar{fill:var(--c-oar);fill-opacity:.16;}
+.akudo .ol-aku,.akudo .ol-koa,.akudo .ol-oar{fill:none;stroke-width:2.5px;stroke-linejoin:round;}
+.akudo .ol-aku{stroke:var(--c-aku);}
+.akudo .ol-koa{stroke:var(--c-koa);}
+.akudo .ol-oar{stroke:var(--c-oar);stroke-dasharray:7 5;}
+.akudo .leader{fill:none;stroke:var(--ink);stroke-width:1.6px;vector-effect:non-scaling-stroke;}
+.akudo .ridge-old{fill:none;stroke:#7A4E1A;stroke-width:4px;stroke-dasharray:2 8;stroke-linecap:round;vector-effect:non-scaling-stroke;}
+.akudo .arrow-line{fill:none;stroke:var(--forest-900);stroke-width:3px;vector-effect:non-scaling-stroke;}
+
+/* 図の下の色の凡例 */
+.akudo .river-key{list-style:none;padding:0;gap:10px;}
+.akudo .river-key li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start;}
+.akudo .river-key i{display:block;height:6px;margin-top:.72em;border-radius:3px;}
+.akudo .river-key b{color:var(--forest-900);}
+
+/* 河川争奪の3コマ */
+.akudo .cap-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.akudo .cap-steps svg{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);}
+.akudo .cap-steps figcaption{margin-top:8px;font-size:.88rem;line-height:1.65;color:var(--ink);}
+.akudo .cap-steps figcaption b{display:block;color:var(--forest-900);font-size:.96rem;}
+@media (max-width:620px){
+  .akudo .cap-steps{grid-template-columns:minmax(0,1fr);gap:12px;}
+  .akudo .cap-steps figure{display:grid;grid-template-columns:42% minmax(0,1fr);gap:12px;align-items:center;}
+  .akudo .cap-steps figcaption{margin-top:0;}
+}
+
+/* ふつうの谷のルール */
+.akudo .rule-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.akudo .rule-grid > div{background:var(--paper-2);border-radius:14px;padding:12px 8px;text-align:center;}
+.akudo .rule-grid svg{display:block;width:100%;height:auto;margin:6px 0;}
+.akudo .rule-grid b{display:block;font-size:.88rem;color:var(--forest-900);line-height:1.4;}
+.akudo .rule-grid span{display:block;font-size:.78rem;line-height:1.5;color:var(--ink);}
+.akudo .rule-grid strong{display:block;margin-top:2px;font-size:.86rem;line-height:1.4;color:var(--forest-900);}
+.akudo .rule-grid .odd{background:color-mix(in srgb, var(--ember-600) 14%, var(--paper-2));box-shadow:inset 0 0 0 2px var(--ember-600);}
+.akudo .rule-grid .odd strong{color:#8E2F12;}
+
+/* 一文の強調、証拠の見出し、昔といまの切り替え */
+.akudo .pull{font-size:1.28rem;font-weight:800;line-height:1.5;text-align:center;color:var(--forest-900);padding:14px 8px;border-top:2px solid var(--amber-500);border-bottom:2px solid var(--amber-500);}
+.akudo h2 .ev{display:inline-block;margin-right:.5em;padding:2px 12px;border-radius:999px;background:var(--ember-600);color:#fff;font-size:.8em;vertical-align:.08em;}
+.akudo .era-fig{position:relative;}
+.akudo .era-fig input{position:absolute;opacity:0;width:1px;height:1px;}
+.akudo .era-tabs{display:flex;gap:8px;max-width:600px;margin:0 auto 10px;}
+.akudo .era-tabs label{flex:1;padding:10px 6px;border-radius:999px;background:var(--paper-2);box-shadow:inset 0 0 0 1px var(--line);color:var(--forest-900);font-size:.9rem;font-weight:800;line-height:1.3;text-align:center;cursor:pointer;}
+.akudo #era-old:checked ~ .era-tabs label[for="era-old"],
+.akudo #era-now:checked ~ .era-tabs label[for="era-now"]{background:var(--forest-700);color:var(--paper);box-shadow:none;}
+.akudo #era-old:focus-visible ~ .era-tabs label[for="era-old"],
+.akudo #era-now:focus-visible ~ .era-tabs label[for="era-now"]{outline:3px solid var(--amber-600);outline-offset:2px;}
+.akudo #era-old:checked ~ figure .when-now,
+.akudo #era-now:checked ~ figure .when-old{display:none;}
+
+/* 奪われたあとの比較 */
+.akudo .versus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+@media (max-width:480px){.akudo .versus{grid-template-columns:minmax(0,1fr);}}
+.akudo .versus > div{background:var(--paper-2);border-radius:14px;padding:14px 16px;border-top:5px solid var(--c-aku);}
+.akudo .versus > div.koa{border-top-color:var(--c-koa);}
+.akudo .versus h3{margin:0 0 6px;color:var(--forest-900);font-size:1rem;}
+.akudo .versus h3 small{display:block;font-size:.78rem;font-weight:700;color:var(--ink-soft);}
+.akudo .versus dl{margin:0;}
+.akudo .versus dt{margin-top:8px;font-size:.76rem;font-weight:800;color:var(--forest-700);}
+.akudo .versus dd{margin:0;font-size:.9rem;line-height:1.6;}
+
+/* ここから深掘り、の案内 */
+.akudo .deep-sign{margin-top:44px;padding:20px 22px;border-radius:18px;background:var(--forest-700);}
+.akudo .deep-sign p{margin:0;color:var(--paper);}
+.akudo .deep-sign b{display:block;margin-bottom:4px;color:var(--amber-500);font-size:1.02rem;}
+.akudo .deep-sign + h2{border-top:0;margin-top:30px;padding-top:0;}
+
+/* スマホでは地図を画面の端まで広げる（.wrap の左右余白 24px の分だけはみ出させる） */
+@media (max-width:620px){
+  .akudo .map-fig{margin-left:-24px;margin-right:-24px;max-width:none;}
+  .akudo .map-fig svg{border-radius:0;border-left:0;border-right:0;}
+  .akudo .map-fig > a > img{border-radius:0;border-left:0;border-right:0;}
+  .akudo .map-fig figcaption{padding:0 24px;}
+}
+
+/* 昔といまの図：水の流れの白い点だけを、地図の上の別の層で動かす */
+.akudo .era-fig .map-fig{position:relative;}
+.akudo .map-fig svg.flow-layer{position:absolute;top:0;left:0;width:100%;height:100%;background:none;border:0;border-radius:0;box-shadow:none;pointer-events:none;will-change:transform;}
