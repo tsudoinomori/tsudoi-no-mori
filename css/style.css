@@ -55,6 +55,28 @@ button{font-family:inherit;}
 .eyebrow.on-dark{color:var(--amber-500);}
 .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--amber-500);}
 
+/* ============ 外部リンクの帯（インスタグラム・はてなブログ） ============ */
+/* 追従するヘッダーを高くしないよう、ヘッダーの外に置く */
+.sns-bar{background:var(--forest-900);}
+.sns-bar-inner{
+  display:flex;justify-content:flex-end;gap:8px;
+  max-width:1080px;margin:0 auto;padding:6px 24px;
+}
+.sns-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 13px;border-radius:999px;
+  background:var(--paper);color:var(--forest-900);
+  font-size:.8rem;font-weight:700;line-height:1.5;
+  text-decoration:none;white-space:nowrap;
+  transition:background .15s ease;
+}
+.sns-link:hover{background:var(--amber-500);}
+.sns-link svg{width:15px;height:15px;flex:none;}
+@media (max-width:520px){
+  .sns-bar-inner{justify-content:center;padding:6px 16px;}
+  .sns-link{padding:7px 13px;}
+}
+
 /* ============ Header ============ */
 .site-header{
   position:sticky;top:0;z-index:40;
@@ -92,14 +114,6 @@ button{font-family:inherit;}
 }
 .tel-pill svg{width:15px;height:15px;}
 .tel-pill .num{font-variant-numeric:tabular-nums;}
-.icon-link{
-  display:inline-flex;align-items:center;justify-content:center;flex:none;
-  width:40px;height:40px;border-radius:50%;
-  border:1px solid var(--line);background:var(--paper-2);color:var(--forest-700);
-  text-decoration:none;transition:background .15s ease, color .15s ease, border-color .15s ease;
-}
-.icon-link:hover{background:var(--forest-900);color:var(--paper);border-color:var(--forest-900);}
-.icon-link svg{width:19px;height:19px;}
 .menu-toggle{display:none;border:none;background:var(--paper-2);border-radius:12px;width:42px;height:42px;cursor:pointer;align-items:center;justify-content:center;}
 .menu-toggle svg{width:20px;height:20px;}
 
@@ -111,10 +125,9 @@ button{font-family:inherit;}
   .brand-text .main,.brand-text .sub{white-space:nowrap;}
   .tel-pill{padding:9px 13px;}
   .tel-pill .num{display:none;}
-  .icon-link{width:38px;height:38px;}
 }
 
-@media (max-width:860px){
+@media (max-width:1060px){
   .main-nav{
     position:absolute;top:100%;left:0;right:0;
     background:var(--paper);border-bottom:1px solid var(--line);
