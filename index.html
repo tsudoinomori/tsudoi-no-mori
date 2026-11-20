@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="description" content="盛岡市都南つどいの森は、キャンプ・テニス・グラウンドゴルフ・バーベキュー・木工体験が楽しめる自然体験型の森林公園です。お花見の春から紅葉の秋まで、家族で四季を遊びつくせます。">
 <title>盛岡市都南つどいの森</title>
-<link rel="stylesheet" href="css/style.css?v=20261109">
+<link rel="stylesheet" href="css/style.css?v=20261120">
 </head>
 <body>
 
@@ -67,8 +67,15 @@
       </div>
       <span class="season-badge"><svg style="width:14px;height:14px"><use href="#i-tree"/></svg>キャンプ場の営業期間は4月〜11月です</span>
     </div>
-    <div class="hero-photo hero-photo-autumn">
-      <img src="img/top/koyo-michi.jpg" alt="落ち葉が敷きつめられた、紅葉の見頃を迎えたつどいの森の園路" width="1125" height="844">
+    <!-- 森の定点観測：写真は1〜3枚まで。figure を足すと横に並び、入りきらないときは横にスクロールします -->
+    <div class="teiten" id="teiten">
+      <p class="teiten-head"><span class="teiten-tag">森の定点観測</span>毎週2〜3回、園内の2〜3か所を巡って撮った定点写真を、ここに載せていきます。</p>
+      <div class="teiten-row">
+        <figure>
+          <div class="hero-photo"><img src="img/teiten/20261120-1053.jpg" alt="うっすらと雪をかぶった木々と、落ち葉の上に雪が積もった園路" width="844" height="1125"></div>
+          <figcaption>2026年11月20日 10:53AM撮影 初めて積雪が見られたつどいの森です</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
@@ -126,6 +133,14 @@
     </div>
     <div class="news-list">
       <!-- data-until の日付を過ぎると、この項目は自動的に表示されなくなります -->
+      <div class="news-item">
+        <time>2026.11</time>
+        <span class="news-tag">新企画</span>
+        <div class="body">
+          <h4>トップページで「森の定点観測」を始めます</h4>
+          <p>これから毎週2〜3回、園内の2〜3か所を巡って定点写真を撮り、トップページの最上段に掲載します。同じ場所から見つづけることで、季節の移ろいを森の外からも追えるようにします。第1回は11月20日、初めて積雪が見られたつどいの森です。<a href="#teiten">定点写真を見る</a></p>
+        </div>
+      </div>
       <div class="news-item" data-until="2026-11-07">
         <time>2026.11</time>
         <span class="news-tag">イベント</span>
@@ -340,15 +355,16 @@
     </div>
     <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
     <div class="update-list">
+      <div class="update-item"><time>2026.11.20</time><span>トップページで「森の定点観測」を開始。メイン写真を紅葉の園路から、初めて積雪が見られた11月20日の森の写真（撮影日時のキャプションつき）に差し替えました。これから毎週2〜3回、園内の2〜3か所の定点写真を掲載します。お知らせにもこの企画を掲載</span></div>
       <div class="update-item"><time>2026.11.18</time><span>コラム「土砂の帳じりは、合うのか」を掲載。11月15日の研修会で出た「山から削られた土砂と、ふもとにたまった土砂の量は釣り合うのか」という疑問に、国土地理院の標高データで答えます（断面図、車窓の動画、収支の計算器つき）</span></div>
       <div class="update-item"><time>2026.11.15</time><span>イベント情報に「タイサンボクの葉っぱの金継ぎ」を開催済みとして掲載（当日の作業の流れと作品の写真、継ぎ目を見どころにする金継ぎの考え方、グリセリンで葉がやわらかくなるわけつき）。お知らせの先頭をこの催しに差し替え</span></div>
       <div class="update-item"><time>2026.11.14</time><span>コラム「つどいの森は、なぜ平らなのか」を改訂。冒頭に結論を置き、旧花巻断層から最後の大きな土石流、2013年の豪雨までを、赤色立体地図の上のアニメーションでたどれるようにしました。11月13日に載せたアニメーションと「想定」の節は、内容に誤りがあったため取り下げました</span></div>
       <div class="update-item"><time>2026.11.13</time><span>コラム「消えた山の、底を歩く」を全面改稿。北と南のふたつのカルデラの形成順と景観の違いを軸に組み直し、歴代山行のGPSトラックを重ねた地質図、当日の動画とGPSの3D再生、女岳1970年噴火と現在の火口の対比を加え、写真を筆者のキャプションつきで一新しました</span></div>
-      <div class="update-item"><time>2026.11.11</time><span>コラム「消えた山の、底を歩く」を掲載。9月20日に秋田駒ヶ岳の南カルデラを国見温泉から歩いた山行を、地質図と写真でたどります。イベント情報のグラウンドゴルフ日程とお知らせから、中止になった11月5日のつどりんピックを削除</span></div>
     </div>
     <details class="update-archive">
       <summary>過去の更新情報</summary>
       <div class="update-list">
+        <div class="update-item"><time>2026.11.11</time><span>コラム「消えた山の、底を歩く」を掲載。9月20日に秋田駒ヶ岳の南カルデラを国見温泉から歩いた山行を、地質図と写真でたどります。イベント情報のグラウンドゴルフ日程とお知らせから、中止になった11月5日のつどりんピックを削除</span></div>
         <div class="update-item"><time>2026.11.9</time><span>イベント情報に「きこりのロウソク、スウェーデントーチを作ろう」を開催済みとして掲載（当日の動画と写真、作り方のPDF、燃え残りの柱に並んだ横の線のしくみつき）。お知らせの先頭をこの催しに差し替え</span></div>
         <div class="update-item"><time>2026.11.7</time><span>コラム「奪われた谷に、道が通る」を全面改稿。河川争奪の説明と結論を冒頭に置き、色分けした地図で順番に読み解く構成にしました</span></div>
         <div class="update-item"><time>2026.11.6</time><span>コラム「空に、波が立つ」を掲載。雲のフラクタスとケルビン・ヘルムホルツ不安定性を、岩手の空で撮りためた写真と4コマの図で解説します。コラムのカテゴリに「空と気象」を追加</span></div>
