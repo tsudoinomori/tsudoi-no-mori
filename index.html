@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="description" content="盛岡市都南つどいの森は、キャンプ・テニス・グラウンドゴルフ・バーベキュー・木工体験が楽しめる自然体験型の森林公園です。お花見の春から紅葉の秋まで、家族で四季を遊びつくせます。">
 <title>盛岡市都南つどいの森</title>
-<link rel="stylesheet" href="css/style.css?v=20261120">
+<link rel="stylesheet" href="css/style.css?v=20261121">
 </head>
 <body>
 
@@ -59,7 +59,7 @@
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="eyebrow on-dark"><span class="dot"></span>MORIOKA TSUDOI NO MORI PARK</span>
-      <h1 class="fit-2lines">森が眠る準備に着く晩秋も、<br>ものがたりはつづく。</h1>
+      <h1 class="fit-2lines">初雪をまとい、森に冬が来た。<br>ものがたりは雪の上につづく。</h1>
       <p class="lead"><span class="lead-first">残すところあと1か月。つどいの森は紅葉が見頃です。</span>12月〜3月はキャンプ場施設をお休みします。イベント情報と「森遊びの、その先へ」で、春までお届けします。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="price.html">料金・予約を見る</a>
@@ -67,13 +67,36 @@
       </div>
       <span class="season-badge"><svg style="width:14px;height:14px"><use href="#i-tree"/></svg>キャンプ場の営業期間は4月〜11月です</span>
     </div>
-    <!-- 森の定点観測：写真は1〜3枚まで。figure を足すと横に並び、入りきらないときは横にスクロールします -->
+    <!-- 森の定点観測：場所ごとにタブを1つ、写真の欄（teiten-row）を1つ。
+         欄の写真は新しいものを右に足す（2〜3枚は横に並び、入りきらないときは横にスクロール）。
+         横長の写真は figure に class="landscape" をつける。最初に開くタブは aria-selected="true" で、ほかの欄は hidden -->
     <div class="teiten" id="teiten">
       <p class="teiten-head"><span class="teiten-tag">森の定点観測</span>毎週2〜3回、園内の2〜3か所を巡って撮った定点写真を、ここに載せていきます。</p>
-      <div class="teiten-row">
+      <div class="teiten-tabs" role="tablist" aria-label="定点観測の場所">
+        <button type="button" role="tab" id="teiten-tab-sonro" aria-controls="teiten-sonro" aria-selected="true">森の園路</button>
+        <button type="button" role="tab" id="teiten-tab-komorebi" aria-controls="teiten-komorebi" aria-selected="false" tabindex="-1">こもれび広場</button>
+        <button type="button" role="tab" id="teiten-tab-kanritou" aria-controls="teiten-kanritou" aria-selected="false" tabindex="-1">管理棟</button>
+      </div>
+      <div class="teiten-row" role="tabpanel" id="teiten-sonro" aria-labelledby="teiten-tab-sonro">
         <figure>
-          <div class="hero-photo"><img src="img/teiten/20261120-1053.jpg" alt="うっすらと雪をかぶった木々と、落ち葉の上に雪が積もった園路" width="844" height="1125"></div>
+          <a class="hero-photo" href="img/teiten/20261120-1053.jpg" target="_blank" rel="noopener"><img src="img/teiten/20261120-1053.jpg" alt="うっすらと雪をかぶった木々と、落ち葉の上に雪が積もった園路" width="844" height="1125"></a>
           <figcaption>2026年11月20日 10:53AM撮影 初めて積雪が見られたつどいの森です</figcaption>
+        </figure>
+        <figure>
+          <a class="hero-photo" href="img/teiten/20261121-0940.jpg" target="_blank" rel="noopener"><img src="img/teiten/20261121-0940.jpg" alt="枝の先まで雪をかぶった木々と、一面の雪に覆われた園路" width="1125" height="1500"></a>
+          <figcaption>2026年11月21日 9:40AM撮影 雪がさらに積もったつどいの森です</figcaption>
+        </figure>
+      </div>
+      <div class="teiten-row" role="tabpanel" id="teiten-komorebi" aria-labelledby="teiten-tab-komorebi" hidden>
+        <figure class="landscape">
+          <a class="hero-photo" href="img/teiten/20261121-0859.jpg" target="_blank" rel="noopener"><img src="img/teiten/20261121-0859.jpg" alt="一面の雪に覆われたこもれび広場を高台から見下ろした眺め。奥に雪をかぶった松林と青空が広がる" width="2000" height="1500" loading="lazy"></a>
+          <figcaption>2026年11月21日 8:59AM撮影 雪に覆われたこもれび広場です</figcaption>
+        </figure>
+      </div>
+      <div class="teiten-row" role="tabpanel" id="teiten-kanritou" aria-labelledby="teiten-tab-kanritou" hidden>
+        <figure class="landscape">
+          <a class="hero-photo" href="img/teiten/20261121-0903.jpg" target="_blank" rel="noopener"><img src="img/teiten/20261121-0903.jpg" alt="屋根に雪が積もった管理棟と、雪をかぶった松の木々。朝の日差しが差しこむ" width="1500" height="1125" loading="lazy"></a>
+          <figcaption>2026年11月21日 9:03AM撮影 屋根に雪が積もったつどいの森管理棟です</figcaption>
         </figure>
       </div>
     </div>
@@ -355,15 +378,16 @@
     </div>
     <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
     <div class="update-list">
+      <div class="update-item"><time>2026.11.21</time><span>トップページのメインコピーを「初雪をまとい、森に冬が来た。ものがたりは雪の上につづく。」に変更。「森の定点観測」に11月21日の写真を加え、森の園路の11月20日と21日を並べて見比べられるようにしました。こもれび広場と管理棟の雪景色も、場所のタブから見られます</span></div>
       <div class="update-item"><time>2026.11.20</time><span>トップページで「森の定点観測」を開始。メイン写真を紅葉の園路から、初めて積雪が見られた11月20日の森の写真（撮影日時のキャプションつき）に差し替えました。これから毎週2〜3回、園内の2〜3か所の定点写真を掲載します。お知らせにもこの企画を掲載</span></div>
       <div class="update-item"><time>2026.11.18</time><span>コラム「土砂の帳じりは、合うのか」を掲載。11月15日の研修会で出た「山から削られた土砂と、ふもとにたまった土砂の量は釣り合うのか」という疑問に、国土地理院の標高データで答えます（断面図、車窓の動画、収支の計算器つき）</span></div>
       <div class="update-item"><time>2026.11.15</time><span>イベント情報に「タイサンボクの葉っぱの金継ぎ」を開催済みとして掲載（当日の作業の流れと作品の写真、継ぎ目を見どころにする金継ぎの考え方、グリセリンで葉がやわらかくなるわけつき）。お知らせの先頭をこの催しに差し替え</span></div>
       <div class="update-item"><time>2026.11.14</time><span>コラム「つどいの森は、なぜ平らなのか」を改訂。冒頭に結論を置き、旧花巻断層から最後の大きな土石流、2013年の豪雨までを、赤色立体地図の上のアニメーションでたどれるようにしました。11月13日に載せたアニメーションと「想定」の節は、内容に誤りがあったため取り下げました</span></div>
-      <div class="update-item"><time>2026.11.13</time><span>コラム「消えた山の、底を歩く」を全面改稿。北と南のふたつのカルデラの形成順と景観の違いを軸に組み直し、歴代山行のGPSトラックを重ねた地質図、当日の動画とGPSの3D再生、女岳1970年噴火と現在の火口の対比を加え、写真を筆者のキャプションつきで一新しました</span></div>
     </div>
     <details class="update-archive">
       <summary>過去の更新情報</summary>
       <div class="update-list">
+        <div class="update-item"><time>2026.11.13</time><span>コラム「消えた山の、底を歩く」を全面改稿。北と南のふたつのカルデラの形成順と景観の違いを軸に組み直し、歴代山行のGPSトラックを重ねた地質図、当日の動画とGPSの3D再生、女岳1970年噴火と現在の火口の対比を加え、写真を筆者のキャプションつきで一新しました</span></div>
         <div class="update-item"><time>2026.11.11</time><span>コラム「消えた山の、底を歩く」を掲載。9月20日に秋田駒ヶ岳の南カルデラを国見温泉から歩いた山行を、地質図と写真でたどります。イベント情報のグラウンドゴルフ日程とお知らせから、中止になった11月5日のつどりんピックを削除</span></div>
         <div class="update-item"><time>2026.11.9</time><span>イベント情報に「きこりのロウソク、スウェーデントーチを作ろう」を開催済みとして掲載（当日の動画と写真、作り方のPDF、燃え残りの柱に並んだ横の線のしくみつき）。お知らせの先頭をこの催しに差し替え</span></div>
         <div class="update-item"><time>2026.11.7</time><span>コラム「奪われた谷に、道が通る」を全面改稿。河川争奪の説明と結論を冒頭に置き、色分けした地図で順番に読み解く構成にしました</span></div>
@@ -462,6 +486,29 @@ var COUNTER_API = '';
       }
     })
     .catch(function(){ /* 取得できないときは何も表示しない */ });
+})();
+
+/* 森の定点観測：場所のタブを切り替える（←→キーでも移動できる） */
+(function(){
+  var tabs = [].slice.call(document.querySelectorAll('.teiten-tabs [role="tab"]'));
+  function select(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      select(tabs[(i + d + tabs.length) % tabs.length], true);
+    });
+  });
 })();
 
 /* 掲載期間の管理
