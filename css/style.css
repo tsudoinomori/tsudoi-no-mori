@@ -920,3 +920,67 @@ a.photo-card:hover .cap-tag{background:var(--amber-500);color:#fff;}
 /* 昔といまの図：水の流れの白い点だけを、地図の上の別の層で動かす */
 .akudo .era-fig .map-fig{position:relative;}
 .akudo .map-fig svg.flow-layer{position:absolute;top:0;left:0;width:100%;height:100%;background:none;border:0;border-radius:0;box-shadow:none;pointer-events:none;will-change:transform;}
+
+/* ============ 冬期間の仕様（トップページ、2026年12月〜） ============ */
+/* body に class="winter" をつけたページだけに効く。
+   配色：深緑を冬の夜空の紺に。生成り（雪）と琥珀色（焚き火）はそのまま引き立て役に */
+.winter{
+  --forest-900:#1C2A47;
+  --shadow:0 10px 28px -14px rgba(22,34,59,.4);
+}
+/* ヒーロー：上ほど深い冬の夜空の紺 */
+.winter .hero{background:linear-gradient(180deg, #152039 0%, var(--forest-900) 55%, #213352 100%);}
+
+/* 森の定点観測の写真を大きく：写真の欄を 0.9 → 1.1 に広げ、文字欄は 0.45 に。
+   主題と副題1文目の文字サイズの計算も 0.45 で（1行14字・26字に収める考え方は同じ） */
+@media (min-width:821px){
+  .winter .hero-inner{grid-template-columns:.9fr 1.1fr;}
+  .winter .hero-copy h1.fit-2lines{font-size:min(2.5rem, calc((min(100vw,1080px) - 88px) * .45 / 15));}
+  .winter .hero-copy .lead .lead-first{font-size:min(1.05rem, calc((min(100vw,1080px) - 88px) * .45 / 22));}
+}
+/* 冬のリード文の1文目は21字なので、22字で割って1行に収める */
+@media (max-width:820px){
+  .winter .hero-copy .lead .lead-first{font-size:min(1.05rem, calc((100vw - 48px) / 22));}
+}
+/* スマホ幅：写真を1枚ずつ大きく見せ、となりの写真を少しのぞかせて横にめくる */
+@media (max-width:520px){
+  .winter .teiten-row figure{flex:0 0 84%;}
+  .winter .teiten-row figure:only-child{flex-basis:100%;}
+}
+
+/* 4枚のカード：イベント情報・森遊びの、その先へ を大きく、
+   施設案内・料金・予約 は冬期閉鎖を案内する小さなカードにして右の列に重ねる */
+.winter .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,.85fr);}
+/* カードの下にも紺の背景を少し（約2mm）のぞかせる */
+.winter .hero > .wrap{padding-bottom:8px;}
+/* 大きいカードも、ひとまわり小さく */
+.winter .quick-card{padding:18px 20px;gap:8px;}
+.winter .quick-card .icon-badge{width:38px;height:38px;border-radius:12px;}
+.winter .quick-card .icon-badge svg{width:21px;height:21px;}
+.winter .quick-card h3{font-size:.98rem;}
+.winter .quick-card p{font-size:.82rem;}
+.winter .quick-card .go{font-size:.78rem;}
+.quick-closed{display:flex;flex-direction:column;gap:10px;}
+.quick-card.compact{flex:1;flex-direction:row;align-items:center;gap:12px;padding:11px 14px;}
+.quick-card.compact > div{min-width:0;}
+.quick-card.compact .icon-badge{flex:none;width:32px;height:32px;border-radius:10px;}
+.quick-card.compact .icon-badge svg{width:18px;height:18px;}
+.quick-card.compact h3{font-size:.92rem;}
+.quick-card.compact p{margin-top:2px;font-size:.76rem;line-height:1.6;}
+.quick-card.compact .qc-arrow{margin-left:6px;color:var(--amber-600);}
+/* 閉鎖期間は「〜から」「〜まで」の切れ目でだけ折り返す */
+.quick-card.compact .nw{display:inline-block;white-space:nowrap;}
+.closed-tag{
+  display:inline-block;margin-right:6px;padding:0 8px;border-radius:999px;
+  background:var(--forest-900);color:var(--paper);
+  font-size:.7rem;font-weight:800;line-height:1.7;vertical-align:1px;
+}
+@media (max-width:900px){
+  .winter .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .quick-closed{grid-column:1 / -1;flex-direction:row;}
+  .quick-closed .quick-card{flex:1 1 0;}
+}
+@media (max-width:520px){
+  .winter .quick-grid{grid-template-columns:minmax(0,1fr);}
+  .quick-closed{flex-direction:column;}
+}
