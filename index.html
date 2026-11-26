@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="description" content="盛岡市都南つどいの森は、キャンプ・テニス・グラウンドゴルフ・バーベキュー・木工体験が楽しめる自然体験型の森林公園です。お花見の春から紅葉の秋まで、家族で四季を遊びつくせます。">
 <title>盛岡市都南つどいの森</title>
-<link rel="stylesheet" href="css/style.css?v=20261125">
+<link rel="stylesheet" href="css/style.css?v=20261126">
 </head>
 <!-- 冬期間の仕様（2026年12月〜）：class="winter" で配色を冬の紺にし、定点観測の写真を大きく、
      施設案内・料金・予約のカードを小さくする（css/style.css の「冬期間の仕様」）。
@@ -80,6 +80,7 @@
         <button type="button" role="tab" id="teiten-tab-komorebi" aria-controls="teiten-komorebi" aria-selected="true">こもれび広場</button>
         <button type="button" role="tab" id="teiten-tab-kanritou" aria-controls="teiten-kanritou" aria-selected="false" tabindex="-1">管理棟</button>
         <button type="button" role="tab" id="teiten-tab-access" aria-controls="teiten-access" aria-selected="false" tabindex="-1">アクセス路</button>
+        <button type="button" role="tab" id="teiten-tab-fukei" aria-controls="teiten-fukei" aria-selected="false" tabindex="-1">非定点風景写真</button>
       </div>
       <div class="teiten-row" role="tabpanel" id="teiten-sonro" aria-labelledby="teiten-tab-sonro" hidden>
         <figure>
@@ -117,6 +118,90 @@
           <a class="hero-photo" href="img/teiten/20261121-access.jpg" target="_blank" rel="noopener"><img src="img/teiten/20261121-access.jpg" alt="雪の積もったつどいの森へのアクセス路。雪の重さで折れた木が、道ばたのガードレールの上に倒れかかっている" width="1500" height="1125" loading="lazy"></a>
           <figcaption>2026年11月21日撮影 つどいの森のアクセス路です。この日の雪で倒木が発生しましたが、すでに処理済みです</figcaption>
         </figure>
+      </div>
+      <!-- 非定点風景写真：定点ではない風景写真のアルバム。写真は img/teiten/fukei に、
+           原寸（長辺1600pxまで）と、欄に並べる縮小版（幅600px、名前の末尾 -thumb）を置く。
+           欄では2枚ずつ（スマホでは1枚ずつ）4:3 に切りそろえて並べ、前後のボタンでめくる。古い順に左から -->
+      <div class="teiten-album" role="tabpanel" id="teiten-fukei" aria-labelledby="teiten-tab-fukei" hidden>
+        <div class="album-head">
+          <p class="album-title">秋の風景<small>2022年11月・17枚</small></p>
+          <div class="album-nav">
+            <span class="album-count" aria-live="polite"></span>
+            <button type="button" class="album-prev" aria-label="前の写真">←</button>
+            <button type="button" class="album-next" aria-label="次の写真">→</button>
+          </div>
+        </div>
+        <div class="teiten-row album">
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221102-0852.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221102-0852-thumb.jpg" alt="朝霧の中、赤茶色に色づいた並木の下を、落ち葉の積もった園路がのびる" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月2日 8:52AM撮影 朝霧に包まれた紅葉の並木と園路です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221102-1443.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221102-1443-thumb.jpg" alt="黄色く色づいた木々の枝がトンネルのように頭上をおおい、その下に落ち葉の道が続く" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月2日 2:43PM撮影 黄葉の枝が頭上をおおう、落ち葉の道です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221102-1455.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221102-1455-thumb.jpg" alt="日の光に透ける黄色い葉と、黒っぽい幹や枝が重なり合う林" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月2日 2:55PM撮影 日に透ける黄葉と、黒い幹が重なる林です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221102-1504.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221102-1504-thumb.jpg" alt="日の光を受けて橙色と黄色に輝く葉の重なり。背景は赤や緑にぼける" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月2日 3:04PM撮影 日を受けて燃えるように色づいた葉です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221103-1117.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221103-1117-thumb.jpg" alt="橙色に染まった林と太い幹。奥に明るい緑の芝生がのぞく" width="600" height="800" loading="lazy"></a>
+            <figcaption>2022年11月3日 11:17AM撮影 橙色に染まった林の奥に、芝生がのぞきます</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221103-1125.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221103-1125-thumb.jpg" alt="まっすぐな幹が並ぶ色づいた林の中を、落ち葉の細い園路が奥へ曲がっていく" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月3日 11:25AM撮影 色づいた林の中を、細い園路が奥へ曲がっていきます</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221103-1130.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221103-1130-thumb.jpg" alt="赤や橙に色づいた雑木林の斜面に沿って、落ち葉の積もった道が続く" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月3日 11:30AM撮影 赤と橙の紅葉の斜面に沿って、落ち葉の道が続きます</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221103-1136.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221103-1136-thumb.jpg" alt="赤や橙に染まった葉を背に、灰色や黒の幹が立ち並ぶ林" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月3日 11:36AM撮影 赤く染まった木々のあいだに、幹が立ち並びます</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221103-1155.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221103-1155-thumb.jpg" alt="橙色の紅葉の木の下に、赤や黄緑に色づいた丸い植え込みが並ぶ" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月3日 11:55AM撮影 紅葉の木の下に、赤く色づいた丸い植え込みが並びます</figcaption>
+          </figure>
+          <!-- この1枚だけ撮影日時の記録がない。元の写真の番号（IMG_3127）の順に置いている -->
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/nodate-3127.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/nodate-3127-thumb.jpg" alt="赤や橙に色づいた雑木林の斜面を、落ち葉の積もった道が下っていく" width="600" height="450" loading="lazy"></a>
+            <figcaption>撮影日不明 色づいた雑木林の斜面を、落ち葉の道が下っていきます</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221105-1440.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221105-1440-thumb.jpg" alt="落ち葉に覆われた広い道の奥に、林の中の木造の小屋と真っ赤な紅葉が見える" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月5日 2:40PM撮影 落ち葉の道の奥に、林の中の小屋と赤い紅葉が見えます</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221105-1446.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221105-1446-thumb.jpg" alt="灰色の幹と枝のあいだに、黄色や黄緑に色づいた葉が広がる" width="600" height="600" loading="lazy"></a>
+            <figcaption>2022年11月5日 2:46PM撮影 幹のあいだに、黄色や黄緑の葉が広がります</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221105-1453.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221105-1453-thumb.jpg" alt="松の木々の下に落ち葉が積もった広場。奥に柵と小さな建物が見える" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月5日 2:53PM撮影 松林の下の、落ち葉に覆われた広場です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221105-1505.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221105-1505-thumb.jpg" alt="細くまっすぐな幹が並ぶ林。葉は緑から黄、赤に色づき、地面は落ち葉に覆われる" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月5日 3:05PM撮影 すらりとした幹が並ぶ、落ち葉の林です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221106-1000.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221106-1000-thumb.jpg" alt="黄色く色づいた林に木漏れ日が差しこみ、落ち葉の地面に光と影の模様ができている" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月6日 10:00AM撮影 木漏れ日が落ち葉の地面に差しこむ林です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221106-1003.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221106-1003-thumb.jpg" alt="地面すれすれの高さから見た、赤や黄の落ち葉が積もった園路と、奥に並ぶ幹" width="600" height="800" loading="lazy"></a>
+            <figcaption>2022年11月6日 10:03AM撮影 地面すれすれから見た、落ち葉の園路です</figcaption>
+          </figure>
+          <figure>
+            <a class="hero-photo" href="img/teiten/fukei/20221106-1017.jpg" target="_blank" rel="noopener"><img src="img/teiten/fukei/20221106-1017-thumb.jpg" alt="手前に色とりどりの落ち葉が重なり、その向こうに色づいた林が続く" width="600" height="450" loading="lazy"></a>
+            <figcaption>2022年11月6日 10:17AM撮影 色とりどりの落ち葉の向こうに、林が続きます</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
@@ -460,7 +545,7 @@
     </div>
     <!-- 新しい順に5件まで。6件目以降は下の「過去の更新情報」へ移す -->
     <div class="update-list">
-      <div class="update-item"><time>2026.11.26</time><span>コラム「タイサンボクを、拾い歩く」を掲載。アメリカ南部生まれの花木を、ふるさとの海岸平野、南部の象徴としての顔、上野でグラント夫人が植えた記念樹と渋沢栄一、東京の88か所の植栽地、葉っぱの金継ぎまでたどります（日本列島を重ねた分布図、植栽地を地形の上に落とした地図つき）</span></div>
+      <div class="update-item"><time>2026.11.26</time><span>コラム「タイサンボクを、拾い歩く」を掲載。アメリカ南部生まれの花木を、ふるさとの海岸平野、南部の象徴としての顔、上野でグラント夫人が植えた記念樹と渋沢栄一、東京の88か所の植栽地、葉っぱの金継ぎまでたどります（日本列島を重ねた分布図、植栽地を地形の上に落とした地図つき）。「森の定点観測」に「非定点風景写真」のタブを加え、2022年11月に撮った「秋の風景」17枚のアルバムを掲載（前後のボタンでめくって見られます）</span></div>
       <div class="update-item"><time>2026.11.25</time><span>トップページを冬期間の仕様に変更。キャンプ場施設の冬期閉鎖（2026年12月1日から2027年4月中頃まで）に合わせて「イベント情報」と「森遊びの、その先へ」を先頭に、「施設案内」と「料金・予約」を閉鎖期間の案内つきで小さく並べ替え、電話ボタンをイベント窓口（019-637-0877）に、配色を冬の紺色に、リード文を「紅葉が終わり冬の装いで春を静かに待ちます。」に変更。「森の定点観測」は写真を大きくし、こもれび広場と管理棟の11月25日の写真を加えて11月21日の雪景色と見比べられるようにしました</span></div>
       <div class="update-item"><time>2026.11.24</time><span>イベント情報に、開催済みの2件を掲載。11月23日のあかばやし探検隊「葉っぱの金継ぎ・自然素材のリース・スウェーデントーチ」（参加41名、当日の動画と作品の写真、薪割り機で作るスウェーデントーチの手順つき）と、「豊富な素材・ナチュラルなリース・スワッグつくり その1」（当日の様子と作品の写真つき）。お知らせに12月のイベント4件（12/12 絵手紙、12/19 葉っぱの刺繍・パッチワーク、12/20 しめ飾りづくり、12/26 小型門松づくり）の参加者募集と応募フォーム、12月27日(日)の正月飾りづくり（予定）の予告を掲載</span></div>
       <div class="update-item"><time>2026.11.21</time><span>トップページのメインコピーを「初雪をまとい、森に冬が来た。ものがたりは雪の上につづく。」に変更。「森の定点観測」に11月21日の写真を加え、森の園路の11月20日と21日を並べて見比べられるようにしました。こもれび広場と管理棟の雪景色も、場所のタブから見られます。「アクセス路」のタブを加え、この日の雪で発生した倒木（処理済み）をお知らせ</span></div>
@@ -580,7 +665,9 @@ var COUNTER_API = '';
       var on = t === tab;
       t.setAttribute('aria-selected', on ? 'true' : 'false');
       t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      panel.hidden = !on;
+      if (on) panel.dispatchEvent(new CustomEvent('teiten-show'));
     });
     if (focus) tab.focus();
   }
@@ -592,6 +679,34 @@ var COUNTER_API = '';
       e.preventDefault();
       select(tabs[(i + d + tabs.length) % tabs.length], true);
     });
+  });
+})();
+
+/* 非定点風景写真のアルバム：前後のボタンで1画面ぶん（PCは2枚、スマホは1枚）ずつめくり、何枚目かを出す */
+(function(){
+  document.querySelectorAll('.teiten-album').forEach(function(box){
+    var row = box.querySelector('.teiten-row');
+    var figs = row.querySelectorAll('figure');
+    var prev = box.querySelector('.album-prev');
+    var next = box.querySelector('.album-next');
+    var count = box.querySelector('.album-count');
+    function step(){ return figs.length > 1 ? figs[1].offsetLeft - figs[0].offsetLeft : row.clientWidth; }
+    function perView(){ return Math.max(1, Math.round((row.clientWidth + 12) / step())); }
+    function update(){
+      if (!row.clientWidth) return;
+      var first = Math.round(row.scrollLeft / step());
+      var last = Math.min(figs.length, first + perView());
+      count.textContent = (last > first + 1 ? (first + 1) + '–' + last : (first + 1)) + ' / ' + figs.length;
+      prev.disabled = row.scrollLeft <= 2;
+      next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 2;
+    }
+    function go(d){ row.scrollBy({left: d * perView() * step(), behavior: 'smooth'}); }
+    prev.addEventListener('click', function(){ go(-1); });
+    next.addEventListener('click', function(){ go(1); });
+    row.addEventListener('scroll', function(){ window.requestAnimationFrame(update); }, {passive: true});
+    window.addEventListener('resize', update);
+    box.addEventListener('teiten-show', update);
+    update();
   });
 })();
 

@@ -218,6 +218,21 @@ section.tight{padding:44px 0;}
 .teiten-row figure.landscape .hero-photo img{aspect-ratio:4/3;}
 .teiten-row figure:only-child:not(.landscape) .hero-photo img{aspect-ratio:auto;height:380px;object-position:50% 60%;}
 .teiten-row figcaption{margin-top:8px;font-size:.78rem;line-height:1.6;color:color-mix(in srgb, var(--paper) 82%, transparent);}
+/* 非定点風景写真のアルバム：写真が多いので2枚ずつ 4:3 に切りそろえて並べ、前後のボタンでめくる */
+.album-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
+.album-title{font-size:.86rem;font-weight:800;line-height:1.5;color:var(--paper);}
+.album-title small{margin-left:8px;font-size:.76rem;font-weight:700;color:color-mix(in srgb, var(--paper) 72%, transparent);}
+.album-nav{display:flex;align-items:center;gap:6px;flex:none;}
+.album-count{min-width:4.6em;text-align:right;font-size:.76rem;font-weight:700;font-variant-numeric:tabular-nums;color:color-mix(in srgb, var(--paper) 82%, transparent);}
+.album-nav button{
+  display:flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:50%;cursor:pointer;
+  font:inherit;font-size:.95rem;font-weight:700;line-height:1;
+  background:transparent;color:var(--paper);border:1px solid color-mix(in srgb, var(--paper) 45%, transparent);
+}
+.album-nav button:hover:not(:disabled){background:var(--paper);color:var(--forest-900);border-color:var(--paper);}
+.album-nav button:disabled{opacity:.3;cursor:default;}
+.teiten-row.album figure{flex:0 0 calc((100% - 12px) / 2);}
+.teiten-row.album .hero-photo img{aspect-ratio:4/3;}
 .season-badge{
   display:inline-flex;align-items:center;gap:8px;background:color-mix(in srgb, var(--paper) 14%, transparent);
   border:1px solid color-mix(in srgb, var(--paper) 28%, transparent);
